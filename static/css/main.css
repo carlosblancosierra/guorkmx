@@ -1,0 +1,156 @@
+.row {
+    margin-bottom:0;
+}
+
+.gold-hr-center {
+    width: 50px;
+    background: #d4bd8b;
+    border: none;
+    height: 5px;
+    margin-left:auto!important;
+    margin-right:auto!important;
+}
+
+.gold-hr {
+    width: 50px;
+    background: #d4bd8b;
+    border: none;
+    height: 5px;
+}
+
+.gold-hr-right {
+    width: 50px;
+    background: #d4bd8b;
+    border: none;
+    height: 5px;
+    margin-left:auto!important;
+}
+
+/*Fonts*/
+
+* {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.text-barlow {
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+/*BACKGROUNDS*/
+
+.bg-linear-gold {
+    background: rgba(211,189,139,1);
+    background: -moz-linear-gradient(top, rgba(211,189,139,1) 0%, rgba(177,143,80,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(211,189,139,1)), color-stop(100%, rgba(177,143,80,1)));
+    background: -webkit-linear-gradient(top, rgba(211,189,139,1) 0%, rgba(177,143,80,1) 100%);
+    background: -o-linear-gradient(top, rgba(211,189,139,1) 0%, rgba(177,143,80,1) 100%);
+    background: -ms-linear-gradient(top, rgba(211,189,139,1) 0%, rgba(177,143,80,1) 100%);
+    background: linear-gradient(to bottom, rgba(211,189,139,1) 0%, rgba(177,143,80,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3bd8b', endColorstr='#b18f50', GradientType=0 );
+}
+
+.bg-light-grey {
+    background-color: #F1F2F3!important;
+}
+
+.bg-dark-grey {
+    background-color: #262626!important;
+}
+
+.bg-gold {
+    background-color: #d4bd8b!important;
+}
+
+/*TEXT*/
+
+.text-gold {
+    color: #d4bd8b!important;
+}
+
+/*BUTTONS*/
+.btn-gold {
+    background: rgba(211,189,139,1);
+    background: -moz-linear-gradient(top, rgba(211,189,139,1) 0%, rgba(177,143,80,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(211,189,139,1)), color-stop(100%, rgba(177,143,80,1)));
+    background: -webkit-linear-gradient(top, rgba(211,189,139,1) 0%, rgba(177,143,80,1) 100%);
+    background: -o-linear-gradient(top, rgba(211,189,139,1) 0%, rgba(177,143,80,1) 100%);
+    background: -ms-linear-gradient(top, rgba(211,189,139,1) 0%, rgba(177,143,80,1) 100%);
+    background: linear-gradient(to bottom, rgba(211,189,139,1) 0%, rgba(177,143,80,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3bd8b', endColorstr='#b18f50', GradientType=0 );
+    color:#424647!important;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: bold;
+}
+
+.btn-outline-gold {
+    background: rgba(255,255,255,1)!important;
+    color:#000000!important;
+    border-color: #D1BE8B!important;
+    border-width: 2px!important;
+    border-style: solid!important;
+    height: unset!important;
+    font-family: 'Barlow Condensed', sans-serif;
+
+}
+
+.btn-outline-gold:hover {
+    background: #1B3053!important;
+    color:#fff!important;
+    border-color: #1B3053!important;
+}
+
+.btn-subscribe-banner {
+    height: 3rem;
+}
+
+/*NAVBAR*/
+.navbar li a{
+    color:#000;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+/*FOOTER*/
+
+.footer p{
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+/*HOME*/
+
+.home-service-title {
+    font-size: 1.64rem;
+    margin-top:1rem;
+    margin-bottom: 0;
+}
+
+.home-service-title-description {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.home-blog-title {
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.home-blog-desc {
+
+}
+
+.home-contactanos-title {
+    text-align: center;
+    color: #F1F2F3;
+    font-size: 11rem;
+    line-height: 11rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: bold;
+
+}
+
+
+

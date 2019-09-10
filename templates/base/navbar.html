@@ -1,0 +1,21 @@
+{% load static %}
+
+{% url 'home' as home_url %}
+
+<nav class="transparent navbar">
+    <div class="container">
+        <div class="nav-wrapper black-text">
+            <a href="{{ home_url }}" class="brand-logo">
+                <img src="{% static 'images/logo.png' %}" class="responsive-image"></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="sass.html">Servicios</a></li>
+                <li><a href="badges.html">Nosotros</a></li>
+                <li><a href="collapsible.html">Casos de Éxito</a></li>
+                <li><a href="badges.html">Partnership</a></li>
+                <li><a href="badges.html">Blog</a></li>
+                <li><a href="badges.html">Contáctanos</a></li>
+                <li><a href="badges.html" class="btn btn-gold">Cotiza</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

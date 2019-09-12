@@ -18,10 +18,12 @@ from django.urls import path
 
 from .views import (
     home_page,
+    inbound_page,
 )
 
 urlpatterns = [
     path('', home_page, name='home'),
+    path('inbound', inbound_page, name='inbound'),
 
     path('admin/', admin.site.urls),
 

@@ -26,6 +26,12 @@
     margin-left:auto!important;
 }
 
+.icon-gold-round {
+    background-color: #d4bd8b!important;
+    border-radius: 50%;
+    padding:1rem;
+}
+
 /*Fonts*/
 
 * {
@@ -42,7 +48,7 @@ h1, h2, h3 {
 
 /*BACKGROUNDS*/
 
-.bg-linear-gold {
+.bg-gold-gradient {
     background: rgba(211,189,139,1);
     background: -moz-linear-gradient(top, rgba(211,189,139,1) 0%, rgba(177,143,80,1) 100%);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(211,189,139,1)), color-stop(100%, rgba(177,143,80,1)));
@@ -63,6 +69,14 @@ h1, h2, h3 {
 
 .bg-gold {
     background-color: #d4bd8b!important;
+}
+
+.bg-blue {
+    background-color: #213A60!important;
+}
+
+.bg-dark-blue {
+    background-color: #122743!important;
 }
 
 /*TEXT*/
@@ -152,5 +166,74 @@ h1, h2, h3 {
 
 }
 
+ /*SERVICIOS */
+ /*INBOUND*/
+
+ .inbound-cf-squares {
+    background-color: #F1F2F3!important;
+    border-radius: 2rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 5rem;
+    margin: 2rem!important;
+ }
+
+ .inbound-cf-icon {
+    margin-top: -30px;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a28d5d+0,d4bd8b+100 */
+    background: #a28d5d; /* Old browsers */
+    background: -moz-linear-gradient(top,  #a28d5d 0%, #d4bd8b 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #a28d5d 0%,#d4bd8b 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #a28d5d 0%,#d4bd8b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a28d5d', endColorstr='#d4bd8b',GradientType=0 ); /* IE6-9 */
+    padding-right: 1.5rem!important;
+    padding-left: 1.5rem!important;
+    padding-top: 3.5em!important;
+    padding-bottom: 3.5rem!important;
+    border-radius: 0px 0px 2rem 2rem;
+    box-shadow: 4px 4px #e4e7e6;
+ }
+
+ .inbound-cf-icon:hover {
+    background: #1B3053;
+ }
+
+ .inbound-canales-square {
+    box-shadow: 4px 4px 7px #0009;
+    padding-right: 1.5rem!important;
+    padding-left: 1.5rem!important;
+    padding-top: 5rem!important;
+    padding-bottom: 5rem!important;
+
+    border-radius: 2rem;
+ }
+
+.quote-service-text {
+    font-family: 'Barlow Condensed';
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.quote-slider-text-container {
+    border:white solid 1px;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background-color: white;
+
+}
+
+.quote-slider-text {
+    font-size: 3rem!important;
+    font-family: 'Barlow Condensed';
+    color: #000!important;
+}
+
+.quote-slider-text-icon {
+    font-size: 3rem!important;
+    color:#d4bd8b;
+}
 
 

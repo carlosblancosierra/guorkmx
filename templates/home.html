@@ -6,22 +6,28 @@
 
 {% block content %}
 
-<div class="container">
-    <div class="row">
-        <div class="col s12 m6 offset-m6 my-5">
-            <h1 class="text-right text-uppercase">Lorem ipsum <br> dolor sit amet</h1>
-            <p class="text-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et
-                dolore magna aliqua</p>
-            <p class="text-right">
-                <a class="btn btn-outline-gold" href="#">COTIZAR</a>
-                <a class="btn btn-outline-gold" href="#">CONTACTANOS</a>
-            </p>
+{% url 'inbound' as inbound_url %}
+
+
+<div class="row">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m6 offset-m6 my-5">
+                <h1 class="text-right text-uppercase">Lorem ipsum <br> dolor sit amet</h1>
+                <p class="text-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et
+                    dolore magna aliqua</p>
+                <p class="text-right">
+                    <a class="btn btn-outline-gold" href="#">COTIZAR</a>
+                    <a class="btn btn-outline-gold" href="#">CONTACTANOS</a>
+                </p>
+            </div>
         </div>
+        <img src="{% static 'images/bg-blue-left.png' %}" class="blue-left-bg-img"/>
     </div>
 </div>
 
-<div class="row bg-light-grey py-3">
+<div class="row bg-light-grey py-3 my-3 position-relative">
     <div class="container">
         <div class="row">
 
@@ -43,81 +49,110 @@
             </div>
         </div>
     </div>
+    <img src="{% static 'images/ipad.png' %}" class="home-ipad"/>
 </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col s12 m5">
-            <h2>SERVICIOS</h2>
-            <p class="gold-hr"></p>
+<div class="row position-relative">
+    <div class="container">
+        <img src="{% static 'images/bg-blue-right.png' %}" class="blue-right-bg-img mt-5"/>
+        <div class="row">
+            <div class="col s12 m5">
+                <h2>SERVICIOS</h2>
+                <p class="gold-hr"></p>
 
+                <a href="{{ inbound_url }}">
+                    <div class="row mt-3">
 
-            <div class="row">
-                <div class="col s3">
+                        <div class="col s3 home-service-col home-service-inbound-col">
 
-                </div>
-                <div class="col s9">
-                    <h3 class="home-service-title">Inbound Marketing</h3>
-                    <p class="home-service-title-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor
-                        incididunt</p>
-                </div>
-            </div>
+                        </div>
+                        <div class="col s9">
+                            <h3 class="home-service-title">Inbound Marketing</h3>
+                            <p class="home-service-title-description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit,
+                                sed do eiusmod tempor
+                                incididunt</p>
+                        </div>
+                    </div>
+                </a>
 
-            <div class="row">
-                <div class="col s3">
+                <a href="#">
+                    <div class="row mt-3">
 
-                </div>
-                <div class="col s9">
-                    <h3 class="home-service-title">Branding</h3>
-                    <p class="home-service-title-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor
-                        incididunt</p>
-                </div>
-            </div>
+                        <div class="col s3 home-service-col home-service-branding-col">
 
-            <div class="row">
-                <div class="col s3">
+                        </div>
+                        <div class="col s9">
+                            <h3 class="home-service-title">Branding</h3>
+                            <p class="home-service-title-description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit,
+                                sed do eiusmod tempor
+                                incididunt</p>
+                        </div>
+                    </div>
+                </a>
 
-                </div>
-                <div class="col s9">
-                    <h3 class="home-service-title">Lead Generation</h3>
-                    <p class="home-service-title-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor
-                        incididunt</p>
-                </div>
-            </div>
+                <a href="#">
+                    <div class="row mt-3">
 
-            <div class="row">
-                <div class="col s3">
+                        <div class="col s3 home-service-col home-service-leadgen-col">
 
-                </div>
-                <div class="col s9">
-                    <h3 class="home-service-title">Marketing Tools</h3>
-                    <p class="home-service-title-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor
-                        incididunt</p>
-                </div>
-            </div>
+                        </div>
+                        <div class="col s9">
+                            <h3 class="home-service-title">Lead Generation</h3>
+                            <p class="home-service-title-description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit,
+                                sed do eiusmod tempor
+                                incididunt</p>
+                        </div>
+                    </div>
+                </a>
 
-            <div class="row">
-                <div class="col s3">
+                <a href="#">
+                    <div class="row mt-3">
 
-                </div>
-                <div class="col s9">
-                    <h3 class="home-service-title">Consultoria</h3>
-                    <p class="home-service-title-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor
-                        incididunt</p>
-                </div>
+                        <div class="col s3 home-service-col home-service-marketingtools-col">
+
+                        </div>
+                        <div class="col s9">
+                            <h3 class="home-service-title">Marketing Tools</h3>
+                            <p class="home-service-title-description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit,
+                                sed do eiusmod tempor
+                                incididunt</p>
+                        </div>
+                    </div>
+                </a>
+
+                 <a href="#">
+                    <div class="row mt-3">
+
+                        <div class="col s3 home-service-col home-service-consult-col">
+
+                        </div>
+                        <div class="col s9">
+                        <h3 class="home-service-title">Consultoria</h3>
+                            <p class="home-service-title-description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit,
+                                sed do eiusmod tempor
+                                incididunt</p>
+                        </div>
+                    </div>
+                </a>
+
             </div>
         </div>
     </div>
 </div>
 
-<div class="container">
+<div class="container my-5 py-5">
     <div class="row">
-        <div class="col s6 offset-m6 text-right">
+        <div class="col s7 position-relative">
+            <img src="{% static 'images/home/home-nosotros-face.png' %}" class="responsive-img w-50 mt-5 ml-5"/>
+            <img src="{% static 'images/gold-circle.png' %}" class="responsive-img home-nosotros-circle "/>
+        </div>
+
+        <div class="col s5 text-right">
             <h2>NOSOTROS</h2>
             <p class="gold-hr-right"></p>
 

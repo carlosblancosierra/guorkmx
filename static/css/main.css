@@ -2,6 +2,10 @@
     margin-bottom:0;
 }
 
+a {
+    color:unset;
+}
+
 .gold-hr-center {
     width: 50px;
     background: #d4bd8b;
@@ -30,6 +34,22 @@
     background-color: #d4bd8b!important;
     border-radius: 50%;
     padding:1rem;
+}
+
+.blue-left-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    z-index: -5;
+}
+
+.blue-right-bg-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    z-index: -5;
 }
 
 /*Fonts*/
@@ -122,6 +142,12 @@ h1, h2, h3 {
 }
 
 /*NAVBAR*/
+
+.navbar {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
 .navbar li a{
     color:#000;
     font-family: 'Barlow Condensed', sans-serif;
@@ -135,15 +161,97 @@ h1, h2, h3 {
 
 /*HOME*/
 
+.home-ipad {
+    position: absolute;
+    max-width: 25%!important;
+    top:-20%;
+    right: 15%;
+    height: auto;
+}
+.home-service-col {
+    background-position: center;
+    background-size: contain;
+    height: 5rem;
+    -webkit-transition: background-image 0.2s ease-in-out;
+    transition: background-image 0.2s ease-in-out;
+    background-repeat: no-repeat;
+}
+
+.home-service-inbound-col {
+    background-image: url(../images/logo-inbound-grey.png);
+}
+
+a:hover .home-service-inbound-col{
+    background-image: url(../images/logo-inbound-blue.png);
+}
+
+.home-service-branding-col {
+    background-image: url(../images/logo-branding-grey.png);
+}
+
+a:hover .home-service-branding-col{
+    background-image: url(../images/logo-branding-blue.png);
+}
+
+.home-service-leadgen-col {
+    background-image: url(../images/logo-leadgen-grey.png);
+}
+
+a:hover .home-service-leadgen-col{
+    background-image: url(../images/logo-leadgen-blue.png);
+}
+
+.home-service-marketingtools-col {
+    background-image: url(../images/logo-marketingtools-grey.png);
+}
+
+a:hover .home-service-marketingtools-col{
+    background-image: url(../images/logo-marketingtools-blue.png);
+}
+
+.home-service-consult-col {
+    background-image: url(../images/logo-consult-grey.png);
+}
+
+a:hover .home-service-consult-col{
+    background-image: url(../images/logo-consult-blue.png);
+}
+
+
+
 .home-service-title {
     font-size: 1.64rem;
-    margin-top:1rem;
+    margin-top:0rem;
     margin-bottom: 0;
 }
 
 .home-service-title-description {
     font-size: 0.9rem;
     margin: 0;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.home-nosotros-circle {
+    animation-name:            rotate;
+    animation-duration:        20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0%;
+    z-index: -5;
+    width: 60%;
+    top: -10%;
 }
 
 .home-blog-title {

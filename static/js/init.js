@@ -1,13 +1,7 @@
 M.AutoInit();
 
-$(document).ready(function(){
-
-    $('.collapsible').collapsible();
-    $('.modal').modal();
-
-
-    $('.carousel.carousel-slider').carousel({
-    fullWidth: true
-    });
-
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.slider');
+    var instances = M.Slider.init(elems, {'height' : 200, 'indicators' : true});
 });
+

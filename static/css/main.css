@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .row {
     margin-bottom:0;
 }
@@ -36,20 +40,71 @@ a {
     padding:1rem;
 }
 
-.blue-left-bg-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    z-index: -5;
+
+/*Phones*/
+@media (max-width:425px) {
+    .blue-left-bg-img {
+        display: none
+    }
+
+    .blue-right-bg-img {
+        display: none
+    }
+
+    .blue-left-2-bg-img {
+        display: none
+    }
 }
 
-.blue-right-bg-img {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50%;
-    z-index: -5;
+/*Tablets*/
+@media (min-width:768px) {
+    .blue-left-bg-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        z-index: -5;
+    }
+
+    .blue-right-bg-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        z-index: -5;
+    }
+
+    .blue-left-2-bg-img {
+        position: absolute;
+        top: 5%;
+        left: 0;
+        width: 35%;
+        z-index: -5;
+    }
+}
+
+/*Laptops*/
+@media (min-width:1024px) {
+}
+
+/*Desktops*/
+@media (min-width:1440px) {
+}
+
+.font-125 {
+    font-size: 1.25rem;
+}
+
+.font-150 {
+    font-size: 1.5rem;
+}
+
+.font-175 {
+    font-size: 1.75rem;
+}
+
+.font-200 {
+    font-size: 2rem;
 }
 
 /*Fonts*/
@@ -143,14 +198,40 @@ h1, h2, h3 {
 
 /*NAVBAR*/
 
-.navbar {
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-
 .navbar li a{
     color:#000;
     font-family: 'Barlow Condensed', sans-serif;
+}
+
+.sidenav-trigger {
+    color: #d4bd8b!important;
+}
+
+/*Phones*/
+@media (max-width:425px) {
+    .navbar {
+        background:#213A60;
+        padding-top:1rem;
+        padding-bottom:1rem;
+        height: 6rem;
+    }
+}
+
+/*Tablets*/
+@media (min-width:768px) {
+    .navbar {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        background-color: rgba(0,0,0,0);
+    }
+}
+
+/*Laptops*/
+@media (min-width:1024px) {
+}
+
+/*Desktops*/
+@media (min-width:1440px) {
 }
 
 /*FOOTER*/
@@ -271,11 +352,93 @@ a:hover .home-service-consult-col{
     margin-top: 0;
     margin-bottom: 0;
     font-weight: bold;
+}
 
+.cotiza-banner-climber {
+    position: absolute;
+    max-width: 25%!important;
+    top: -33%;
+    right: 0;
+    height: auto;
+}
+
+#owl-carousel-partnertship .owl-nav {
+    text-align: center;
+}
+
+#owl-carousel-partnertship .owl-prev, #owl-carousel-partnertship .owl-next  {
+    font-size: 2rem!important;
+    background-color: #F1F2F3!important;
+    color:white;
+    margin: .5rem;
+    border-radius: 50%;
+    width: 3rem;
+}
+
+#owl-carousel-casos-exito .owl-nav {
+    text-align: center;
+}
+
+#owl-carousel-casos-exito .owl-prev, #owl-carousel-casos-exito .owl-next  {
+    font-size: 2rem!important;
+    background-color: #F1F2F3!important;
+    color:white;
+    margin: .5rem;
+    border-radius: 50%;
+    width: 3rem;
+}
+
+/*Phones*/
+@media (max-width:425px) {
+    .home-contactanos-title {
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+
+    }
+
+    .home-nosotros-circle {
+        left: 23%;
+    }
+
+    .cotiza-banner-climber {
+        position: absolute;
+        max-width: 58%!important;
+        top: -19%;
+        right: 0;
+        height: auto;
+        z-index: -1
+    }
+
+    .cotiza-banner-row {
+        z-index: -2
+    }
+
+    .cotiza-banner-container {
+        z-index: -3;
+        margin-top: 5rem;
+    }
+}
+
+/*Tablets*/
+@media (min-width:768px) {
+}
+
+/*Laptops*/
+@media (min-width:1024px) {
+}
+
+/*Desktops*/
+@media (min-width:1440px) {
 }
 
  /*SERVICIOS */
+
  /*INBOUND*/
+
+ .inbound-cf-title-container {
+    padding-top:15%;
+    padding-bottom:15%;
+ }
 
  .inbound-cf-squares {
     background-color: #F1F2F3!important;

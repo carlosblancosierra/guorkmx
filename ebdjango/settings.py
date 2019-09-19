@@ -25,7 +25,11 @@ SECRET_KEY = '0bgnw^0tw64h+0v+-vk1kvroc-=43a62w+u*629+sb%3&#)av0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    'guork-env.trawp8wvmc.us-east-1.elasticbeanstalk.com',
+    'guork.mx'
+]
 
 
 # Application definition

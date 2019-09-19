@@ -476,8 +476,16 @@ a:hover .home-service-consult-col{
     padding-left: 1.5rem!important;
     padding-top: 5rem!important;
     padding-bottom: 5rem!important;
-
     border-radius: 2rem;
+    display: none;
+ }
+
+ .inbound-canales-image-btn {
+    cursor: pointer;
+ }
+
+.canales-circle {
+    cursor: pointer;
  }
 
 .quote-service-text {

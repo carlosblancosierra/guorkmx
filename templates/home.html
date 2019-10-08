@@ -7,7 +7,7 @@
 {% block content %}
 
 {% url 'inbound' as inbound_url %}
-
+{% url 'contact' as contact_url %}
 
 <div class="row">
     <div class="container">
@@ -345,7 +345,7 @@
     </div>
     <div class="row my-2">
         <div class="col s12 m6 offset-m3">
-            <a class="btn btn-gold w-100" href="#">CONTÁCTANOS</a>
+            <a class="btn btn-gold w-100" href="{{ contact_url }}">CONTÁCTANOS</a>
         </div>
     </div>
 </div>

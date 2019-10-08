@@ -40,6 +40,10 @@ a {
     padding:1rem;
 }
 
+.clickable {
+    cursor: pointer;
+ }
+
 
 /*Phones*/
 @media (max-width:425px) {
@@ -91,6 +95,25 @@ a {
 @media (min-width:1440px) {
 }
 
+
+/*Fonts*/
+
+* {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.text-barlow, .font-barlow {
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.text-fira, .font-fira {
+    font-family: 'Fira Sans', sans-serif;
+}
+
 .font-125 {
     font-size: 1.25rem;
 }
@@ -105,20 +128,6 @@ a {
 
 .font-200 {
     font-size: 2rem;
-}
-
-/*Fonts*/
-
-* {
-    font-family: 'Fira Sans', sans-serif;
-}
-
-h1, h2, h3 {
-    font-family: 'Barlow Condensed', sans-serif;
-}
-
-.text-barlow {
-    font-family: 'Barlow Condensed', sans-serif;
 }
 
 /*BACKGROUNDS*/
@@ -158,6 +167,10 @@ h1, h2, h3 {
 
 .text-gold {
     color: #d4bd8b!important;
+}
+
+.text-blue {
+    color: #213A60!important;
 }
 
 /*BUTTONS*/
@@ -488,6 +501,8 @@ a:hover .home-service-consult-col{
     cursor: pointer;
  }
 
+
+
 .quote-service-text {
     font-family: 'Barlow Condensed';
     text-transform: uppercase;
@@ -513,6 +528,85 @@ a:hover .home-service-consult-col{
 .quote-slider-text-icon {
     font-size: 3rem!important;
     color:#d4bd8b;
+}
+
+
+ /*BLOG */
+
+ /*LIST */
+
+.blog-list-post-title {
+    color: #213A60!important;
+    font-size:1.5rem;
+    font-family: 'Barlow Condensed';
+    margin:0;
+    font-weight:bold;
+}
+
+
+.blog-list-related-box {
+    background-color: #F1F2F3!important;
+    padding:1rem;
+    color: #213A60!important;
+    transition: background-color 0.5s ease;
+
+}
+
+.blog-list-related-box:hover {
+    background-color: #d4bd8b!important;
+    color: #FFFFFF!important;
+
+}
+
+ /* CONTACT */
+
+.bg-contact{
+    background:url('../images/contact/bg-hablemos.jpg');
+    background-size:contain;
+    background-repeat: no-repeat;
+
+}
+
+.contact-location-col {
+    background-size:cover!important;
+    min-height:400px!important;
+}
+
+.contact-location-col-title{
+    color:white;
+    z-index:10;
+    position:relative;
+}
+
+.contact-location-overlay {
+    transition: background-color 0.5s ease;
+}
+.contact-location-col:hover .contact-location-overlay {
+    background-color: rgba(0,0,0,0.5);
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+}
+
+.contact-hidden-text{
+    font-family: 'Barlow Condensed'!important;
+    text-transform:uppercase;
+    opacity:0;
+    transition: opacity 0.5s ease;
+    color:#FFFFFF!important;
+
+
+}
+
+.contact-location-col:hover .contact-hidden-text{
+    display:block;
+    z-index:10;
+    position:relative;
+    opacity:1;
+
 }
 
 

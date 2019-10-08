@@ -27,10 +27,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'localhost',
+    '127.0.0.1',
     'guork-env.trawp8wvmc.us-east-1.elasticbeanstalk.com',
     'guork.mx'
 ]
 
+LOGIN_URL = '/login'
 
 # Application definition
 
@@ -41,6 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'blog',
 ]
 
 MIDDLEWARE = [

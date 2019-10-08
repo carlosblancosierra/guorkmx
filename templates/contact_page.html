@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block head_title %} {% endblock %}
+
+{% block content %}
+
+<div class="container bg-contact mt-5">
+    <div class="row">
+        <div class="col s6 offset-s3 m4 offset-m4">
+            <img src="{% static 'images/home/home-gold-plane.png' %}" class="responsive-img"/>
+        </div>
+        <div class="col s12 m6 offset-m3 text-center">
+            <img src="{% static 'images/contact/hablemos.png' %}" class="responsive-img"/>
+        </div>
+    </div>
+    <div class="row text-center mt-5 mt-md-0">
+
+        <div class="col s4 m4">
+            <img src="{% static 'images/contact/correo.png' %}" class="responsive-img w-75"/>
+            <p class="font-weight-bold">MANDA UN CORREO</p>
+        </div>
+        <div class="col s4 m4">
+            <img src="{% static 'images/contact/whatsapp.png' %}" class="responsive-img w-75"/>
+            <p class="font-weight-bold">ESCRIBE UN WHATSAPP</p>
+
+        </div>
+        <div class="col s4 m4">
+            <img src="{% static 'images/contact/telefono.png' %}" class="responsive-img w-75"/>
+            <p class="font-weight-bold">MARCANOS A OFICINAS</p>
+
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="s12 text-center">
+            <h3 class="font-weight-bold font-fira">VISITANOS EN NUESTRAS REDES</h3>
+            <p class="mt-5">
+                <a href="https://www.facebook.com/guork.mx/">
+                    <img src="{% static 'images/facebook-blue.png' %}" style="width:2rem;" class="mx-2"/>
+                </a>
+                <a href="https://www.linkedin.com/company/25031983/">
+                    <img src="{% static 'images/linkedin-blue.png' %}" style="width:2rem;" class="mx-2"/>
+                </a>
+                <a href="https://www.instagram.com/guork.mx/">
+                    <img src="{% static 'images/instagram-blue.png' %}" style="width:2rem;" class="mx-2"/>
+                </a>
+                <a href="">
+                    <img src="{% static 'images/twitter-blue.png' %}" style="width:2rem;" class="mx-2"/>
+                </a>
+
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-0 mt-5">
+    <div class="col s12 m4 contact-location-col position-relative"
+         style="background:url({% static './images/contact/vancouver.jpg' %})">
+        <div class="contact-location-overlay"></div>
+        <h3 class="text-white contact-location-col-title">Vancouver</h3>
+        <div class="contact-hidden-text">
+            <p class="my-1 font-barlow font-150">Ignacio Allende 21-209</p>
+            <p class="my-1 font-barlow font-150">Miguel Hidalgo, CDMX 11289</p>
+            <p class=""><a href="#" class="font-barlow">Ir a mapa ></a></p>
+        </div>
+    </div>
+
+    <div class="col s12 m4 contact-location-col position-relative"
+         style="background:url({% static './images/contact/cdmx.jpg' %})">
+        <div class="contact-location-overlay"></div>
+        <h3 class="text-white contact-location-col-title">Ciudad de México</h3>
+        <div class="contact-hidden-text">
+            <p class="my-1 font-barlow font-150">Ignacio Allende 21-209</p>
+            <p class="my-1 font-barlow font-150">Miguel Hidalgo, CDMX 11289</p>
+            <p class=""><a href="#" class="font-barlow">Ir a mapa ></a></p>
+        </div>
+    </div>
+
+    <div class="col s12 m4 contact-location-col position-relative"
+         style="background:url({% static './images/contact/california.jpg' %})">
+        <div class="contact-location-overlay"></div>
+        <h3 class="text-white contact-location-col-title">California</h3>
+        <div class="contact-hidden-text">
+            <p class="my-1 font-barlow font-150">Ignacio Allende 21-209</p>
+            <p class="my-1 font-barlow font-150">Miguel Hidalgo, CDMX 11289</p>
+            <p class=""><a href="#" class="font-barlow">Ir a mapa ></a></p>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

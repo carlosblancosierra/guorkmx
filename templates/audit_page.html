@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block head_title %} {% endblock %}
+
+{% block content %}
+
+<style>
+    .audit-radios .radio {
+        background-color: #F1F2F3 !important;
+        display: inline-block;
+        cursor: pointer;
+        font-size: 2rem;
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        color: black;
+
+    }
+
+    .audit-radios input[type=radio] {
+        display: none;
+    }
+
+    .audit-radios input[type=radio]:checked + .radio {
+        background-color: #d4bd8b !important;
+        color: white;
+    }
+
+    .questions_2.last_div {
+        display: none;
+    }
+
+</style>
+
+<div class="container">
+    <div class="row my-5 py-5">
+        <form method="POST"> {% csrf_token %}
+
+            <div class="carousel carousel-slider" id="carousel-audit">
+
+                {% for questions in questions_list %}
+                <div class="carousel-item py-auto white">
+                    {% for question in questions %}
+                    <div class="questions_{{ questions|length }} {% if forloop.last %}last_div{% endif %}">
+                        <p class="font-150 text-center">{{ question }}</p>
+
+                        <div class="audit-radios text-center">
+                            {% for i in range %}
+                            <input type="radio"
+                                   class="audit_radio {% if forloop.parentloop.last %} last {% endif %} questions_{{ questions|length }}_radio"
+                                   value="{{ forloop.counter }}"
+                                   name="audit_option_{{ forloop.parentloop.parentloop.counter }}_{{ forloop.parentloop.counter }}"
+                                   id="audit_option_{{ forloop.parentloop.parentloop.counter }}_{{ forloop.parentloop.counter }}_{{ forloop.counter }}"
+
+                            />
+                            <label class="radio"
+                                   for="audit_option_{{ forloop.parentloop.parentloop.counter }}_{{ forloop.parentloop.counter }}_{{ forloop.counter }}">
+                                {{ forloop.counter }}</label>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+                {% endfor %}
+            </div>
+        </form>
+<!--        <p class="text-center">-->
+<!--            <button onclick="carouselPrev('#carousel-audit')">Prev</button>-->
+<!--            <button onclick="carouselNext('#carousel-audit')">Next</button>-->
+<!--        </p>-->
+
+    </div>
+</div>
+{% endblock %}
+
+{% block js_extra %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script>
+    M.AutoInit();
+
+    function carouselNext(id) {
+        $(id).carousel('next');
+    }
+
+    function carouselPrev(id) {
+        $(id).carousel('prev');
+    }
+
+    function carouselAuditNext(id) {
+        $(id).carousel('next');
+    }
+
+    function carouselAuditPrev(id) {
+        $(id).carousel('prev');
+    }
+
+    $("input:radio.questions_2_radio").change(function () {
+        var div = $('.carousel-item.active > .last_div')
+
+        div.show('slow')
+        console.log(div)
+    });
+
+
+    $("input:radio.last").change(function () {
+
+        setTimeout(
+            function () {
+                $('#carousel-audit').carousel('next');
+            }, 300);
+
+    });
+
+</script>
+{% endblock %}

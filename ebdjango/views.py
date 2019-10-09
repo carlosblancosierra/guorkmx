@@ -11,7 +11,6 @@ def home_page(request):
 
 
 def inbound_page(request):
-
     context = {
     }
 
@@ -19,7 +18,6 @@ def inbound_page(request):
 
 
 def contact_page(request):
-
     form = ContactForm(request.POST or None)
 
     if form.is_valid():
@@ -30,3 +28,29 @@ def contact_page(request):
     }
 
     return render(request, "contact_page.html", context)
+
+
+def audit_page(request):
+    questions_list = [
+        [
+            'How confident are you in your ability to design a conversion funnel that transforms cold visitors into customers?',
+            'How confident are you in your ability to design a conversion funnel that transforms cold visitors into customers?',
+        ],
+        ['lorem ipsum2'],
+        ['lorem ipsum3'],
+        [
+            'How confident are you in your ability to design a conversion funnel that transforms cold visitors into customers?',
+            'How confident are you in your ability to design a conversion funnel that transforms cold visitors into customers?',
+        ],
+        ['lorem ipsum5'],
+    ]
+
+    current_page = questions_list[0]
+
+    context = {
+        'current_page': current_page,
+        'range': range(10),
+        'questions_list': questions_list,
+    }
+
+    return render(request, "audit_page.html", context)

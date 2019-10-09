@@ -379,7 +379,9 @@ a:hover .home-service-consult-col{
     text-align: center;
 }
 
-#owl-carousel-partnertship .owl-prev, #owl-carousel-partnertship .owl-next  {
+#owl-carousel-partnertship .owl-prev, #owl-carousel-partnertship .owl-next,
+#owl-carousel-audit .owl-prev, #owl-carousel-audit .owl-next
+{
     font-size: 2rem!important;
     background-color: #F1F2F3!important;
     color:white;

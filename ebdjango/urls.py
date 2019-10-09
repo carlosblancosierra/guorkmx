@@ -20,7 +20,8 @@ from django.urls import path, include
 from .views import (
     home_page,
     inbound_page,
-    contact_page
+    contact_page,
+    audit_page
 )
 
 urlpatterns = [
@@ -28,6 +29,7 @@ urlpatterns = [
     path('inbound', inbound_page, name='inbound'),
     path('contacto', contact_page, name='contact'),
     path('blog/', include('blog.urls')),
+    path('auditoria/', audit_page, name='audit'),
     path('admin/', admin.site.urls),
 ]
 

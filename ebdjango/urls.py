@@ -31,6 +31,9 @@ urlpatterns = [
     path('blog/', include('blog.urls')),
     path('auditoria/', audit_page, name='audit'),
     path('admin/', admin.site.urls),
+
+    # third party
+    path('ckeditor/', include('ckeditor_uploader.urls')),
 ]
 
 if settings.DEBUG:

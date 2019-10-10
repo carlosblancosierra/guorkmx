@@ -1,0 +1,614 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.row {
+    margin-bottom:0;
+}
+
+a {
+    color:unset;
+}
+
+.gold-hr-center {
+    width: 50px;
+    background: #d4bd8b;
+    border: none;
+    height: 5px;
+    margin-left:auto!important;
+    margin-right:auto!important;
+}
+
+.gold-hr {
+    width: 50px;
+    background: #d4bd8b;
+    border: none;
+    height: 5px;
+}
+
+.gold-hr-right {
+    width: 50px;
+    background: #d4bd8b;
+    border: none;
+    height: 5px;
+    margin-left:auto!important;
+}
+
+.icon-gold-round {
+    background-color: #d4bd8b!important;
+    border-radius: 50%;
+    padding:1rem;
+}
+
+.clickable {
+    cursor: pointer;
+ }
+
+
+/*Phones*/
+@media (max-width:425px) {
+    .blue-left-bg-img {
+        display: none
+    }
+
+    .blue-right-bg-img {
+        display: none
+    }
+
+    .blue-left-2-bg-img {
+        display: none
+    }
+}
+
+/*Tablets*/
+@media (min-width:768px) {
+    .blue-left-bg-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        z-index: -5;
+    }
+
+    .blue-right-bg-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        z-index: -5;
+    }
+
+    .blue-left-2-bg-img {
+        position: absolute;
+        top: 5%;
+        left: 0;
+        width: 35%;
+        z-index: -5;
+    }
+}
+
+/*Laptops*/
+@media (min-width:1024px) {
+}
+
+/*Desktops*/
+@media (min-width:1440px) {
+}
+
+
+/*Fonts*/
+
+* {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.text-barlow, .font-barlow {
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.text-fira, .font-fira {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.font-125 {
+    font-size: 1.25rem;
+}
+
+.font-150 {
+    font-size: 1.5rem;
+}
+
+.font-175 {
+    font-size: 1.75rem;
+}
+
+.font-200 {
+    font-size: 2rem;
+}
+
+/*BACKGROUNDS*/
+
+.bg-gold-gradient {
+    background: rgba(211,189,139,1);
+    background: -moz-linear-gradient(top, rgba(211,189,139,1) 0%, rgba(177,143,80,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(211,189,139,1)), color-stop(100%, rgba(177,143,80,1)));
+    background: -webkit-linear-gradient(top, rgba(211,189,139,1) 0%, rgba(177,143,80,1) 100%);
+    background: -o-linear-gradient(top, rgba(211,189,139,1) 0%, rgba(177,143,80,1) 100%);
+    background: -ms-linear-gradient(top, rgba(211,189,139,1) 0%, rgba(177,143,80,1) 100%);
+    background: linear-gradient(to bottom, rgba(211,189,139,1) 0%, rgba(177,143,80,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3bd8b', endColorstr='#b18f50', GradientType=0 );
+}
+
+.bg-light-grey {
+    background-color: #F1F2F3!important;
+}
+
+.bg-dark-grey {
+    background-color: #262626!important;
+}
+
+.bg-gold {
+    background-color: #d4bd8b!important;
+}
+
+.bg-blue {
+    background-color: #213A60!important;
+}
+
+.bg-dark-blue {
+    background-color: #122743!important;
+}
+
+/*TEXT*/
+
+.text-gold {
+    color: #d4bd8b!important;
+}
+
+.text-blue {
+    color: #213A60!important;
+}
+
+/*BUTTONS*/
+.btn-gold {
+    background: rgba(211,189,139,1);
+    background: -moz-linear-gradient(top, rgba(211,189,139,1) 0%, rgba(177,143,80,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(211,189,139,1)), color-stop(100%, rgba(177,143,80,1)));
+    background: -webkit-linear-gradient(top, rgba(211,189,139,1) 0%, rgba(177,143,80,1) 100%);
+    background: -o-linear-gradient(top, rgba(211,189,139,1) 0%, rgba(177,143,80,1) 100%);
+    background: -ms-linear-gradient(top, rgba(211,189,139,1) 0%, rgba(177,143,80,1) 100%);
+    background: linear-gradient(to bottom, rgba(211,189,139,1) 0%, rgba(177,143,80,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3bd8b', endColorstr='#b18f50', GradientType=0 );
+    color:#424647!important;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: bold;
+}
+
+.btn-outline-gold {
+    background: rgba(255,255,255,1)!important;
+    color:#000000!important;
+    border-color: #D1BE8B!important;
+    border-width: 2px!important;
+    border-style: solid!important;
+    height: unset!important;
+    font-family: 'Barlow Condensed', sans-serif;
+
+}
+
+.btn-outline-gold:hover {
+    background: #1B3053!important;
+    color:#fff!important;
+    border-color: #1B3053!important;
+}
+
+.btn-subscribe-banner {
+    height: 3rem;
+}
+
+/*NAVBAR*/
+
+.navbar li a{
+    color:#000;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.sidenav-trigger {
+    color: #d4bd8b!important;
+}
+
+/*Phones*/
+@media (max-width:425px) {
+    .navbar {
+        background:#213A60;
+        padding-top:1rem;
+        padding-bottom:1rem;
+        height: 6rem;
+    }
+}
+
+/*Tablets*/
+@media (min-width:768px) {
+    .navbar {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        background-color: rgba(0,0,0,0);
+    }
+}
+
+/*Laptops*/
+@media (min-width:1024px) {
+}
+
+/*Desktops*/
+@media (min-width:1440px) {
+}
+
+/*FOOTER*/
+
+.footer p{
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+/*HOME*/
+
+.home-ipad {
+    position: absolute;
+    max-width: 25%!important;
+    top:-20%;
+    right: 15%;
+    height: auto;
+}
+.home-service-col {
+    background-position: center;
+    background-size: contain;
+    height: 5rem;
+    -webkit-transition: background-image 0.2s ease-in-out;
+    transition: background-image 0.2s ease-in-out;
+    background-repeat: no-repeat;
+}
+
+.home-service-inbound-col {
+    background-image: url(../images/logo-inbound-grey.png);
+}
+
+a:hover .home-service-inbound-col{
+    background-image: url(../images/logo-inbound-blue.png);
+}
+
+.home-service-branding-col {
+    background-image: url(../images/logo-branding-grey.png);
+}
+
+a:hover .home-service-branding-col{
+    background-image: url(../images/logo-branding-blue.png);
+}
+
+.home-service-leadgen-col {
+    background-image: url(../images/logo-leadgen-grey.png);
+}
+
+a:hover .home-service-leadgen-col{
+    background-image: url(../images/logo-leadgen-blue.png);
+}
+
+.home-service-marketingtools-col {
+    background-image: url(../images/logo-marketingtools-grey.png);
+}
+
+a:hover .home-service-marketingtools-col{
+    background-image: url(../images/logo-marketingtools-blue.png);
+}
+
+.home-service-consult-col {
+    background-image: url(../images/logo-consult-grey.png);
+}
+
+a:hover .home-service-consult-col{
+    background-image: url(../images/logo-consult-blue.png);
+}
+
+
+
+.home-service-title {
+    font-size: 1.64rem;
+    margin-top:0rem;
+    margin-bottom: 0;
+}
+
+.home-service-title-description {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.home-nosotros-circle {
+    animation-name:            rotate;
+    animation-duration:        20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0%;
+    z-index: -5;
+    width: 60%;
+    top: -10%;
+}
+
+.home-blog-title {
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.home-blog-desc {
+
+}
+
+.home-contactanos-title {
+    text-align: center;
+    color: #F1F2F3;
+    font-size: 11rem;
+    line-height: 11rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.cotiza-banner-climber {
+    position: absolute;
+    max-width: 25%!important;
+    top: -33%;
+    right: 0;
+    height: auto;
+}
+
+#owl-carousel-partnertship .owl-nav {
+    text-align: center;
+}
+
+#owl-carousel-partnertship .owl-prev, #owl-carousel-partnertship .owl-next,
+#owl-carousel-audit .owl-prev, #owl-carousel-audit .owl-next
+{
+    font-size: 2rem!important;
+    background-color: #F1F2F3!important;
+    color:white;
+    margin: .5rem;
+    border-radius: 50%;
+    width: 3rem;
+}
+
+#owl-carousel-casos-exito .owl-nav {
+    text-align: center;
+}
+
+#owl-carousel-casos-exito .owl-prev, #owl-carousel-casos-exito .owl-next  {
+    font-size: 2rem!important;
+    background-color: #F1F2F3!important;
+    color:white;
+    margin: .5rem;
+    border-radius: 50%;
+    width: 3rem;
+}
+
+/*Phones*/
+@media (max-width:425px) {
+    .home-contactanos-title {
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+
+    }
+
+    .home-nosotros-circle {
+        left: 23%;
+    }
+
+    .cotiza-banner-climber {
+        position: absolute;
+        max-width: 58%!important;
+        top: -19%;
+        right: 0;
+        height: auto;
+        z-index: -1
+    }
+
+    .cotiza-banner-row {
+        z-index: -2
+    }
+
+    .cotiza-banner-container {
+        z-index: -3;
+        margin-top: 5rem;
+    }
+}
+
+/*Tablets*/
+@media (min-width:768px) {
+}
+
+/*Laptops*/
+@media (min-width:1024px) {
+}
+
+/*Desktops*/
+@media (min-width:1440px) {
+}
+
+ /*SERVICIOS */
+
+ /*INBOUND*/
+
+ .inbound-cf-title-container {
+    padding-top:15%;
+    padding-bottom:15%;
+ }
+
+ .inbound-cf-squares {
+    background-color: #F1F2F3!important;
+    border-radius: 2rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 5rem;
+    margin: 2rem!important;
+ }
+
+ .inbound-cf-icon {
+    margin-top: -30px;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a28d5d+0,d4bd8b+100 */
+    background: #a28d5d; /* Old browsers */
+    background: -moz-linear-gradient(top,  #a28d5d 0%, #d4bd8b 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #a28d5d 0%,#d4bd8b 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #a28d5d 0%,#d4bd8b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a28d5d', endColorstr='#d4bd8b',GradientType=0 ); /* IE6-9 */
+    padding-right: 1.5rem!important;
+    padding-left: 1.5rem!important;
+    padding-top: 3.5em!important;
+    padding-bottom: 3.5rem!important;
+    border-radius: 0px 0px 2rem 2rem;
+    box-shadow: 4px 4px #e4e7e6;
+ }
+
+ .inbound-cf-icon:hover {
+    background: #1B3053;
+ }
+
+ .inbound-canales-square {
+    box-shadow: 4px 4px 7px #0009;
+    padding-right: 1.5rem!important;
+    padding-left: 1.5rem!important;
+    padding-top: 5rem!important;
+    padding-bottom: 5rem!important;
+    border-radius: 2rem;
+    display: none;
+ }
+
+ .inbound-canales-image-btn {
+    cursor: pointer;
+ }
+
+.canales-circle {
+    cursor: pointer;
+ }
+
+
+
+.quote-service-text {
+    font-family: 'Barlow Condensed';
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.quote-slider-text-container {
+    border:white solid 1px;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background-color: white;
+
+}
+
+.quote-slider-text {
+    font-size: 3rem!important;
+    font-family: 'Barlow Condensed';
+    color: #000!important;
+}
+
+.quote-slider-text-icon {
+    font-size: 3rem!important;
+    color:#d4bd8b;
+}
+
+
+ /*BLOG */
+
+ /*LIST */
+
+.blog-list-post-title {
+    color: #213A60!important;
+    font-size:1.5rem;
+    font-family: 'Barlow Condensed';
+    margin:0;
+    font-weight:bold;
+}
+
+
+.blog-list-related-box {
+    background-color: #F1F2F3!important;
+    padding:1rem;
+    color: #213A60!important;
+    transition: background-color 0.5s ease;
+
+}
+
+.blog-list-related-box:hover {
+    background-color: #d4bd8b!important;
+    color: #FFFFFF!important;
+
+}
+
+ /* CONTACT */
+
+.bg-contact{
+    background:url('../images/contact/bg-hablemos.jpg');
+    background-size:contain;
+    background-repeat: no-repeat;
+
+}
+
+.contact-location-col {
+    background-size:cover!important;
+    min-height:400px!important;
+}
+
+.contact-location-col-title{
+    color:white;
+    z-index:10;
+    position:relative;
+}
+
+.contact-location-overlay {
+    transition: background-color 0.5s ease;
+}
+.contact-location-col:hover .contact-location-overlay {
+    background-color: rgba(0,0,0,0.5);
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+}
+
+.contact-hidden-text{
+    font-family: 'Barlow Condensed'!important;
+    text-transform:uppercase;
+    opacity:0;
+    transition: opacity 0.5s ease;
+    color:#FFFFFF!important;
+
+
+}
+
+.contact-location-col:hover .contact-hidden-text{
+    display:block;
+    z-index:10;
+    position:relative;
+    opacity:1;
+
+}
+
+

@@ -23,17 +23,20 @@
 <div class="container">
     <div class="row">
         <div class="col s12 m8 p-0">
+            {% for object in object_list|slice:"0:1" %}
 
             <div class="col s12">
 
                 <div class="card">
                     <div class="card-image">
-                        <img src="{% static 'images/blog/placeholder.jpeg' %}">
+                        {% if object.image %}
+                        <img src="{{ object.image.url }}">
+                        {% endif %}
                         <a class="btn-floating halfway-fab waves-effect waves-light bg-gold"><i
                                 class="material-icons">add</i></a>
                     </div>
                     <div class="card-content text-center bg-light-grey">
-                        <h2 class="blog-list-post-title">{{ object_1.title }}</h2>
+                        <h2 class="blog-list-post-title">{{ object.title }}</h2>
                         <p class="gold-hr-center my-3"></p>
                         <p class="home-blog-desc">I am a very simple card. I am good at containing small bits of
                             information. I am
@@ -42,14 +45,16 @@
                     </div>
                 </div>
             </div>
+            {% endfor %}
 
-
-            {% for object in object_list_2 %}
+            {% for object in object_list|slice:"1:5" %}
             <div class="col s12 m6">
 
                 <div class="card">
                     <div class="card-image">
-                        <img src="{% static 'images/blog/placeholder.jpeg' %}">
+                        {% if object.image %}
+                        <img src="{{ object.image.url }}">
+                        {% endif %}
                         <a class="btn-floating halfway-fab waves-effect waves-light bg-gold"><i
                                 class="material-icons">add</i></a>
                     </div>

@@ -8,6 +8,8 @@ from .views import (
     blog_post_update_view
 )
 
+app_name = 'blog'
+
 urlpatterns = [
 
     path('', blog_post_list_view),

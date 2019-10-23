@@ -11,9 +11,9 @@ from .forms import BlogPostForm, BlogPostModelForm
 
 
 def blog_post_list_view(request):
-    queryset = BlogPost.objects.all()
+    queryset = BlogPost.objects.active()
 
-    paginator = Paginator(queryset, 6)
+    paginator = Paginator(queryset, 7)
 
     page_request_var = "pagina"
     page = request.GET.get(page_request_var)
@@ -27,18 +27,14 @@ def blog_post_list_view(request):
         # If page is out of range (e.g. 9999), deliver last page of results.
         queryset = paginator.page(paginator.num_pages)
 
-    object_1 = queryset[:1]
-
-    object_list_2 = queryset[0:2]
-
-    object_list_3 = queryset[2:]
+    object_popular_list = BlogPost.objects.get_3_random()
+    object_recommended_list = BlogPost.objects.get_3_random()
 
     template_name = 'blog/list.html'
     context = {
         "object_list": queryset,
-        "object_1": object_1,
-        "object_list_2": object_list_2,
-        "object_list_3": object_list_3,
+        "object_popular_list": object_popular_list,
+        "object_recommended_list": object_recommended_list,
         "page_request_var": page_request_var,
 
     }
@@ -65,6 +61,7 @@ def blog_post_update_view(request, slug):
 def blog_post_create_view(request):
     form = BlogPostModelForm(request.POST or None)
     if form.is_valid():
+        print("form valid")
         obj = form.save(commit=False)
         obj.user = request.user
         obj.save()

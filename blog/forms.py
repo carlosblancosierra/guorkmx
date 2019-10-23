@@ -2,19 +2,31 @@ from django import forms
 
 from .models import BlogPost
 
+from ckeditor_uploader.widgets import CKEditorUploadingWidget
+
 
 class BlogPostForm(forms.Form):
     title = forms.CharField()
     slug = forms.SlugField()
     content = forms.CharField(
-        widget=forms.Textarea
+        widget=CKEditorUploadingWidget()
     )
 
 
 class BlogPostModelForm(forms.ModelForm):
+    content = forms.CharField(widget=CKEditorUploadingWidget())
+
     class Meta:
         model = BlogPost
-        fields = ['title', 'slug', 'content']
+        fields = ['title',
+                  'slug',
+                  'publish',
+                  'image'
+                  ]
+
+        def __init__(self, *args, **kwargs):
+            super().__init__(*args, **kwargs)
+            self.fields['publish'].widget.attrs.update({'class': 'datepicker'})
 
     def clean_title(self, *args, **kwargs):
         instance = self.instance

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block head_title %} {% endblock %}
+
+{% block content %}
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col s12 m8">
+            <h1>{{ object.title }} asdasdasd</h1>
+        </div>
+
+        <div class="col s12 m4">
+            <ul class="collapsible">
+
+                {% for module in module_list %}
+                <li class="{% if module.id == module_obj.id %}active{% endif %}">
+                    <div class="collapsible-header">
+                        <span class="">{{ module }}</span>
+                    </div>
+                    <div class="collapsible-body">
+                        {% for lesson in module.lessons %}
+                        <a href="{{ lesson.get_absolute_url }}"
+                           class="{% if lesson.id == object.id %}text-gold{% endif %}"
+                        ><p>{{ lesson.title }}</p>
+                        </a>
+                        {% endfor %}
+                    </div>
+                </li>
+
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

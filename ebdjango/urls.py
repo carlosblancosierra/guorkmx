@@ -32,6 +32,7 @@ urlpatterns = [
     path('auditoria/', audit_page, name='audit'),
     path('admin/', admin.site.urls),
 
+    path('workshops/', include('courses.urls')),
     # third party
     path('ckeditor/', include('ckeditor_uploader.urls')),
 ]

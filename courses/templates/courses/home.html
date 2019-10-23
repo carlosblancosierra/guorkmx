@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block head_title %} {% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="col s12 my-5">
+        <h1>Workshops</h1>
+        {% for object in object_list %}
+        <div class="card">
+            <h3><a href="{{ object.get_absolute_url}}">{{ object.title }}</a></h3>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block head_title %} {% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="col s12 my-5">
+        <h1>{{ object.title }} asdasdasd</h1>
+
+        <ul class="collapsible">
+
+            {% for module in modules %}
+            <li>
+                <div class="collapsible-header">{{ module }}</div>
+                <div class="collapsible-body">
+                    {% for lesson in module.lessons %}
+                    <a href="{{ lesson.get_absolute_url }}"><p>{{ lesson.title }} {{ lesson.get_absolute_url }}</p></a>
+                    {% endfor %}
+                </div>
+            </li>
+
+            {% endfor %}
+        </ul>
+
+    </div>
+</div>
+{% endblock %}

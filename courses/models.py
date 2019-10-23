@@ -26,6 +26,9 @@ class Course(models.Model):
                                  processors=[ResizeToFill(384, 256)],
                                  format='JPEG',
                                  options={'quality': 90})
+    updated = models.DateTimeField(auto_now=True, auto_now_add=False)
+    timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
+    overview = models.TextField(max_length=10000, null=True, blank=True)
 
     def __str__(self):
         return self.title
@@ -42,6 +45,10 @@ class Module(models.Model):
     title = models.CharField(max_length=255)
     course = models.ForeignKey(Course, null=True, blank=True, on_delete=models.CASCADE)
     slug = models.SlugField(unique=True, blank=True, max_length=255)
+    updated = models.DateTimeField(auto_now=True, auto_now_add=False)
+    timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True, auto_now_add=False)
+    timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
 
     def __str__(self):
         return self.title
@@ -57,6 +64,8 @@ class Lesson(models.Model):
     content = RichTextUploadingField(null=True, blank=True)
     slug = models.SlugField(unique=True, blank=True, max_length=255)
     module = models.ForeignKey(Module, null=True, blank=True, on_delete=models.CASCADE)
+    updated = models.DateTimeField(auto_now=True, auto_now_add=False)
+    timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
 
     def get_absolute_url(self):
         return f"/workshops/{self.module.course.slug}/{self.module.slug}/{self.slug}"
@@ -97,6 +106,8 @@ class Document(models.Model):
     title = models.CharField(max_length=255)
     file = models.FileField(upload_to=file_upload_location, validators=[validate_file_size])
     course = models.ForeignKey(Course, null=True, blank=True, on_delete=models.CASCADE)
+    updated = models.DateTimeField(auto_now=True, auto_now_add=False)
+    timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
 
     def __str__(self):
         return self.title

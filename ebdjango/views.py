@@ -1,5 +1,7 @@
 import json
 from django.shortcuts import render
+import json
+from ebdjango.settings import GOOGLE_RECAPTCHA_SECRET_KEY, GOOGLE_RECAPTCHA_PUBLIC_KEY
 from .forms import ContactForm
 
 
@@ -47,10 +49,44 @@ def audit_page(request):
 
     current_page = questions_list[0]
 
+    if request.POST:
+        # json_post = json.dumps(request.POST)
+        print('AUDIT -> post: ', json.dumps(request.POST, indent=4))
+
     context = {
         'current_page': current_page,
         'range': range(10),
         'questions_list': questions_list,
+        'public_key': GOOGLE_RECAPTCHA_PUBLIC_KEY,
     }
 
     return render(request, "audit_page.html", context)
+
+
+def audit_result_page(request):
+    labels = ['Content Marketing', 'Social Media', 'Paid Media', 'Search Marketing',
+              'Email Marketing', 'Marketing Strategy', 'Data & Analytics', 'Conversion Optmization'
+              ]
+
+    importance_values = [8.5, 8, 7.5, 7.17, 7, 6, 4.67, 3]
+    confidence_values = [3, 4, 3, 4, 3, 6, 7, 3]
+    marketing_score = 40;
+    total_values = [marketing_score, 100 - marketing_score]
+
+    table_data = []
+    for i in range(len(labels)):
+        data_point = [labels[i], importance_values[i], confidence_values[i]]
+        table_data.append(data_point)
+
+    print('AUDIT RESULT table_data', table_data)
+
+    context = {
+        'marketing_score': marketing_score,
+        'labels': labels,
+        'importance_values': importance_values,
+        'confidence_values': confidence_values,
+        'total_values': total_values,
+        'table_data': table_data,
+    }
+
+    return render(request, "audit_result_page.html", context)

@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block head_title %} {% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row my-5">
+        <div class="col s12 text-center">
+            <h1>Hi carlos,</h1>
+            <p class="font-150">Looks like we can help jump-start your marketing skills.</p>
+        </div>
+        <div class="col s12 m6">
+            <canvas id="pie_chart"></canvas>
+        </div>
+        <div class="col s12 m6">
+            <h3>Your Overall Score</h3>
+            <p class="audit-score">{{ marketing_score }}%</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <canvas id="radio_chart"></canvas>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12">
+            <h2 class="text-center">Recommendation:</h2>
+            <p class="text-center font-150">Based on your breakdown we'd recommend the following trainings:</p>
+        </div>
+
+        <div class="col s12">
+            <table>
+                <thead>
+                <tr>
+                    <th>Marketing Discipline</th>
+                    <th class="text-center">Confidence</th>
+                    <th class="text-center">Importance</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                {% for data_point in table_data %}
+                <tr>
+                    <td>{{ data_point.0 }}</td>
+                    <td class="text-center">{{ data_point.1 }}</td>
+                    <td class="text-center">{{ data_point.2 }}</td>
+                </tr>
+                {% endfor %}
+
+                <tr>
+                    <td class="font-200">Average Score:</td>
+                    <td class="font-200 text-center" colspan="2">{{ marketing_score }}%</td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block js_extra %}
+<script>
+    // @formatter:off
+    var radioLabels = {{ labels|safe }};
+    var radioImportanceValues = {{ importance_values|safe }};
+    var radioConfidenceValues = {{ confidence_values|safe }};
+    var doughnutLabels = ['Actual', 'Posibilidad de mejora'];
+    var doughnutValues = {{ total_values|safe }};
+    // @formatter:on
+
+    var doughnutChartCanvas = document.getElementById('pie_chart').getContext('2d');
+
+    var doughnutOptions = {
+        circumference: 1 * Math.PI,
+        rotation: 1 * Math.PI,
+        cutoutPercentage: 30,
+        legend: {
+            display: false,
+        }
+    };
+
+    var doughnutChartData = {
+        labels: doughnutLabels,
+        datasets: [{
+            label: "My First dataset",
+            backgroundColor: ['rgba(177,143,80,1)', '#f1f2f3'],
+            data: doughnutValues,
+            borderWidth: 1
+
+        }]
+    };
+
+    var myDoughnutChart = new Chart(doughnutChartCanvas, {
+        type: 'doughnut',
+        data: doughnutChartData,
+        options: doughnutOptions
+    });
+
+
+    var radioChartCanvas = document.getElementById('radio_chart').getContext('2d');
+
+    var radioOptions = {
+        maintainAspectRatio: true,
+        scale: {
+            ticks: {
+                beginAtZero: true,
+                max: 10
+            }
+        }
+    };
+
+    var radioData = {
+        labels: radioLabels,
+        datasets: [
+            {
+                label: "Importance",
+                backgroundColor: "rgba(179,181,198,0.2)",
+                borderColor: "rgba(179,181,198,1)",
+                pointBackgroundColor: "rgba(179,181,198,1)",
+                pointBorderColor: "#fff",
+                pointHoverBackgroundColor: "#fff",
+                pointHoverBorderColor: "rgba(179,181,198,1)",
+                data: radioImportanceValues
+            },
+            {
+                label: "Confidence",
+                backgroundColor: "rgba(177,143,80,0.2)",
+                borderColor: "rgb(177,143,80,1)",
+                pointBackgroundColor: "rgba(177,143,80,0.2)",
+                pointBorderColor: "rgb(177,143,80,1)",
+                pointHoverBackgroundColor: "rgb(177,143,80)",
+                pointHoverBorderColor: "rgba(177,143,80,1)",
+                data: radioConfidenceValues
+            }
+        ]
+    };
+
+
+    var myRadarChart = new Chart(radioChartCanvas, {
+        type: 'radar',
+        data: radioData,
+        options: radioOptions
+    });
+</script>
+{% endblock %}

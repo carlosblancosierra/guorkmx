@@ -47,10 +47,13 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'imagekit',
+    'stripe',
 
     # my apps
     'blog',
     'courses',
+    'stripe_checkout',
+
 ]
 
 MIDDLEWARE = [
@@ -150,7 +153,6 @@ CKEDITOR_CONFIGS = {
 }
 
 DATE_INPUT_FORMATS = ['%d/%m/%Y']
-
 
 # GOOGLE RECAPTCHA
 

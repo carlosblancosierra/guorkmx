@@ -35,6 +35,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('workshops/', include('courses.urls')),
+    path('checkout/', include('stripe_checkout.urls')),
+
     # third party
     path('ckeditor/', include('ckeditor_uploader.urls')),
 ]

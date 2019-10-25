@@ -1,8 +1,9 @@
 from django.shortcuts import render
-import stripe
+from django.conf import settings
 
-STRIPE_PUB_KEY = 'pk_test_UTSbSt5W4QpVCHpCxa5K7nIw00FbA6R0K2'
-STRIPE_SECRET_KEY = 'sk_test_KJ6abjyErxo9HcttWkkdIEGW00QGzanzow'
+STRIPE_SECRET_KEY = settings.STRIPE_SECRET_KEY
+STRIPE_PUB_KEY = settings.STRIPE_PUB_KEY
+import stripe
 
 
 # Create your views here.
@@ -26,6 +27,7 @@ def charge_view(request):
 
     template_name = 'stripe/charge.html'
     context = {
+        'pub_key': STRIPE_PUB_KEY,
     }
 
     return render(request, template_name, context)

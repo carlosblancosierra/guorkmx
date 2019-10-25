@@ -66,7 +66,7 @@
 <script src="https://js.stripe.com/v3/"></script>
 
 <script>
-    var stripe = Stripe('pk_test_UTSbSt5W4QpVCHpCxa5K7nIw00FbA6R0K2');
+    var stripe = Stripe('{{ pub_key }}');
     var elements = stripe.elements();
 
     // Custom styling can be passed to options when creating an Element.

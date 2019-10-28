@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.conf import settings
+from billing.models import BillingProfile
 
 STRIPE_SECRET_KEY = settings.STRIPE_SECRET_KEY
 STRIPE_PUB_KEY = settings.STRIPE_PUB_KEY
@@ -16,10 +17,24 @@ def charge_view(request):
 
             stripe.api_key = STRIPE_SECRET_KEY
 
+            email = 'carlosblancosierra@gmail.com'
+
+            customer = stripe.Customer.create(
+                email=email,
+            )
+
+            card = card = stripe.Customer.create_source(
+                customer.id,
+                source=card_token
+            )
+
+            print('STRIPE CHARGE: customer = ', customer)
+
             charge = stripe.Charge.create(
+                customer=customer.id,
                 amount=10001,
                 currency="mxn",
-                source=card_token,
+                source=card.id,
                 description="Test Charge",
             )
 

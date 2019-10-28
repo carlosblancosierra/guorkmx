@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'stripe',
 
     # my apps
+    'billing',
     'blog',
     'courses',
     'stripe_checkout',

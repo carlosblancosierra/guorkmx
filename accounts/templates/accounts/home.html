@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head_title %}{{ title }} | {{ block.super }}{% endblock %}
+
+{% block content %}
+{% url 'password_change' as password_change_url %}
+{% url 'password_reset' as password_reset_url %}
+
+<div class="container-fluid product-detail-header bg-gradient-primary">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-white">Mi cuenta</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row my-5">
+
+        <div class="col-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Datos de la cuenta</h5>
+                    <div class='list-group'>
+                        <p>Email:</p>
+                        <p class='list-group-item'>{{ request.user.email }}</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Ayuda</h5>
+                    <div class='list-group'>
+                        <a class='list-group-item' href='{{ password_change_url }}'>Cambiar Contraseña</a>
+                        <a class='list-group-item' href='{{ password_reset_url }}'>Olvide mi Contraseña</a>
+                        <a class='list-group-item' href='{% url "logout" %}'>Cerrar sesión</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">asd</h5>
+                    <div class='list-group'>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+{% endblock %}

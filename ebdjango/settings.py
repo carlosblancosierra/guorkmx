@@ -31,6 +31,21 @@ ALLOWED_HOSTS = [
     'guork.mx'
 ]
 
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'ventas.venezum@gmail.com'
+EMAIL_HOST_PASSWORD = 'Cas8735839*'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'Venezum'
+
+MANAGERS = [
+    ("Carlos Blanco", "venezum2018@gmail.com")
+]
+
+ADMINS = [
+    ("Carlos Blanco", "venezum2018@gmail.com")
+]
+
 LOGIN_URL = '/login'
 
 # Application definition
@@ -50,12 +65,24 @@ INSTALLED_APPS = [
     'stripe',
 
     # my apps
+    'accounts',
     'billing',
     'blog',
     'courses',
     'stripe_checkout',
 
 ]
+
+AUTH_USER_MODEL = 'accounts.User'  # changes the built-in user model to ours
+LOGIN_URL = '/login/'
+LOGIN_URL_REDIRECT = '/'
+LOGOUT_URL = '/logout/'
+LOGOUT_REDIRECT_URL = '/login/'
+
+
+FORCE_SESSION_TO_ONE = False
+FORCE_INACTIVE_USER_ENDSESSION= False
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

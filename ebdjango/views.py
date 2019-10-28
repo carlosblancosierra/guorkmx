@@ -6,6 +6,7 @@ from .forms import ContactForm
 
 
 def home_page(request):
+    print(request.user)
     context = {
     }
 

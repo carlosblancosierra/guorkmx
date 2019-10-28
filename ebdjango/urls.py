@@ -17,6 +17,9 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
 
+from accounts.views import login_page, register_page, register_page_local
+from django.contrib.auth.views import LogoutView
+
 from .views import (
     home_page,
     inbound_page,
@@ -36,6 +39,12 @@ urlpatterns = [
 
     path('workshops/', include('courses.urls')),
     path('checkout/', include('stripe_checkout.urls')),
+
+    path('login/', login_page, name='login'),
+    path('logout/', LogoutView.as_view(), name='logout'),
+    path('register/', register_page_local, name='register'),
+    path('cuenta/', include('accounts.urls')),
+    path('cuenta/', include('accounts.passwords.urls')),
 
     # third party
     path('ckeditor/', include('ckeditor_uploader.urls')),

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head_title %}{{ title }} | {{ block.super }}{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row my-5">
+        <div class="col-md-6 offset-md-3">
+            <h2>Registrate</h2>
+            <p>¿Ya tienes cuenta? <a class="orange-link" href="{% url 'login' %}">Iniciar Sesion</a> </p>
+            <form method="POST"> {% csrf_token %}
+                {{ form }}
+                <button type="submit" class="btn btn-primary mt-3">Crear Cuenta</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -24,6 +24,8 @@ from .views import (
     home_page,
     inbound_page,
     contact_page,
+    audit_landing_page,
+    audit_pre_page,
     audit_page,
     audit_result_page
 )
@@ -33,6 +35,8 @@ urlpatterns = [
     path('inbound', inbound_page, name='inbound'),
     path('contacto', contact_page, name='contact'),
     path('blog/', include('blog.urls')),
+    path('auditoria_landing/', audit_landing_page, name='audit_lp'),
+    path('auditoria_pre/', audit_pre_page, name='audit_pre'),
     path('auditoria/', audit_page, name='audit'),
     path('auditoria/resultado/', audit_result_page, name='audit_result'),
     path('admin/', admin.site.urls),

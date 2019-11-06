@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block head_title %} {% endblock %}
+
+{% block content %}
+
+{% url 'audit_pre' as audit_pre_url %}
+
+<div class="row">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m6 position-relative d-none d-md-block">
+                <img src="{% static 'images/audit/audit_circle.png' %}" alt="" class="responsive-img">
+                <p class="audit-circle-number">90</p>
+            </div>
+            <div class="col s12 m6 my-md-5">
+                <h1 class="text-right text-uppercase">MARKETING
+                    SKILLS
+                    ASSESSMENT</h1>
+                <p class="text-right text-uppercase">Instantly find your strengths...and weaknesses</p>
+                <p class="text-right">Digital marketing is constantly evolving…But no matter how much it changes, we
+                    believe it can be
+                    broken down into 8 critical, core disciplines. Take a few minutes to find out exactly where you
+                    stand.</p>
+                <p class="text-right">
+                    <a class="btn btn-gold" href="{{audit_pre_url}}">EMPIEZA AHORA</a>
+                </p>
+            </div>
+        </div>
+        <img src="{% static 'images/bg-blue-left.png' %}" class="blue-left-bg-img"/>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            <h2 class="text-center text-uppercase">In Just a 6 Minutes You’ll…</h2>
+        </div>
+    </div>
+</div>
+
+
+<div class="row bg-gold-60">
+    <div class="container">
+        <div class="col s12">
+            <img src="{% static 'images/audit/computer.png' %}" alt="" class="responsive-img">
+        </div>
+    </div>
+</div>
+<div class="container mt-3">
+
+    <div class="row">
+        <div class="col s12 m6">
+            <h3 class="text-center text-uppercase mt-0">Get Your Overall Marketing Skills Score</h3>
+        </div>
+        <div class="col s12 m6">
+            <p>Your score evaluates your current marketing skills broken down by the 8 core digital marketing
+                disciplines.</p>
+            <a class="btn btn-gold" href="{{audit_pre_url}}">EMPIEZA AHORA</a>
+        </div>
+    </div>
+</div>
+
+<div class="container my-5 pt-md-5">
+    <div class="row">
+        <div class="col s12 m6 push-m6">
+            <img src="{% static 'images/audit/lp_result_example.jpg' %}" alt="" class="responsive-img">
+        </div>
+
+        <div class="col s12 m6 text-right pull-m6">
+            <h3 class="text-uppercase">Tailor Your Training To Master New Skills</h3>
+            <p>The Full-Stack Marketer Quiz is designed to highlight your marketing strengths as well as your
+                weaknesses. You’ll receive a detailed report of where you need to focus (and more importantly where you
+                DON’T)</p>
+            <a class="btn btn-gold" href="{{audit_pre_url}}">EMPIEZA AHORA</a>
+        </div>
+
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col s12 m6">
+            <img src="{% static 'images/audit/lp_graph_ex.jpg' %}" alt="" class="responsive-img">
+        </div>
+        <div class="col s12 m6">
+            <h3 class="text-uppercase">Your Grade At a Glance</h3>
+            <p>Using Guork’s “Spider Graph” display, you’ll not only see your overall score, but we’ll map out
+                which areas you need to focus on to improve the marketing skills that matter the most to you.</p>
+            <a class="btn btn-gold" href="{{audit_pre_url}}">EMPIEZA AHORA</a>
+        </div>
+
+    </div>
+</div>
+
+<div class="container text-center my-5">
+    <div class="row">
+        <div class="col s12">
+            <h3 class="text-uppercase">This Assessment is Perfect For...</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s4 m4">
+            <img src="{% static 'images/audit/self_audits.jpg' %}" alt="" class="responsive-img w-75">
+            <p class="font-weight-bold text-uppercase">SELF AUDITS</p>
+            <p class="font-s7">Find out exactly where you stand and hone your skills for your next review.</p>
+        </div>
+
+        <div class="col s4 m4">
+            <img src="{% static 'images/audit/team_audits.jpg' %}" alt="" class="responsive-img w-75">
+            <p class="font-weight-bold text-uppercase">TEAM AUDITS</p>
+            <p class="font-s7">Identify how well-rounded your team is, where they can improve, and how they can work
+                together
+                better.</p>
+        </div>
+
+        <div class="col s4 m4">
+            <img src="{% static 'images/audit/client_audits.jpg' %}" alt="" class="responsive-img w-75">
+            <p class="font-weight-bold text-uppercase">CLIENT AUDITS</p>
+            <p class="font-s7">ee where you need to start when onboarding a new client. Protip: compare your audit to
+                your clients for
+                better results.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m6 offset-m3">
+            <a class="btn btn-gold w-100" href="{{audit_pre_url}}">EMPIEZA AHORA</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

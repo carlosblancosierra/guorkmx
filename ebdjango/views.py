@@ -1,5 +1,5 @@
 import json
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 import json
 from ebdjango.settings import GOOGLE_RECAPTCHA_SECRET_KEY, GOOGLE_RECAPTCHA_PUBLIC_KEY
 from .forms import ContactForm
@@ -33,6 +33,20 @@ def contact_page(request):
     return render(request, "contact_page.html", context)
 
 
+def audit_pre_page(request):
+    context = {
+    }
+
+    return render(request, "audit_pre_page.html", context)
+
+
+def audit_landing_page(request):
+    context = {
+    }
+
+    return render(request, "audit_landing_page.html", context)
+
+
 def audit_page(request):
     questions_list = [
         [
@@ -53,6 +67,7 @@ def audit_page(request):
     if request.POST:
         # json_post = json.dumps(request.POST)
         print('AUDIT -> post: ', json.dumps(request.POST, indent=4))
+        return redirect('audit_result')
 
     context = {
         'current_page': current_page,

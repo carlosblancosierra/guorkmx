@@ -14,6 +14,8 @@ def home_page(request):
 
 
 def inbound_page(request):
+    print(request.user)
+
     context = {
     }
 
@@ -106,3 +108,10 @@ def audit_result_page(request):
     }
 
     return render(request, "audit_result_page.html", context)
+
+
+def events_list_page(request):
+    context = {
+    }
+
+    return render(request, "events_list_page.html", context)

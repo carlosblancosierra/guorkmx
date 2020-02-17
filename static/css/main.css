@@ -190,6 +190,10 @@ h1, h2, h3 {
     color: #213A60 !important;
 }
 
+.link-black-gold:hover {
+    color: #d4bd8b !important;
+}
+
 /*BUTTONS*/
 .btn-gold {
     background: rgba(211, 189, 139, 1);
@@ -646,4 +650,37 @@ a:hover .home-service-consult-col {
     color: #FFFFFF;
     font-family: 'Barlow Condensed', sans-serif;
 
+}
+
+
+/* EVENTS */
+
+.event-list-climber {
+    position: absolute;
+    top: 2%;
+    width: 30%;
+    right: 0;
+}
+
+.event-list-bg-blue {
+    position: absolute;
+    top: 65%;
+    width: 30%;
+    right: 0;
+}
+
+.event-list-splash-lines {
+    position: absolute;
+    bottom: -10%;
+    width: 25%;
+    left: 5%;
+    z-index: -5000;
+}
+
+.event-list-splash-lines-2 {
+    position: absolute;
+    bottom: -40%;
+    width: 25%;
+    right: 0%;
+    z-index: -5000;
 }

@@ -114,6 +114,10 @@ h1, h2, h3 {
     font-family: 'Fira Sans', sans-serif;
 }
 
+.font-070 {
+    font-size: 0.7rem;
+}
+
 .font-125 {
     font-size: 1.25rem;
 }
@@ -684,3 +688,67 @@ a:hover .home-service-consult-col {
     right: 0%;
     z-index: -5000;
 }
+
+/* EXPERTS */
+
+.expert-card {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cda668+0,ddbe8a+100 */
+    background-color: #cda668; /* Old browsers */
+    background-color: -moz-linear-gradient(top,  #cda668 0%, #ddbe8a 100%); /* FF3.6-15 */
+    background-color: -webkit-linear-gradient(top,  #cda668 0%,#ddbe8a 100%); /* Chrome10-25,Safari5.1-6 */
+    background-color: linear-gradient(to bottom,  #cda668 0%,#ddbe8a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cda668', endColorstr='#ddbe8a',GradientType=0 ); /* IE6-9 */
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.expert-card p:last-child {
+    color: #213A60;
+}
+
+
+.expert-card:hover {
+    background-color: #213A60 !important;
+    color:white;
+    -webkit-transition: background-color 0.5s ease-out;
+  -moz-transition: background-color 0.5s ease-out;
+  -o-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+}
+
+.expert-card:hover p:last-child {
+    color: white;
+}
+ /*AUDIO / VISUAL */
+
+ .audio-visual-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin:0;
+ }
+
+ .audio-visual-desc {
+    margin:0;
+ }
+
+ .audio-visual-left-blue {
+    position:absolute;
+    left: 0;
+    width: 30%;
+ }
+
+ .audio-visual-right-blue {
+    top:0;
+    position:absolute;
+    right: 0;
+    width: 30%;
+ }
+
+ .audio-visual-splash-lines-top  {
+    top:-40%;
+    position:absolute;
+    left: 0;
+    width: 20%;
+    z-index: -1000;
+ }

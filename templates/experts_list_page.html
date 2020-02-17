@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block head_title %} {% endblock %}
+
+{% block content %}
+
+{% url 'inbound' as inbound_url %}
+{% url 'contact' as contact_url %}
+
+{% url 'events' as events_url %}
+{% url 'experts' as experts_url %}
+{% url 'audio_visual' as audio_visual_url %}
+
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col s12 m2 text-center">
+                <p><a class="link-black-gold" href="{{ events_url }}">Eventos</a></p>
+            </div>
+            <div class="col s12 m2 text-center">
+                <p><a class="link-black-gold text-gold" href="{{ experts_url }}">Reserva un Expero</a></p>
+            </div>
+            <div class="col s12 m2 text-center">
+                <p><a class="link-black-gold" href="{{ audio_visual_url }}">Audio/Visual</a></p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            <h1 class="text-uppercase font-weight-bold text-blue">Reserva un experto</h1>
+            <p class="text-justify">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur
+                aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+        </div>
+    </div>
+
+    <div class="row">
+
+        {% for i in expert_list %}
+        <div class="col s12 m3 mt-3">
+            <a href="#">
+                <div class="expert-card">
+                    <img src="{% static 'images/experts/sample.png' %}" alt="" class="responsive-img w-50">
+                    <p class="m-0 text-barlow text-uppercase">Jhon Doe</p>
+                    <p class="m-0 font-070">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                        doloremque laudantium.</p>
+                    <p class="m-0 text-right font-italic">Más ></p>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+
+
+<div class="container-fluid position-relative">
+    <div class="container my-5">
+        <div class="row">
+            <div class="col s6 offset-s3 m4 offset-m4">
+                <img src="{% static 'images/home/home-gold-plane.png' %}" class="responsive-img"/>
+            </div>
+            <div class="col s12">
+                <p class="home-contactanos-title">CONTÁCTANOS</p>
+                <p class="text-center text-uppercase text-barlow font-weight-bold font-150">
+                    Da Click y dejanos tus comentarios</p>
+            </div>
+        </div>
+        <div class="row my-2">
+            <div class="col s12 m6 offset-m3">
+                <a class="btn btn-gold w-100" href="{{ contact_url }}">CONTÁCTANOS</a>
+            </div>
+        </div>
+    </div>
+    <img src="{% static 'images/bg-splash-lines-2.png' %}" class="event-list-splash-lines-2 d-none d-md-block"/>
+
+</div>
+
+
+{% endblock %}
+
+
+{% block js_extra %}
+
+{% endblock %}

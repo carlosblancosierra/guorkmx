@@ -27,7 +27,10 @@ from .views import (
     audit_landing_page,
     audit_pre_page,
     audit_page,
-    audit_result_page
+    audit_result_page,
+    events_list_page,
+    experts_list_page,
+    audio_visual_page,
 )
 
 urlpatterns = [
@@ -39,6 +42,11 @@ urlpatterns = [
     path('auditoria_pre/', audit_pre_page, name='audit_pre'),
     path('auditoria/', audit_page, name='audit'),
     path('auditoria/resultado/', audit_result_page, name='audit_result'),
+
+    path('eventos', events_list_page, name='events'),
+    path('reserva_un_experto', experts_list_page, name='experts'),
+    path('audio_visual', audio_visual_page, name='audio_visual'),
+
     path('admin/', admin.site.urls),
 
     path('workshops/', include('courses.urls')),

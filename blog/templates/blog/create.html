@@ -9,66 +9,35 @@
 <div class="container">
     <div class="row">
         <div class="col s12">
-            <h3 class="text-center">Blog Post</h3>
+            <h1>Create Blog Post</h1>
             <form method="POST" action="">{% csrf_token %}
-                <div class="row">
-                    {{ form.errors }}
-                    <div class="col s12 m6 input-field">
-                        {{ form.title }}
-                        <label for="">{{ form.title.label }}</label>
-                        {{ form.title.errors }}
-                        {% for error in form.title.errors %}
-                        <p class="red-text">{{ error|escape }}</p>
-                        {% endfor %}
-                        </span>
-                    </div>
-
-                    <div class="col s12 m6 input-field">
-                        {{ form.slug}}
-                        <label for="">{{ form.slug.label }}</label>
-                        {% for error in form.slug.errors %}
-                        <p class="red-text">{{ error|escape }}</p>
-                        {% endfor %}
-                    </div>
-
-                    <div class="col s12 m6 input-field">
-                        {{ form.publish}}
-                        <label for="">{{ form.publish.label }}</label>
-                        {% for error in form.publish.errors %}
-                        <p class="red-text">{{ error|escape }}</p>
-                        {% endfor %}
-                    </div>
-
-                    <div class="col s12 m6">
-                        {{ form.image }}
-                        <!--                        <label for="">{{ form.image.label }}</label>-->
-                        {% for error in form.image.errors %}
-                        <p class="red-text">{{ error|escape }}</p>
-                        {% endfor %}
-
-                    </div>
-
-                    <div class="col s12 m6 file-field input-field">
-                        <div class="btn">
-                            <span>File</span>
-                            <input type="file">
-                        </div>
-                        <div class="file-path-wrapper">
-                            <input class="file-path validate" type="text">
-                        </div>
-                    </div>
-
-
-                    <div class="col s12 mt-5">
-                        {{ form.content }}
-                    </div>
-                </div>
-                {{ form.media }}
+                {{ form.as_p }}
                 <button type="submit" class="btn">Enviar</button>
             </form>
         </div>
     </div>
+
 </div>
 
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            <form method="POST">
+                <textarea name="content" id="editor"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
 
+{% block js_extra %}
+<script>
+    ClassicEditor
+        .create(document.querySelector('#editor'))
+        .catch(error = > {
+        console.error(error);
+    } )
+    ;
+</script>
 {% endblock %}

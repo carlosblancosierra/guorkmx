@@ -1,0 +1,44 @@
+Nueva Orden: {{ order_obj.order_id }}
+
+{% for suborder in suborders %}
+
+Producto
+Precio Unitario
+Cantidad
+Subtotal
+
+
+{% for entry in suborder.cart_entries.all %}
+
+{{ entry.stock_product.cart_display_name }}
+
+Bs. {{ entry.stock_product.bs }} / $ {{ entry.stock_product.usd }}
+
+{{ entry.quantity }}
+
+Bs. {{ entry.total }} / $ {{ entry.total_usd }}
+
+
+
+{% endfor %}
+
+
+COSTO DE ENVÍO:
+
+
+Bs {{ suborder.shipping_total }} / $ {{ suborder.shipping_total_usd }}
+
+
+{% endfor %}
+
+Costo de productos
+Bs {{ order_obj.subtotal }}
+$  {{ order_obj.subtotal_usd }}
+
+Costo de Envios
+Bs {{ order_obj.shipping_total }}
+$  {{ order_obj.shipping_total_usd }}
+
+Total
+Bs {{ order_obj.total }}
+$  {{ order_obj.total_usd }}

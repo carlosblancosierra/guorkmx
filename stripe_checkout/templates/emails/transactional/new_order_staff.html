@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tu orden de Venezum.com</title>
+</head>
+<body>
+
+<h1>Nueva Orden: {{ order_obj.order_id }}</h1>
+
+
+{% for suborder in suborders %}
+
+<table class="table w-100 my-5">
+    <thead>
+    <tr>
+        <th>Producto</th>
+        <th>Precio Unitario</th>
+        <th>Cantidad</th>
+        <th>Subtotal</th>
+
+    </tr>
+    </thead>
+    <tbody>
+
+    {% for entry in suborder.cart_entries.all %}
+
+
+    <tr>
+        <td>
+            {{ entry.stock_product.cart_display_name }}
+        </td>
+        <td>Bs. {{ entry.stock_product.bs }} / $ {{ entry.stock_product.usd }}</td>
+        <td>
+            {{ entry.quantity }}
+        </td>
+        <td>Bs. {{ entry.total }} / $ {{ entry.total_usd }}
+        </td>
+    </tr>
+
+    {% endfor %}
+
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td>
+            COSTO DE ENVÍO: <br>
+        </td>
+        <td>
+            Bs {{ suborder.shipping_total }} / $ {{ suborder.shipping_total_usd }} <br>
+        </td>
+    </tr>
+
+</table>
+
+<h3>Costo de productos</h3>
+<p>Bs {{ order_obj.subtotal }}</p>
+<p>$  {{ order_obj.subtotal_usd }}</p>
+
+<h3>Costo de Envios</h3>
+<p>Bs {{ order_obj.shipping_total }}</p>
+<p>$  {{ order_obj.shipping_total_usd }}</p>
+
+<h3>Total</h3>
+<p>Bs {{ order_obj.total }}</p>
+<p>$  {{ order_obj.total_usd }}</p>
+
+{% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block head_title %} {% endblock %}
+
+{% block content %}
+
+{% url 'inbound' as inbound_url %}
+{% url 'contact' as contact_url %}
+
+<div class="row">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m6 offset-m6 my-md-5">
+                <h1 class="text-right text-uppercase">soluciones y <br> servicios</h1>
+                <p class="text-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et
+                    dolore magna aliqua</p>
+            </div>
+        </div>
+        <img src="{% static 'images/bg-blue-left.png' %}" class="blue-left-bg-img"/>
+        <img src="{% static 'images/bg-splash-lines.png' %}" class="soluciones-right-splash-lines"/>
+
+    </div>
+</div>
+
+<div class="container-fluid position-relative">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m8">
+                <h2 class="text-blue">EXPERIENCIA INTERNA</h2>
+                <p class="gold-hr"></p>
+
+                <div class="row">
+                    <div class="col s12 m5">
+                        <ul class="browser-default soluciones-list">
+                            <li>Creativo</li>
+                            <li>Desarrollo</li>
+                            <li>Contenido</li>
+                            <li>Social</li>
+                            <li>Marketing + Ventas</li>
+                            <li>Inbound</li>
+                            <li>Estrategia</li>
+                        </ul>
+                    </div>
+
+                    <div class="col s12 m6">
+                        <ul class="browser-default soluciones-list">
+                            <li>Generación de Demanda</li>
+                            <li>Relaciones de Influencia</li>
+                            <li>Casos de Éxito</li>
+                            <li>Optimización de Plataforma</li>
+                            <li>Producción de vide</li>
+                            <li>Inteligencia de Negocios</li>
+                            <li>Un monton de otras cosas</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <img src="{% static 'images/bg-blue-right-2.png' %}" class="soluciones-bg-blue-right"/>
+
+</div>
+
+<div class="container pt-5">
+    <div class="row">
+        <div class="col s12 m4 mt-5 pt-3">
+            <div class="soluciones-square">
+                <img src="{% static 'images/soluciones/icono-programas-estrategicos.png' %}" alt=""
+                     class="soluciones-square-icon"/>
+                <h3 class="font-150 mt-2">Programas Estratégicos</h3>
+                <p class="text-justify">Un socio totalmente integrado, listo para lanzar y monitorear estrategias
+                    creativas, desde marketing
+                    entrante y basado en cuentas, hasta habilitación de ventas y programas de éxito del cliente.</p>
+                <p class="font-125 text-blue m-0 text-right">Más ></p>
+            </div>
+        </div>
+
+        <div class="col s12 m4 mt-5 pt-3">
+            <div class="soluciones-square">
+                <img src="{% static 'images/soluciones/icono-programas-estrategicos.png' %}" alt=""
+                     class="soluciones-square-icon"/>
+                <h3 class="font-150 mt-2">Programas Estratégicos</h3>
+                <p class="text-justify">Un socio totalmente integrado, listo para lanzar y monitorear estrategias
+                    creativas, desde marketing
+                    entrante y basado en cuentas, hasta habilitación de ventas y programas de éxito del cliente.</p>
+                <p class="font-125 text-blue m-0 text-right">Más ></p>
+            </div>
+        </div>
+
+        <div class="col s12 m4 mt-5 pt-3">
+            <div class="soluciones-square">
+                <img src="{% static 'images/soluciones/icono-programas-estrategicos.png' %}" alt=""
+                     class="soluciones-square-icon"/>
+                <h3 class="font-150 mt-2">Programas Estratégicos</h3>
+                <p class="text-justify">Un socio totalmente integrado, listo para lanzar y monitorear estrategias
+                    creativas, desde marketing
+                    entrante y basado en cuentas, hasta habilitación de ventas y programas de éxito del cliente.</p>
+                <p class="font-125 text-blue m-0 text-right">Más ></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5 position-relative">
+    <div class="row">
+        <div class="col">
+            <p class="soluciones-necesitas-title text-center">
+                <span class="font-weight-bold font-barlow">¿Necesitas ayuda</span> para resolverlo?</p>
+            <p class="font-150 text-center px-5">Hablemos sobre sus desafíos, objetivos y plazos para determinar los
+                servicios y las soluciónes adecuadas para
+                su equipo.</p>
+            <p class="text-center"><a class="btn-large btn-blue" href="#">Consulta de horarios</a></p>
+
+        </div>
+    </div>
+    <img src="{% static 'images/bg-splash-lines.png' %}" class="soluciones-right-splash-lines-2"/>
+
+</div>
+{% endblock %}
+
+
+{% block js_extra %}
+
+{% endblock %}

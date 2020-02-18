@@ -132,3 +132,10 @@ def audio_visual_page(request):
     }
 
     return render(request, "audio_visual_page.html", context)
+
+
+def soluciones_page(request):
+    context = {
+    }
+
+    return render(request, "soluciones_page.html", context)

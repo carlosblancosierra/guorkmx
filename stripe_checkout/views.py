@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.conf import settings
 from billing.models import BillingProfile
+from django.template.loader import render_to_string, get_template
+from django.core.mail import send_mail, mail_managers
 
 STRIPE_SECRET_KEY = settings.STRIPE_SECRET_KEY
 STRIPE_PUB_KEY = settings.STRIPE_PUB_KEY
@@ -9,6 +11,9 @@ import stripe
 
 # Create your views here.
 def charge_view(request):
+
+    print('user:', request.user)
+
     if request.POST:
         card_token = request.POST.get('stripeToken', None)
 
@@ -39,7 +44,6 @@ def charge_view(request):
             )
 
             print('STRIPE CHARGE: charge = ', charge)
-
     template_name = 'stripe/charge.html'
     context = {
         'pub_key': STRIPE_PUB_KEY,

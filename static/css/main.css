@@ -46,21 +46,22 @@ a {
 
 
 /*Phones*/
+
 @media (max-width: 425px) {
     .blue-left-bg-img {
         display: none
     }
-
     .blue-right-bg-img {
         display: none
     }
-
     .blue-left-2-bg-img {
         display: none
     }
 }
 
+
 /*Tablets*/
+
 @media (min-width: 768px) {
     .blue-left-bg-img {
         position: absolute;
@@ -69,7 +70,6 @@ a {
         width: 50%;
         z-index: -5;
     }
-
     .blue-right-bg-img {
         position: absolute;
         top: 0;
@@ -77,7 +77,6 @@ a {
         width: 50%;
         z-index: -5;
     }
-
     .blue-left-2-bg-img {
         position: absolute;
         top: 5%;
@@ -87,13 +86,15 @@ a {
     }
 }
 
+
 /*Laptops*/
-@media (min-width: 1024px) {
-}
+
+@media (min-width: 1024px) {}
+
 
 /*Desktops*/
-@media (min-width: 1440px) {
-}
+
+@media (min-width: 1440px) {}
 
 
 /*Fonts*/
@@ -102,15 +103,19 @@ a {
     font-family: 'Fira Sans', sans-serif;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Barlow Condensed', sans-serif;
 }
 
-.text-barlow, .font-barlow {
+.text-barlow,
+.font-barlow {
     font-family: 'Barlow Condensed', sans-serif;
 }
 
-.text-fira, .font-fira {
+.text-fira,
+.font-fira {
     font-family: 'Fira Sans', sans-serif;
 }
 
@@ -134,12 +139,15 @@ h1, h2, h3 {
     font-size: 2rem;
 }
 
+
 /*Phones*/
+
 @media (max-width: 425px) {
     .font-s7 {
         font-size: 0.7rem;
     }
 }
+
 
 /*BACKGROUNDS*/
 
@@ -176,13 +184,18 @@ h1, h2, h3 {
 
 .bg-gold-60 {
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+40,d4bd8b+40 */
-    background: #ffffff; /* Old browsers */
-    background: -moz-linear-gradient(top, #ffffff 40%, #d4bd8b 40%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #ffffff 40%, #d4bd8b 40%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #ffffff 40%, #d4bd8b 40%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#d4bd8b', GradientType=0); /* IE6-9 */
-
+    background: #ffffff;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 40%, #d4bd8b 40%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffffff 40%, #d4bd8b 40%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffffff 40%, #d4bd8b 40%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#d4bd8b', GradientType=0);
+    /* IE6-9 */
 }
+
 
 /*TEXT*/
 
@@ -198,7 +211,9 @@ h1, h2, h3 {
     color: #d4bd8b !important;
 }
 
+
 /*BUTTONS*/
+
 .btn-gold {
     background: rgba(211, 189, 139, 1);
     background: -moz-linear-gradient(top, rgba(211, 189, 139, 1) 0%, rgba(177, 143, 80, 1) 100%);
@@ -221,7 +236,6 @@ h1, h2, h3 {
     border-style: solid !important;
     height: unset !important;
     font-family: 'Barlow Condensed', sans-serif;
-
 }
 
 .btn-outline-gold:hover {
@@ -234,6 +248,24 @@ h1, h2, h3 {
     height: 3rem;
 }
 
+.btn-blue {
+    background: #1B3053 !important;
+    color: #fff !important;
+    border-color: #1B3053 !important;
+    border-width: 2px !important;
+    border-style: solid !important;
+    height: unset !important;
+    font-family: 'Barlow Condensed', sans-serif;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+.btn-blue:hover {
+    background: rgba(255, 255, 255, 1) !important;
+    color: #000000 !important;
+    border-color: #D1BE8B !important;
+}
+
+
 /*NAVBAR*/
 
 .navbar li a {
@@ -245,7 +277,9 @@ h1, h2, h3 {
     color: #d4bd8b !important;
 }
 
+
 /*Phones*/
+
 @media (max-width: 425px) {
     .navbar {
         background: #213A60;
@@ -255,7 +289,9 @@ h1, h2, h3 {
     }
 }
 
+
 /*Tablets*/
+
 @media (min-width: 768px) {
     .navbar {
         -webkit-box-shadow: none;
@@ -264,19 +300,23 @@ h1, h2, h3 {
     }
 }
 
+
 /*Laptops*/
-@media (min-width: 1024px) {
-}
+
+@media (min-width: 1024px) {}
+
 
 /*Desktops*/
-@media (min-width: 1440px) {
-}
+
+@media (min-width: 1440px) {}
+
 
 /*FOOTER*/
 
 .footer p {
     font-family: 'Barlow Condensed', sans-serif;
 }
+
 
 /*HOME*/
 
@@ -337,7 +377,6 @@ a:hover .home-service-consult-col {
     background-image: url(../images/logo-consult-blue.png);
 }
 
-
 .home-service-title {
     font-size: 1.64rem;
     margin-top: 0rem;
@@ -377,9 +416,7 @@ a:hover .home-service-consult-col {
     font-family: 'Barlow Condensed', sans-serif;
 }
 
-.home-blog-desc {
-
-}
+.home-blog-desc {}
 
 .home-contactanos-title {
     text-align: center;
@@ -404,8 +441,10 @@ a:hover .home-service-consult-col {
     text-align: center;
 }
 
-#owl-carousel-partnertship .owl-prev, #owl-carousel-partnertship .owl-next,
-#owl-carousel-audit .owl-prev, #owl-carousel-audit .owl-next {
+#owl-carousel-partnertship .owl-prev,
+#owl-carousel-partnertship .owl-next,
+#owl-carousel-audit .owl-prev,
+#owl-carousel-audit .owl-next {
     font-size: 2rem !important;
     background-color: #F1F2F3 !important;
     color: white;
@@ -418,7 +457,8 @@ a:hover .home-service-consult-col {
     text-align: center;
 }
 
-#owl-carousel-casos-exito .owl-prev, #owl-carousel-casos-exito .owl-next {
+#owl-carousel-casos-exito .owl-prev,
+#owl-carousel-casos-exito .owl-next {
     font-size: 2rem !important;
     background-color: #F1F2F3 !important;
     color: white;
@@ -427,18 +467,17 @@ a:hover .home-service-consult-col {
     width: 3rem;
 }
 
+
 /*Phones*/
+
 @media (max-width: 425px) {
     .home-contactanos-title {
         font-size: 3.5rem;
         line-height: 3.5rem;
-
     }
-
     .home-nosotros-circle {
         left: 23%;
     }
-
     .cotiza-banner-climber {
         position: absolute;
         max-width: 58% !important;
@@ -447,30 +486,33 @@ a:hover .home-service-consult-col {
         height: auto;
         z-index: -1
     }
-
     .cotiza-banner-row {
         z-index: -2
     }
-
     .cotiza-banner-container {
         z-index: -3;
         margin-top: 5rem;
     }
 }
 
+
 /*Tablets*/
-@media (min-width: 768px) {
-}
+
+@media (min-width: 768px) {}
+
 
 /*Laptops*/
-@media (min-width: 1024px) {
-}
+
+@media (min-width: 1024px) {}
+
 
 /*Desktops*/
-@media (min-width: 1440px) {
-}
+
+@media (min-width: 1440px) {}
+
 
 /*SERVICIOS */
+
 
 /*INBOUND*/
 
@@ -492,11 +534,16 @@ a:hover .home-service-consult-col {
 .inbound-cf-icon {
     margin-top: -30px;
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a28d5d+0,d4bd8b+100 */
-    background: #a28d5d; /* Old browsers */
-    background: -moz-linear-gradient(top, #a28d5d 0%, #d4bd8b 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #a28d5d 0%, #d4bd8b 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #a28d5d 0%, #d4bd8b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a28d5d', endColorstr='#d4bd8b', GradientType=0); /* IE6-9 */
+    background: #a28d5d;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #a28d5d 0%, #d4bd8b 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #a28d5d 0%, #d4bd8b 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #a28d5d 0%, #d4bd8b 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a28d5d', endColorstr='#d4bd8b', GradientType=0);
+    /* IE6-9 */
     padding-right: 1.5rem !important;
     padding-left: 1.5rem !important;
     padding-top: 3.5em !important;
@@ -527,7 +574,6 @@ a:hover .home-service-consult-col {
     cursor: pointer;
 }
 
-
 .quote-service-text {
     font-family: 'Barlow Condensed';
     text-transform: uppercase;
@@ -541,7 +587,6 @@ a:hover .home-service-consult-col {
     padding: 0.5rem;
     border-radius: 1rem;
     background-color: white;
-
 }
 
 .quote-slider-text {
@@ -558,6 +603,7 @@ a:hover .home-service-consult-col {
 
 /*BLOG */
 
+
 /*LIST */
 
 .blog-list-post-title {
@@ -568,20 +614,18 @@ a:hover .home-service-consult-col {
     font-weight: bold;
 }
 
-
 .blog-list-related-box {
     background-color: #F1F2F3 !important;
     padding: 1rem;
     color: #213A60 !important;
     transition: background-color 0.5s ease;
-
 }
 
 .blog-list-related-box:hover {
     background-color: #d4bd8b !important;
     color: #FFFFFF !important;
-
 }
+
 
 /* CONTACT */
 
@@ -589,7 +633,6 @@ a:hover .home-service-consult-col {
     background: url('../images/contact/bg-hablemos.jpg');
     background-size: contain;
     background-repeat: no-repeat;
-
 }
 
 .contact-location-col {
@@ -623,8 +666,6 @@ a:hover .home-service-consult-col {
     opacity: 0;
     transition: opacity 0.5s ease;
     color: #FFFFFF !important;
-
-
 }
 
 .contact-location-col:hover .contact-hidden-text {
@@ -632,7 +673,6 @@ a:hover .home-service-consult-col {
     z-index: 10;
     position: relative;
     opacity: 1;
-
 }
 
 
@@ -653,7 +693,6 @@ a:hover .home-service-consult-col {
     margin-left: -1.2rem;
     color: #FFFFFF;
     font-family: 'Barlow Condensed', sans-serif;
-
 }
 
 
@@ -689,15 +728,21 @@ a:hover .home-service-consult-col {
     z-index: -5000;
 }
 
+
 /* EXPERTS */
 
 .expert-card {
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cda668+0,ddbe8a+100 */
-    background-color: #cda668; /* Old browsers */
-    background-color: -moz-linear-gradient(top,  #cda668 0%, #ddbe8a 100%); /* FF3.6-15 */
-    background-color: -webkit-linear-gradient(top,  #cda668 0%,#ddbe8a 100%); /* Chrome10-25,Safari5.1-6 */
-    background-color: linear-gradient(to bottom,  #cda668 0%,#ddbe8a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cda668', endColorstr='#ddbe8a',GradientType=0 ); /* IE6-9 */
+    background-color: #cda668;
+    /* Old browsers */
+    background-color: -moz-linear-gradient(top, #cda668 0%, #ddbe8a 100%);
+    /* FF3.6-15 */
+    background-color: -webkit-linear-gradient(top, #cda668 0%, #ddbe8a 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background-color: linear-gradient(to bottom, #cda668 0%, #ddbe8a 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cda668', endColorstr='#ddbe8a', GradientType=0);
+    /* IE6-9 */
     text-align: center;
     padding: 0.5rem;
 }
@@ -706,49 +751,121 @@ a:hover .home-service-consult-col {
     color: #213A60;
 }
 
-
 .expert-card:hover {
     background-color: #213A60 !important;
-    color:white;
+    color: white;
     -webkit-transition: background-color 0.5s ease-out;
-  -moz-transition: background-color 0.5s ease-out;
-  -o-transition: background-color 0.5s ease-out;
-  transition: background-color 0.5s ease-out;
+    -moz-transition: background-color 0.5s ease-out;
+    -o-transition: background-color 0.5s ease-out;
+    transition: background-color 0.5s ease-out;
 }
 
 .expert-card:hover p:last-child {
     color: white;
 }
- /*AUDIO / VISUAL */
 
- .audio-visual-title {
+
+/*AUDIO / VISUAL */
+
+.audio-visual-title {
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: bold;
     font-size: 1.5rem;
-    margin:0;
- }
+    margin: 0;
+}
 
- .audio-visual-desc {
-    margin:0;
- }
+.audio-visual-desc {
+    margin: 0;
+}
 
- .audio-visual-left-blue {
-    position:absolute;
+.audio-visual-left-blue {
+    position: absolute;
     left: 0;
     width: 30%;
- }
+}
 
- .audio-visual-right-blue {
-    top:0;
-    position:absolute;
+.audio-visual-right-blue {
+    top: 0;
+    position: absolute;
     right: 0;
     width: 30%;
- }
+}
 
- .audio-visual-splash-lines-top  {
-    top:-40%;
-    position:absolute;
+.audio-visual-splash-lines-top {
+    top: -40%;
+    position: absolute;
     left: 0;
     width: 20%;
     z-index: -1000;
- }
+}
+
+
+/* SOLUCIONES */
+
+.soluciones-list li {
+    margin-top: 0.5rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.5rem;
+    color: #213A60 !important;
+}
+
+.soluciones-list {
+  list-style: none; /* Remove default bullets */
+}
+
+.soluciones-list li::before {
+  content: "■";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #d4bd8b; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+.soluciones-square {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cea568+0,ddbe8a+100 */
+    background: #cea568; /* Old browsers */
+    background: -moz-linear-gradient(top,  #cea568 0%, #ddbe8a 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #cea568 0%,#ddbe8a 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #cea568 0%,#ddbe8a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cea568', endColorstr='#ddbe8a',GradientType=0 ); /* IE6-9 */
+    padding-left:1rem;
+    padding-right:1.5rem;
+    padding-bottom:0.5rem;
+    font-size: 0.8rem;
+}
+
+.soluciones-square-icon {
+    width:30%;
+    margin-top:-15%;
+}
+
+.soluciones-necesitas-title {
+    font-size: 3rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: #213A60 !important;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.soluciones-bg-blue-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 30%;
+}
+
+.soluciones-right-splash-lines{
+    position: absolute;
+    right: -7%;
+    bottom: 30%;
+    width: 20%;
+}
+
+.soluciones-right-splash-lines-2{
+    position: absolute;
+    left: -7%;
+    bottom: 50%;
+    width: 30%;
+    z-index: -5000;
+}

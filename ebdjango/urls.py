@@ -32,6 +32,7 @@ from .views import (
     experts_list_page,
     audio_visual_page,
     soluciones_page,
+    programas_estrategicos_page,
 )
 
 urlpatterns = [
@@ -49,6 +50,7 @@ urlpatterns = [
     path('audio_visual', audio_visual_page, name='audio_visual'),
 
     path('soluciones', soluciones_page, name='soluciones'),
+    path('soluciones/programas_estrategicos', programas_estrategicos_page, name='programas_estrategicos'),
 
     path('admin/', admin.site.urls),
 

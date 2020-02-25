@@ -8,6 +8,7 @@
 
 {% url 'inbound' as inbound_url %}
 {% url 'contact' as contact_url %}
+{% url 'programas_estrategicos' as programas_estrategicos_url %}
 
 <div class="row">
     <div class="container">
@@ -69,15 +70,17 @@
 <div class="container pt-5">
     <div class="row">
         <div class="col s12 m4 mt-5 pt-3">
-            <div class="soluciones-square">
-                <img src="{% static 'images/soluciones/icono-programas-estrategicos.png' %}" alt=""
-                     class="soluciones-square-icon"/>
-                <h3 class="font-150 mt-2">Programas Estratégicos</h3>
-                <p class="text-justify">Un socio totalmente integrado, listo para lanzar y monitorear estrategias
-                    creativas, desde marketing
-                    entrante y basado en cuentas, hasta habilitación de ventas y programas de éxito del cliente.</p>
-                <p class="font-125 text-blue m-0 text-right">Más ></p>
-            </div>
+            <a href="{{ programas_estrategicos_url }}">
+                <div class="soluciones-square">
+                    <img src="{% static 'images/soluciones/icono-programas-estrategicos.png' %}" alt=""
+                         class="soluciones-square-icon"/>
+                    <h3 class="font-150 mt-2">Programas Estratégicos</h3>
+                    <p class="text-justify">Un socio totalmente integrado, listo para lanzar y monitorear estrategias
+                        creativas, desde marketing
+                        entrante y basado en cuentas, hasta habilitación de ventas y programas de éxito del cliente.</p>
+                    <p class="font-125 text-blue m-0 text-right">Más ></p>
+                </div>
+            </a>
         </div>
 
         <div class="col s12 m4 mt-5 pt-3">

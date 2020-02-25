@@ -139,3 +139,10 @@ def soluciones_page(request):
     }
 
     return render(request, "soluciones_page.html", context)
+
+
+def programas_estrategicos_page(request):
+    context = {
+    }
+
+    return render(request, "programas_estrategicos_page.html", context)

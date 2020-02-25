@@ -123,6 +123,14 @@ h3 {
     font-size: 0.7rem;
 }
 
+.font-080 {
+    font-size: 0.8rem;
+}
+
+.font-090 {
+    font-size: 0.8rem;
+}
+
 .font-125 {
     font-size: 1.25rem;
 }
@@ -139,7 +147,13 @@ h3 {
     font-size: 2rem;
 }
 
+.font-225 {
+    font-size: 2.25rem;
+}
 
+.font-250 {
+    font-size: 2.5rem;
+}
 /*Phones*/
 
 @media (max-width: 425px) {
@@ -205,6 +219,10 @@ h3 {
 
 .text-blue {
     color: #213A60 !important;
+}
+
+.text-blue-light {
+    color: #4D86DD !important;
 }
 
 .link-black-gold:hover {
@@ -867,5 +885,99 @@ a:hover .home-service-consult-col {
     left: -7%;
     bottom: 50%;
     width: 30%;
+    z-index: -5000;
+}
+
+/* programas estrategicos */
+
+.soluciones-subpage-subtitle {
+    color: #d4bd8b !important;
+    font-size: 3.0rem;
+    margin:0;
+    text-transform: uppercase;
+}
+
+.soluciones-subpage-title {
+    color: #213A60 !important;
+    font-size: 5.0rem;
+    margin:0;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.soluciones-tabs-ul-tabs {
+    line-height: unset!important;
+    height: 2rem!important;
+}
+.soluciones-tabs-ul-a {
+    color: #d4bd8b !important;
+    text-align: right!important;
+    background:none!important;
+    font-family: 'Barlow Condensed', sans-serif;
+    padding: 0!important;
+    font-size: 1rem!important;
+}
+
+.soluciones-tab-square {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cea568+0,ddbe8a+100 */
+    background: #cea568; /* Old browsers */
+    background: -moz-linear-gradient(top,  #cea568 0%, #ddbe8a 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #cea568 0%,#ddbe8a 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #cea568 0%,#ddbe8a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cea568', endColorstr='#ddbe8a',GradientType=0 ); /* IE6-9 */
+
+    padding: 1rem;
+}
+
+.soluciones-tab-square li{
+    font-size: 0.85rem;
+}
+
+.soluciones-tabs-ul .indicator {
+    display: none!important;
+}
+
+.soluciones-tabs-ul .active {
+    text-decoration: underline;
+}
+
+.soluciones-squares {
+    background-color: #F1F2F3 !important;
+    border-radius: 1rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.soluciones-icon {
+    margin-top: -20px;
+    background: #a28d5d;
+    background: -moz-linear-gradient(top, #a28d5d 0%, #d4bd8b 100%);
+    background: -webkit-linear-gradient(top, #a28d5d 0%, #d4bd8b 100%);
+    background: linear-gradient(to bottom, #a28d5d 0%, #d4bd8b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a28d5d', endColorstr='#d4bd8b', GradientType=0);
+    padding-top: 1.5em !important;
+    padding-bottom: 1.5rem !important;
+    border-radius: 0px 0px 2rem 2rem;
+    box-shadow: 4px 4px #e4e7e6;
+}
+
+.soluciones-squares:hover .soluciones-icon {
+    background: #213A60;
+}
+
+.soluciones-bg-blue-left {
+    position: absolute;
+    left:0;
+    width: 27%;
+    bottom: 0;
+}
+
+.soluciones-splash-lines-1{
+    position: absolute;
+    right:0;
+    width: 27%;
+    bottom: -28%;
     z-index: -5000;
 }

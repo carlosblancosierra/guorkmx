@@ -153,3 +153,10 @@ def nosotros_page(request):
     }
 
     return render(request, "nosotros_page.html", context)
+
+
+def recursos_page(request):
+    context = {
+    }
+
+    return render(request, "recursos_page.html", context)

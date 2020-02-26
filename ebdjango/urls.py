@@ -34,6 +34,7 @@ from .views import (
     soluciones_page,
     programas_estrategicos_page,
     nosotros_page,
+    recursos_page,
 )
 
 urlpatterns = [
@@ -54,6 +55,8 @@ urlpatterns = [
 
     path('soluciones', soluciones_page, name='soluciones'),
     path('soluciones/programas_estrategicos', programas_estrategicos_page, name='programas_estrategicos'),
+
+    path('recursos', recursos_page, name='recursos'),
 
     path('admin/', admin.site.urls),
 

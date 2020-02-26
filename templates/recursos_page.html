@@ -1,0 +1,287 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block head_title %} {% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col s12 m10 offset-m1">
+            <h1 class="center text-blue">LIBRERÍA DE RECURSOS</h1>
+            <p class="text-justify">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                doloremque
+                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+                vitae
+                dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed
+                quia
+                consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col s12 m2">
+            <p class="text-blue text-barlow font-100 mt-0 mb-1 text-uppercase text-center">Categorias</p>
+            <ul class="tabs recursos-tabs" style="height: unset;">
+
+                <li class="tab col s12 recursos-tab">
+                    <a href="#test1">
+                        <div class="recursos-tab-inbound-logo-container">
+                        </div>
+                        Inbound
+                    </a>
+                </li>
+
+                <li class="tab col s12 recursos-tab">
+                    <a href="#test2" class="">
+                        <div class="recursos-tab-branding-logo-container">
+                        </div>
+                        Branding
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="col s12 m10">
+            <div id="test1" class="col s12 recursos-grid-item">
+                <div class="row">
+                    <div class="col s6 m3 p-1 position-relative">
+                        <img src="{% static 'images/recursos/square-2.jpg' %}" alt="" class="responsive-img">
+                    </div>
+                    <div class="col s6 m3 p-1 position-relative">
+                        <img src="{% static 'images/recursos/square-6-gold.jpg' %}" alt="" class="responsive-img">
+                        <div class="recursos-square-text center font-080">
+                            <p class="recursos-square-title">A Sed ut perspiciatis unde omnis iste natus error</p>
+                            <p class="recursos-square-subtitle"><a href="#" class="btn btn-blue">Descargar</a></p>
+                        </div>
+                    </div>
+                    <div class="col s6 m3 p-1">
+                        <img src="{% static 'images/recursos/square-2.jpg' %}" alt="" class="responsive-img">
+                    </div>
+                    <div class="col s6 m3 p-1">
+                        <img src="{% static 'images/recursos/square-2.jpg' %}" alt="" class="responsive-img">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6 m3 p-1">
+                        <img src="{% static 'images/recursos/square-2.jpg' %}" alt="" class="responsive-img">
+                    </div>
+
+                    <div class="col s6 m3 p-1">
+                        <img src="{% static 'images/recursos/square-2.jpg' %}" alt="" class="responsive-img">
+                    </div>
+                    <div class="col s6 m3 p-1">
+                        <img src="{% static 'images/recursos/square-2.jpg' %}" alt="" class="responsive-img">
+                    </div>
+                    <div class="col s6 m3 p-1 position-relative">
+                        <img src="{% static 'images/recursos/square-6-gold.jpg' %}" alt="" class="responsive-img">
+                        <div class="recursos-square-text center font-080">
+                            <p class="recursos-square-title">B Sed ut perspiciatis unde omnis iste natus error</p>
+                            <p class="recursos-square-subtitle"><a href="#" class="btn btn-blue">Descargar</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6 m3 p-1">
+                        <img src="{% static 'images/recursos/square-2.jpg' %}" alt="" class="responsive-img">
+                    </div>
+                    <div class="col s6 m3 p-1 position-relative">
+                        <img src="{% static 'images/recursos/square-6-gold.jpg' %}" alt="" class="responsive-img">
+                        <div class="recursos-square-text center font-080">
+                            <p class="recursos-square-title">C Sed ut perspiciatis unde omnis iste natus error</p>
+                            <p class="recursos-square-subtitle"><a href="#" class="btn btn-blue">Descargar</a></p>
+                        </div>
+                    </div>
+                    <div class="col s6 m3 p-1">
+                        <img src="{% static 'images/recursos/square-2.jpg' %}" alt="" class="responsive-img">
+                    </div>
+                    <div class="col s6 m3 p-1">
+                        <img src="{% static 'images/recursos/square-2.jpg' %}" alt="" class="responsive-img">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6 m3 p-1">
+                        <img src="{% static 'images/recursos/square-2.jpg' %}" alt="" class="responsive-img">
+                    </div>
+                    <div class="col s6 m3 p-1">
+                        <img src="{% static 'images/recursos/square-2.jpg' %}" alt="" class="responsive-img">
+                    </div>
+                    <div class="col s6 m3 p-1">
+                        <img src="{% static 'images/recursos/square-2.jpg' %}" alt="" class="responsive-img">
+                    </div>
+                    <div class="col s6 m3 p-1 position-relative">
+                        <img src="{% static 'images/recursos/square-6-gold.jpg' %}" alt="" class="responsive-img">
+                        <div class="recursos-square-text center font-080">
+                            <p class="recursos-square-title">D Sed ut perspiciatis unde omnis iste natus error</p>
+                            <p class="recursos-square-subtitle"><a href="#" class="btn btn-blue">Descargar</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="test2" class="col s12 recursos-grid-item">
+                <div class="row">
+                    <div class="col s6 m3 p-1 position-relative">
+                        <img src="{% static 'images/recursos/square-2.jpg' %}" alt="" class="responsive-img">
+                    </div>
+                    <div class="col s6 m3 p-1">
+                        <img src="{% static 'images/recursos/square-2.jpg' %}" alt="" class="responsive-img">
+                    </div>
+                    <div class="col s6 m3 p-1 position-relative">
+                        <img src="{% static 'images/recursos/square-6-gold.jpg' %}" alt="" class="responsive-img">
+                        <div class="recursos-square-text center font-080">
+                            <p class="recursos-square-title">Sed ut perspiciatis unde omnis iste natus error</p>
+                            <p class="recursos-square-subtitle"><a href="#" class="btn btn-blue">Descargar</a></p>
+                        </div>
+                    </div>
+                    <div class="col s6 m3 p-1">
+                        <img src="{% static 'images/recursos/square-2.jpg' %}" alt="" class="responsive-img">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6 m3 p-1">
+                        <img src="{% static 'images/recursos/square-2.jpg' %}" alt="" class="responsive-img">
+                    </div>
+                    <div class="col s6 m3 p-1 position-relative">
+                        <img src="{% static 'images/recursos/square-6-gold.jpg' %}" alt="" class="responsive-img">
+                        <div class="recursos-square-text center font-080">
+                            <p class="recursos-square-title">Sed ut perspiciatis unde omnis iste natus error</p>
+                            <p class="recursos-square-subtitle"><a href="#" class="btn btn-blue">Descargar</a></p>
+                        </div>
+                    </div>
+                    <div class="col s6 m3 p-1">
+                        <img src="{% static 'images/recursos/square-2.jpg' %}" alt="" class="responsive-img">
+                    </div>
+                    <div class="col s6 m3 p-1">
+                        <img src="{% static 'images/recursos/square-2.jpg' %}" alt="" class="responsive-img">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6 m3 p-1">
+                        <img src="{% static 'images/recursos/square-2.jpg' %}" alt="" class="responsive-img">
+                    </div>
+                    <div class="col s6 m3 p-1">
+                        <img src="{% static 'images/recursos/square-2.jpg' %}" alt="" class="responsive-img">
+                    </div>
+                    <div class="col s6 m3 p-1 position-relative">
+                        <img src="{% static 'images/recursos/square-6-gold.jpg' %}" alt="" class="responsive-img">
+                        <div class="recursos-square-text center font-080">
+                            <p class="recursos-square-title">Sed ut perspiciatis unde omnis iste natus error</p>
+                            <p class="recursos-square-subtitle"><a href="#" class="btn btn-blue">Descargar</a></p>
+                        </div>
+                    </div>
+                    <div class="col s6 m3 p-1">
+                        <img src="{% static 'images/recursos/square-2.jpg' %}" alt="" class="responsive-img">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6 m3 p-1">
+                        <img src="{% static 'images/recursos/square-2.jpg' %}" alt="" class="responsive-img">
+                    </div>
+                    <div class="col s6 m3 p-1">
+                        <img src="{% static 'images/recursos/square-2.jpg' %}" alt="" class="responsive-img">
+                    </div>
+                    <div class="col s6 m3 p-1">
+                        <img src="{% static 'images/recursos/square-2.jpg' %}" alt="" class="responsive-img">
+                    </div>
+                    <div class="col s6 m3 p-1">
+                        <img src="{% static 'images/recursos/square-2.jpg' %}" alt="" class="responsive-img">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col s12 m8 offset-m2">
+            <p class="text-justify">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                doloremque
+                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+                vitae.</p>
+        </div>
+
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col s2 m1 pt-2">
+            <img src="{% static 'images/logo-branding-blue.png' %}" alt="" class="responsive-img">
+        </div>
+        <div class="col s10 offset-m1">
+            <div class="owl-carousel recursos-owl-carousels">
+                <div class="item"><p>Lorem ipsum dolor sit amet</p></div>
+                <div class="item"><p>consectetur adipiscing elit</p></div>
+                <div class="item"><p>sed do eiusmod tempor incididunt</p></div>
+                <div class="item"><p>ut labore et dolore magna</p></div>
+                <div class="item"><p>ut labore et dolore magna</p></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s2 m1 pt-2">
+            <img src="{% static 'images/logo-branding-blue.png' %}" alt="" class="responsive-img">
+        </div>
+        <div class="col s10 offset-m1">
+            <div class="owl-carousel recursos-owl-carousels">
+                <div class="item"><p>Lorem ipsum dolor sit amet</p></div>
+                <div class="item"><p>consectetur adipiscing elit</p></div>
+                <div class="item"><p>sed do eiusmod tempor incididunt</p></div>
+                <div class="item"><p>ut labore et dolore magna</p></div>
+                <div class="item"><p>ut labore et dolore magna</p></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s2 m1 pt-2">
+            <img src="{% static 'images/logo-branding-blue.png' %}" alt="" class="responsive-img">
+        </div>
+        <div class="col s10 offset-m1">
+            <div class="owl-carousel recursos-owl-carousels">
+                <div class="item"><p>Lorem ipsum dolor sit amet</p></div>
+                <div class="item"><p>consectetur adipiscing elit</p></div>
+                <div class="item"><p>sed do eiusmod tempor incididunt</p></div>
+                <div class="item"><p>ut labore et dolore magna</p></div>
+                <div class="item"><p>ut labore et dolore magna</p></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s2 m1 pt-2">
+            <img src="{% static 'images/logo-branding-blue.png' %}" alt="" class="responsive-img">
+        </div>
+        <div class="col s10 offset-m1">
+            <div class="owl-carousel recursos-owl-carousels">
+                <div class="item"><p>Lorem ipsum dolor sit amet</p></div>
+                <div class="item"><p>consectetur adipiscing elit</p></div>
+                <div class="item"><p>sed do eiusmod tempor incididunt</p></div>
+                <div class="item"><p>ut labore et dolore magna</p></div>
+                <div class="item"><p>ut labore et dolore magna</p></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s2 m1 pt-2">
+            <img src="{% static 'images/logo-branding-blue.png' %}" alt="" class="responsive-img">
+        </div>
+        <div class="col s10 offset-m1">
+            <div class="owl-carousel recursos-owl-carousels">
+                <div class="item"><p>Lorem ipsum dolor sit amet</p></div>
+                <div class="item"><p>consectetur adipiscing elit</p></div>
+                <div class="item"><p>sed do eiusmod tempor incididunt</p></div>
+                <div class="item"><p>ut labore et dolore magna</p></div>
+                <div class="item"><p>ut labore et dolore magna</p></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

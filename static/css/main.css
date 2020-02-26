@@ -12,6 +12,8 @@ a {
 
 :root {
   --gold: #d4bd8b;
+  --blue: #213A60;
+  --grey: #CCCCCC;
 }
 
 .gold-hr-center {
@@ -1068,4 +1070,108 @@ a:hover .home-service-consult-col {
 .nosotros-movida-container {
     background:url(../images/nosotros/bg-nosotros-movida.jpg);
     background-size: cover;
+}
+
+ /*RECURSOS */
+
+
+ .recursos-square-text {
+    position: absolute;
+    width: 90%;
+    height: 95%;
+    top:10%;
+    left:6%;
+ }
+
+.recursos-tab {
+    height: unset!important;
+
+}
+
+.recursos-tab a:focus.active {
+    background-color: rgba(0,0,0,0)!important;
+}
+
+ .recursos-tab-inbound-logo-container {
+    background-image: url(../images/logo-inbound-grey.png);
+    min-height: 6rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+ }
+
+.recursos-tab .active .recursos-tab-inbound-logo-container,
+.recursos-tab:hover .recursos-tab-inbound-logo-container
+ {
+    background-image: url(../images/logo-inbound-blue.png);
+ }
+
+  .recursos-tab-branding-logo-container {
+    background-image: url(../images/logo-branding-grey.png);
+    min-height: 6rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+ }
+
+.recursos-tab .active .recursos-tab-branding-logo-container,
+.recursos-tab:hover .recursos-tab-branding-logo-container
+ {
+    background-image: url(../images/logo-branding-blue.png);
+ }
+
+ .recursos-tab a {
+    transition: color 3s ease-out;
+    color:var(--grey)!important;
+ }
+
+ .recursos-tab:hover a {
+    color:var(--blue)!important;
+ }
+
+ .recursos-grid-item {
+    transition: all 2s ease!important;
+    opacity: 0;
+ }
+
+.recursos-grid-item.active {
+    opacity: 1;
+ }
+
+ .recursos-tabs .indicator {
+    display: none!important;
+ }
+
+.recursos-owl-carousels .item {
+    text-align: center;
+}
+
+.recursos-owl-carousels .owl-nav {
+    position: absolute;
+    top: 20%;
+    width: 100%;
+}
+
+.recursos-owl-carousels .owl-prev,
+.recursos-owl-carousels .owl-next {
+    font-size: 1rem !important;
+    background-color: #F1F2F3 !important;
+    color: white;
+    margin: .5rem;
+    border-radius: 50%;
+    width: 1.5rem;
+}
+
+.recursos-owl-carousels .owl-prev {
+    position: absolute;
+    left: -5%;
+}
+
+.recursos-owl-carousels .owl-next {
+    position: absolute;
+    right: -5%;
+}
+
+.recursos-owl-carousels .owl-dots {
+    display: none;
 }

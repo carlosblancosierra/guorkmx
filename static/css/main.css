@@ -10,6 +10,10 @@ a {
     color: unset;
 }
 
+:root {
+  --gold: #d4bd8b;
+}
+
 .gold-hr-center {
     width: 50px;
     background: #d4bd8b;
@@ -154,6 +158,19 @@ h3 {
 .font-250 {
     font-size: 2.5rem;
 }
+
+.font-300 {
+    font-size: 3rem;
+}
+
+.font-500 {
+    font-size: 5rem;
+}
+
+.font-weight-600 {
+    font-weight: 600;
+}
+
 /*Phones*/
 
 @media (max-width: 425px) {
@@ -980,4 +997,75 @@ a:hover .home-service-consult-col {
     width: 27%;
     bottom: -28%;
     z-index: -5000;
+}
+
+/* NOSOTROS */
+
+.nosotros-bg-blue-1 {
+    position: absolute;
+    right: 0;
+    top: 10%;
+    width: 30%;
+}
+
+.nosotros-splash-lines-1 {
+    position: absolute;
+    right: 10%;
+    bottom: 0%;
+    width: 15%;
+}
+
+#nosotros-codigo-container {
+    background: url("../images/nosotros/bg-codigo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#owl-carousel-nosotros-codigo > div.owl-stage-outer > div > div.owl-item.active > div {
+    min-height: 60vh;
+}
+
+.nosotros-codigo-text {
+    position: absolute;
+    top:30%;
+}
+
+.filterDiv {
+  float: left;
+  text-align: center;
+  display: none; /* Hidden by default */
+  padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+.filter_btns {
+    color:#000000;
+    padding: 0.5rem;
+    text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    margin: 0;
+}
+
+.filter_btns.active {
+    background: rgba(211, 189, 139, 1);
+    background: -moz-linear-gradient(top, rgba(211, 189, 139, 1) 0%, rgba(177, 143, 80, 1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(211, 189, 139, 1)), color-stop(100%, rgba(177, 143, 80, 1)));
+    background: -webkit-linear-gradient(top, rgba(211, 189, 139, 1) 0%, rgba(177, 143, 80, 1) 100%);
+    background: -o-linear-gradient(top, rgba(211, 189, 139, 1) 0%, rgba(177, 143, 80, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(211, 189, 139, 1) 0%, rgba(177, 143, 80, 1) 100%);
+    background: linear-gradient(to bottom, rgba(211, 189, 139, 1) 0%, rgba(177, 143, 80, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d3bd8b', endColorstr='#b18f50', GradientType=0);
+    color:white;
+    border-radius: 0.3rem;
+}
+
+.nosotros-movida-container {
+    background:url(../images/nosotros/bg-nosotros-movida.jpg);
+    background-size: cover;
 }

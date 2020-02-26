@@ -33,6 +33,7 @@ from .views import (
     audio_visual_page,
     soluciones_page,
     programas_estrategicos_page,
+    nosotros_page,
 )
 
 urlpatterns = [
@@ -40,6 +41,8 @@ urlpatterns = [
     path('inbound', inbound_page, name='inbound'),
     path('contacto', contact_page, name='contact'),
     path('blog/', include('blog.urls')),
+    path('nosotros', nosotros_page, name='nosotros'),
+
     path('auditoria_landing/', audit_landing_page, name='audit_lp'),
     path('auditoria_pre/', audit_pre_page, name='audit_pre'),
     path('auditoria/', audit_page, name='audit'),

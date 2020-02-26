@@ -146,3 +146,10 @@ def programas_estrategicos_page(request):
     }
 
     return render(request, "programas_estrategicos_page.html", context)
+
+
+def nosotros_page(request):
+    context = {
+    }
+
+    return render(request, "nosotros_page.html", context)

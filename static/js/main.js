@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
 
     if ($('#slider-budget').length > 0) {
 
@@ -22,11 +22,11 @@ $(document).ready(function () {
 
         var inputFormat = document.getElementById('quote-budget-text');
 
-        slider.noUiSlider.on('update', function (values, handle) {
+        slider.noUiSlider.on('update', function(values, handle) {
             inputFormat.value = values[handle];
         });
 
-        inputFormat.addEventListener('change', function () {
+        inputFormat.addEventListener('change', function() {
             slider.noUiSlider.set(this.value);
         });
 
@@ -51,16 +51,16 @@ $(document).ready(function () {
 
         var inputQuoteMonths = document.getElementById('quote-months-text');
 
-        sliderQuoteMonth.noUiSlider.on('update', function (values, handle) {
+        sliderQuoteMonth.noUiSlider.on('update', function(values, handle) {
             inputQuoteMonths.value = values[handle];
         });
 
-        inputQuoteMonths.addEventListener('change', function () {
+        inputQuoteMonths.addEventListener('change', function() {
             sliderQuoteMonth.noUiSlider.set(this.value);
         });
     }
 
-//    $("#carousel-home-partnership").addClass("carousel-home-partnership");
+    //    $("#carousel-home-partnership").addClass("carousel-home-partnership");
 
     $("#owl-carousel-partnertship").owlCarousel({
         loop: true,
@@ -99,8 +99,46 @@ $(document).ready(function () {
         }
     });
 
-    $('.datepicker').pickadate({
-        format: 'dd/mm/yyyy'
+    $('#owl-carousel-nosotros').owlCarousel({
+        loop: true,
+        margin: 0,
+        nav: false,
+        autoplay:true,
+        autoplayTimeout:3000,
+        autoplayHoverPause:false,
+        autoplaySpeed:3000,
+        fluidSpeed:true,
+        slideTransition: 'linear',
+
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 3
+            }
+        }
+    });
+
+    $('#owl-carousel-nosotros-codigo').owlCarousel({
+        loop: true,
+        margin: 0,
+        nav: false,
+        autoplay:false,
+        autoplayTimeout:3000,
+        autoplayHoverPause:false,
+        autoplaySpeed:3000,
+        fluidSpeed:true,
+        slideTransition: 'linear',
+
+        responsive: {
+            0: {
+                items: 1
+            },
+        }
     });
 
 });

@@ -1,7 +1,6 @@
-import json
 from django.shortcuts import render, redirect
 import json
-from ebdjango.settings import GOOGLE_RECAPTCHA_SECRET_KEY, GOOGLE_RECAPTCHA_PUBLIC_KEY
+from ebdjango.settings import GOOGLE_RECAPTCHA_PUBLIC_KEY
 from .forms import ContactForm
 
 

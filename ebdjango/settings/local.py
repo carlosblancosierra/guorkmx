@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
@@ -79,10 +79,8 @@ LOGIN_URL_REDIRECT = '/'
 LOGOUT_URL = '/logout/'
 LOGOUT_REDIRECT_URL = '/login/'
 
-
 FORCE_SESSION_TO_ONE = False
-FORCE_INACTIVE_USER_ENDSESSION= False
-
+FORCE_INACTIVE_USER_ENDSESSION = False
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -192,12 +190,12 @@ GOOGLE_RECAPTCHA_SECRET_KEY = '6LdbV78UAAAAAE_vo9kwHndz9IJiaxyerDeWxrzf'
 STRIPE_PUB_KEY = 'pk_test_UTSbSt5W4QpVCHpCxa5K7nIw00FbA6R0K2'
 STRIPE_SECRET_KEY = 'sk_test_KJ6abjyErxo9HcttWkkdIEGW00QGzanzow'
 
-CORS_REPLACE_HTTPS_REFERER      = False
-HOST_SCHEME                     = "http://"
-SECURE_PROXY_SSL_HEADER         = None
-SECURE_SSL_REDIRECT             = False
-SESSION_COOKIE_SECURE           = False
-CSRF_COOKIE_SECURE              = False
-SECURE_HSTS_SECONDS             = None
-SECURE_HSTS_INCLUDE_SUBDOMAINS  = False
-SECURE_FRAME_DENY               = False
+CORS_REPLACE_HTTPS_REFERER = False
+HOST_SCHEME = "http://"
+SECURE_PROXY_SSL_HEADER = None
+SECURE_SSL_REDIRECT = False
+SESSION_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = False
+SECURE_HSTS_SECONDS = None
+SECURE_HSTS_INCLUDE_SUBDOMAINS = False
+SECURE_FRAME_DENY = False

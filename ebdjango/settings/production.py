@@ -19,16 +19,17 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '0bgnw^0tw64h+0v+-vk1kvroc-=43a62w+u*629+sb%3&#)av0'
+SECRET_KEY = os.environ.get('SECRET_KEY', '0bgnw^0tw64h+0v+-vk1kvroc-=43a62w+u*629+sb%3&#)av0')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     'guork-env.trawp8wvmc.us-east-1.elasticbeanstalk.com',
-    'guork.mx'
+    '.guork.mx',
+    'guork.herokuapp.com'
 ]
 
 EMAIL_HOST = 'smtp.gmail.com'
@@ -79,10 +80,8 @@ LOGIN_URL_REDIRECT = '/'
 LOGOUT_URL = '/logout/'
 LOGOUT_REDIRECT_URL = '/login/'
 
-
 FORCE_SESSION_TO_ONE = False
-FORCE_INACTIVE_USER_ENDSESSION= False
-
+FORCE_INACTIVE_USER_ENDSESSION = False
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -123,6 +122,11 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+import dj_database_url
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
+
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
@@ -192,12 +196,12 @@ GOOGLE_RECAPTCHA_SECRET_KEY = '6LdbV78UAAAAAE_vo9kwHndz9IJiaxyerDeWxrzf'
 STRIPE_PUB_KEY = 'pk_test_UTSbSt5W4QpVCHpCxa5K7nIw00FbA6R0K2'
 STRIPE_SECRET_KEY = 'sk_test_KJ6abjyErxo9HcttWkkdIEGW00QGzanzow'
 
-CORS_REPLACE_HTTPS_REFERER      = False
-HOST_SCHEME                     = "http://"
-SECURE_PROXY_SSL_HEADER         = None
-SECURE_SSL_REDIRECT             = False
-SESSION_COOKIE_SECURE           = False
-CSRF_COOKIE_SECURE              = False
-SECURE_HSTS_SECONDS             = None
-SECURE_HSTS_INCLUDE_SUBDOMAINS  = False
-SECURE_FRAME_DENY               = False
+CORS_REPLACE_HTTPS_REFERER = True
+HOST_SCHEME = "https://"
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_SECONDS = 1000000
+SECURE_FRAME_DENY = True

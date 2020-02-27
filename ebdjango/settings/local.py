@@ -169,6 +169,9 @@ STATICFILES_DIRS = [
 MEDIA_ROOT = os.path.join(LOCAL_STATIC_CDN_PATH, 'media')
 MEDIA_URL = '/media/'  # django-storages
 
+# from ebdjango.aws.conf import *
+
+
 # CKEDITOR
 CKEDITOR_UPLOAD_PATH = "ckuploads/"
 

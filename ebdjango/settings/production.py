@@ -19,7 +19,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY', '0bgnw^0tw64h+0v+-vk1kvroc-=43a62w+u*629+sb%3&#)av0')
+SECRET_KEY = '0bgnw^0tw64h+0v+-vk1kvroc-=43a62w+u*629+sb%3&#)av0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -28,7 +28,7 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     'guork-env.trawp8wvmc.us-east-1.elasticbeanstalk.com',
-    '.guork.mx',
+    'guork.mx',
     'guork.herokuapp.com'
 ]
 
@@ -38,7 +38,7 @@ ALLOWED_HOSTS = [
 # EMAIL_PORT = 587
 # EMAIL_USE_TLS = True
 # DEFAULT_FROM_EMAIL = 'Venezum'
-
+#
 # MANAGERS = [
 #     ("Carlos Blanco", "venezum2018@gmail.com")
 # ]
@@ -64,6 +64,7 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'imagekit',
     'stripe',
+    'storages',
 
     # my apps
     'accounts',
@@ -123,12 +124,6 @@ DATABASES = {
     }
 }
 
-import dj_database_url
-db_from_env = dj_database_url.config()
-DATABASES['default'].update(db_from_env)
-DATABASES['default']['CONN_MAX_AGE'] = 500
-
-
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
 
@@ -162,6 +157,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
+
 
 STATIC_URL = '/static/'
 
@@ -208,14 +204,3 @@ CSRF_COOKIE_SECURE = False
 SECURE_HSTS_SECONDS = None
 SECURE_HSTS_INCLUDE_SUBDOMAINS = False
 SECURE_FRAME_DENY = False
-
-# CORS_REPLACE_HTTPS_REFERER = True
-# HOST_SCHEME = "https://"
-# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-# SECURE_SSL_REDIRECT = True
-# SESSION_COOKIE_SECURE = True
-# CSRF_COOKIE_SECURE = True
-# SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-# SECURE_HSTS_SECONDS = 1000000
-# SECURE_FRAME_DENY = True
-

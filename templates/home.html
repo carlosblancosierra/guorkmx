@@ -5,28 +5,6 @@
 {% block head_title %} {% endblock %}
 
 {% block content %}
-
-{% url 'inbound' as inbound_url %}
-{% url 'contact' as contact_url %}
-
-{% url 'contact' as contact_url %}
-{% url 'audit_lp' as audit_lp_url %}
-
-
-{% url 'events' as events_url %}
-{% url 'experts' as experts_url %}
-{% url 'audio_visual' as audio_visual_url %}
-{% url 'soluciones' as soluciones_url %}
-
-{% url 'programas_estrategicos' as prog_estrategicos_url %}
-{% url 'soporte_tactico' as soporte_tactico_url %}
-{% url 'proyectos' as proyectos_url %}
-
-{% url 'recursos' as recursos_url %}
-{% url 'nosotros' as nosotros_url %}
-{% url 'blog' as blog_url %}
-{% url 'inbound' as inbound_url %}
-
 <div class="row">
     <div class="container">
         <div class="row">
@@ -294,22 +272,20 @@
         <div class="col s12">
             <h2 class="text-center">PARTNERTSHIP</h2>
             <p class="gold-hr-center"></p>
-
-            <!-- Set up your HTML -->
             <div class="owl-carousel" id="owl-carousel-partnertship">
-                <img src="{% static '/images/home/partners/clientify.jpg' %}" class=""/>
 
-                <img src="{% static '/images/home/partners/digital-marketer.jpg' %}" class=""/>
+            <img src="{% static 'images/home/partners/clientify.jpg' %}" class=""/>
 
-                <img src="{% static '/images/home/partners/google.jpg' %}" class=""/>
+                <img src="{% static 'images/home/partners/digital-marketer.jpg' %}" class=""/>
 
-                <img src="{% static '/images/home/partners/hubspot.jpg' %}" class=""/>
+                <img src="{% static 'images/home/partners/google.jpg' %}" class=""/>
 
-                <img src="{% static '/images/home/partners/instapage.jpg' %}" class=""/>
+                <img src="{% static 'images/home/partners/hubspot.jpg' %}" class=""/>
 
-                <img src="{% static '/images/home/partners/wistia.jpg' %}" class=""/>
+                <img src="{% static 'images/home/partners/instapage.jpg' %}" class=""/>
 
-            </div>
+                <img src="{% static 'images/home/partners/wistia.jpg' %}" class=""/>
+        </div>
 
         </div>
     </div>
@@ -382,10 +358,5 @@
     </div>
 </div>
 
-
-{% endblock %}
-
-
-{% block js_extra %}
 
 {% endblock %}

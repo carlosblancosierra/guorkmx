@@ -28,23 +28,24 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     'guork-env.trawp8wvmc.us-east-1.elasticbeanstalk.com',
-    'guork.mx'
+    'guork.mx',
+    'guork.herokuapp.com'
 ]
 
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'ventas.venezum@gmail.com'
-EMAIL_HOST_PASSWORD = 'Cas8735839*'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'Venezum'
-
-MANAGERS = [
-    ("Carlos Blanco", "venezum2018@gmail.com")
-]
-
-ADMINS = [
-    ("Carlos Blanco", "venezum2018@gmail.com")
-]
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER = 'ventas.venezum@gmail.com'
+# EMAIL_HOST_PASSWORD = 'Cas8735839*'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# DEFAULT_FROM_EMAIL = 'Venezum'
+#
+# MANAGERS = [
+#     ("Carlos Blanco", "venezum2018@gmail.com")
+# ]
+#
+# ADMINS = [
+#     ("Carlos Blanco", "venezum2018@gmail.com")
+# ]
 
 LOGIN_URL = '/login'
 

@@ -6,7 +6,10 @@ from .forms import ContactForm
 
 
 def home_page(request):
-    blog_posts = BlogPost.objects.all()[:3]
+    blog_posts = BlogPost.objects.all() # [:3]
+
+    if len(blog_posts) < 3:
+        blog_posts = blog_posts[:3]
 
     context = {
         "blog_posts": blog_posts,

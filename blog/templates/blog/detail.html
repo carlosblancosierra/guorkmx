@@ -8,10 +8,37 @@
 
 <div class="container">
     <div class="row">
-        <div class="col s12">
-
+        <div class="col s12 m9">
+            <img src="{{ object.image.url }}" alt="" class="responsive-img">
             <h1 class="text-center">{{ object.title }}</h1>
-            <p>{{ object.content }}</p>
+            <p>{{ object.content|safe }}</p>
+        </div>
+         <div class="col s12 m3">
+            <p class="text-uppercase font-barlow font-weight-bold font-150">Publicaciones más populares</p>
+            <p class="gold-hr"></p>
+            {% for object in object_popular_list %}
+
+            <div class="card blog-list-related-box">
+                <p class="m-0"><a href="{{ object.get_absolute_url}}">{{ object.title }}</a></p>
+                <p class="m-0 font-weight-bold">{{ object.category.title }} | Lectura de {{ object.reading_time }}
+                    min</p>
+            </div>
+
+            {% endfor %}
+
+            <p class="text-uppercase font-barlow font-weight-bold font-150">Publicaciones Recomendadas</p>
+            <p class="gold-hr"></p>
+
+            {% for object in object_recommended_list %}
+
+            <div class="card blog-list-related-box">
+                <p class="m-0"><a href="{{ object.get_absolute_url}}">{{ object.title }}</a></p>
+                <p class="m-0 font-weight-bold">{{ object.category.title }} | Lectura de {{ object.reading_time }}
+                    min</p>
+            </div>
+
+            {% endfor %}
+
         </div>
     </div>
 </div>

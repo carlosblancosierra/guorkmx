@@ -78,8 +78,14 @@ def blog_post_create_view(request):
 def blog_post_detail_view(request, slug):
     obj = get_object_or_404(BlogPost, slug=slug)
     template_name = 'blog/detail.html'
+
+    object_popular_list = BlogPost.objects.get_3_random()
+    object_recommended_list = BlogPost.objects.get_3_random()
+
     context = {
-        "object": obj
+        "object": obj,
+        "object_popular_list": object_popular_list,
+        "object_recommended_list": object_recommended_list,
     }
 
     return render(request, template_name, context)

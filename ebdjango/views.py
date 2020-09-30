@@ -1,12 +1,15 @@
 from django.shortcuts import render, redirect
 import json
 from ebdjango.settings import GOOGLE_RECAPTCHA_PUBLIC_KEY
+from blog.models import BlogPost
 from .forms import ContactForm
 
 
 def home_page(request):
-    print(request.user)
+    blog_posts = BlogPost.objects.all()[:3]
+
     context = {
+        "blog_posts": blog_posts,
     }
 
     return render(request, "home.html", context)
@@ -141,21 +144,30 @@ def soluciones_page(request):
 
 
 def programas_estrategicos_page(request):
+    blog_posts = BlogPost.objects.all()[:3]
+
     context = {
+        "blog_posts": blog_posts,
     }
 
     return render(request, "soluciones_programas_estrategicos_page.html", context)
 
 
 def soporte_tactico_page(request):
+    blog_posts = BlogPost.objects.all()[:3]
+
     context = {
+        "blog_posts": blog_posts,
     }
 
     return render(request, "soluciones_soporte_tactico_page.html", context)
 
 
 def proyectos_page(request):
+    blog_posts = BlogPost.objects.all()[:3]
+
     context = {
+        "blog_posts": blog_posts,
     }
 
     return render(request, "soluciones_proyectos_page.html", context)

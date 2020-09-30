@@ -10,6 +10,15 @@ a {
     color: unset;
 }
 
+ul:not(.browser-default) {
+    list-style-type: inherit!important;
+    padding-left:2rem!important;
+
+}
+
+ul:not(.browser-default) li{
+    list-style-type: inherit!important;
+}
 :root {
   --gold: #d4bd8b;
   --blue: #213A60;
@@ -454,6 +463,15 @@ a:hover .home-service-consult-col {
 }
 
 .home-blog-desc {}
+
+.home-blog-list-post-title {
+    min-height:6.2rem;
+    color: #213A60 !important;
+    font-size: 1.5rem;
+    font-family: 'Barlow Condensed';
+    margin: 0;
+    font-weight: bold;
+}
 
 .home-contactanos-title {
     text-align: center;
@@ -1180,3 +1198,4 @@ a:hover .home-service-consult-col {
     min-height:4.5rem;
     margin-top:1.5rem;
 }
+

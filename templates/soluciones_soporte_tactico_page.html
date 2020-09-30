@@ -17,6 +17,7 @@
 {% url 'soporte_tactico' as soporte_tactico_url %}
 {% url 'programas_estrategicos' as programas_estrategicos_url %}
 {% url 'proyectos' as proyectos_url %}
+{% url 'blog:home' as blog_url %}
 
 <div class="container-fluid">
     <div class="container">
@@ -268,68 +269,43 @@
         </div>
 
         <div class="row">
-            <div class="col s12 m4">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="https://materializecss.com/images/sample-1.jpg">
-                        <a class="btn-floating halfway-fab waves-effect waves-light bg-gold"><i
-                                class="material-icons">add</i></a>
-                    </div>
-                    <div class="card-content text-center">
-                        <p class="home-blog-title">COMO APARECER EN GOOGLE PARA AUMENTAR TU POSICIONAMIENTO WEB?</p>
-                        <p class="gold-hr-center my-3"></p>
-                        <p class="home-blog-desc">I am a very simple card. I am good at containing small bits of
-                            information. I am
-                            convenient because I require little markup to use effectively.</p>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col s12 m4">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="https://materializecss.com/images/sample-1.jpg">
-                        <a class="btn-floating halfway-fab waves-effect waves-light bg-gold"><i
-                                class="material-icons">add</i></a>
-                    </div>
-                    <div class="card-content text-center">
-                        <p class="home-blog-title">COMO APARECER EN GOOGLE PARA AUMENTAR TU POSICIONAMIENTO WEB?</p>
-                        <p class="gold-hr-center my-3"></p>
-                        <p class="home-blog-desc">I am a very simple card. I am good at containing small bits of
-                            information. I am
-                            convenient because I require little markup to use effectively.</p>
-                    </div>
-                </div>
-
-            </div>
+            {% for object in blog_posts %}
 
             <div class="col s12 m4">
                 <div class="card">
                     <div class="card-image">
-                        <img src="https://materializecss.com/images/sample-1.jpg">
-                        <a class="btn-floating halfway-fab waves-effect waves-light bg-gold"><i
+                        {% if object.image %}
+                        <a href="{{ object.get_absolute_url}}">
+                            <img src="{{ object.image.url }}" class="responsive-img">
+                        </a>
+                        {% endif %}
+                        <a href="{{ object.get_absolute_url}}"
+                           class="btn-floating halfway-fab waves-effect waves-light bg-gold"><i
                                 class="material-icons">add</i></a>
                     </div>
-                    <div class="card-content text-center">
-                        <p class="home-blog-title">COMO APARECER EN GOOGLE PARA AUMENTAR TU POSICIONAMIENTO WEB?</p>
+                    <div class="card-content text-center bg-white">
+                        <a href="{{ object.get_absolute_url}}">
+                            <h2 class="home-blog-list-post-title">{{ object.title }}</h2>
+                        </a>
                         <p class="gold-hr-center my-3"></p>
-                        <p class="home-blog-desc">I am a very simple card. I am good at containing small bits of
-                            information. I am
-                            convenient because I require little markup to use effectively.</p>
+                        <p class="home-blog-desc">{{ object.meta_description|truncatechars:155 }}...</p>
+                        <p class="text-blue pt-2 m-0 font-weight-bold">
+                            {{ object.category.title }} | Lectura de {{ object.reading_time }} min
+                        </p>
                     </div>
                 </div>
-
             </div>
+            {% endfor %}
 
         </div>
-
         <div class="row my-5">
             <div class="col s12 m6 offset-m3">
-                <a class="btn btn-gold w-100" href="#">VER MÁS</a>
+                <a class="btn btn-gold w-100" href="{{ blog_url }}">VER MÁS</a>
             </div>
         </div>
     </div>
 </div>
+
 
 
 <div class="container-fluid position-relative">

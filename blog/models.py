@@ -107,11 +107,11 @@ class BlogPost(models.Model):
     slug = models.SlugField(unique=True, blank=True, max_length=255)
     content = RichTextUploadingField(null=True, blank=True)
     image = ProcessedImageField(upload_to=upload_location, null=True, blank=True,
-                                processors=[ResizeToFill(730, 487)],
+                                processors=[ResizeToFill(1200, 628)],
                                 format='JPEG',
                                 options={'quality': 90})
     image_small = ImageSpecField(source='image',
-                                 processors=[ResizeToFill(384, 256)],
+                                 processors=[ResizeToFill(800, 419)],
                                  format='JPEG',
                                  options={'quality': 90})
 

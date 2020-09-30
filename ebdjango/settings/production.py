@@ -32,20 +32,20 @@ ALLOWED_HOSTS = [
     'guork.herokuapp.com'
 ]
 
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'ventas.venezum@gmail.com'
-EMAIL_HOST_PASSWORD = 'Cas8735839*'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'Venezum'
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER = 'ventas.venezum@gmail.com'
+# EMAIL_HOST_PASSWORD = 'Cas8735839*'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# DEFAULT_FROM_EMAIL = 'Venezum'
 
-MANAGERS = [
-    ("Carlos Blanco", "venezum2018@gmail.com")
-]
-
-ADMINS = [
-    ("Carlos Blanco", "venezum2018@gmail.com")
-]
+# MANAGERS = [
+#     ("Carlos Blanco", "venezum2018@gmail.com")
+# ]
+#
+# ADMINS = [
+#     ("Carlos Blanco", "venezum2018@gmail.com")
+# ]
 
 LOGIN_URL = '/login'
 

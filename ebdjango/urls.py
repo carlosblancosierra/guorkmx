@@ -20,46 +20,33 @@ from django.urls import path, include
 from accounts.views import login_page, register_page, register_page_local
 from django.contrib.auth.views import LogoutView
 
-from .views import (
-    home_page,
-    inbound_page,
-    contact_page,
-    audit_landing_page,
-    audit_pre_page,
-    audit_page,
-    audit_result_page,
-    events_list_page,
-    experts_list_page,
-    audio_visual_page,
-    soluciones_page,
-    programas_estrategicos_page,
-    nosotros_page,
-    recursos_page,
-)
+from . import views
 
 urlpatterns = [
-    path('', home_page, name='home'),
-    path('inbound', inbound_page, name='inbound'),
-    path('contacto', contact_page, name='contact'),
-    path('blog/', include('blog.urls')),
-    path('nosotros', nosotros_page, name='nosotros'),
+    path('', views.home_page, name='home'),
+    path('inbound', views.inbound_page, name='inbound'),
+    path('contacto', views.contact_page, name='contact'),
+    path('nosotros', views.nosotros_page, name='nosotros'),
 
-    path('auditoria_landing/', audit_landing_page, name='audit_lp'),
-    path('auditoria_pre/', audit_pre_page, name='audit_pre'),
-    path('auditoria/', audit_page, name='audit'),
-    path('auditoria/resultado/', audit_result_page, name='audit_result'),
+    path('auditoria_landing/', views.audit_landing_page, name='audit_lp'),
+    path('auditoria_pre/', views.audit_pre_page, name='audit_pre'),
+    path('auditoria/', views.audit_page, name='audit'),
+    path('auditoria/resultado/', views.audit_result_page, name='audit_result'),
 
-    path('eventos', events_list_page, name='events'),
-    path('reserva_un_experto', experts_list_page, name='experts'),
-    path('audio_visual', audio_visual_page, name='audio_visual'),
+    path('eventos', views.events_list_page, name='events'),
+    path('reserva_un_experto', views.experts_list_page, name='experts'),
+    path('audio_visual', views.audio_visual_page, name='audio_visual'),
 
-    path('soluciones', soluciones_page, name='soluciones'),
-    path('soluciones/programas_estrategicos', programas_estrategicos_page, name='programas_estrategicos'),
+    path('soluciones', views.soluciones_page, name='soluciones'),
+    path('soluciones/programas_estrategicos', views.programas_estrategicos_page, name='programas_estrategicos'),
+    path('soluciones/soporte_tactico', views.soporte_tactico_page, name='soporte_tactico'),
+    path('soluciones/proyectos', views.proyectos_page, name='proyectos'),
 
-    path('recursos', recursos_page, name='recursos'),
+    path('recursos', views.recursos_page, name='recursos'),
 
     path('admin/', admin.site.urls),
 
+    path('blog/', include('blog.urls')),
     path('workshops/', include('courses.urls')),
     path('checkout/', include('stripe_checkout.urls')),
 

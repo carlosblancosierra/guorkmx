@@ -1,0 +1,323 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block head_title %} {% endblock %}
+
+{% block content %}
+
+{% url 'inbound' as inbound_url %}
+{% url 'contact' as contact_url %}
+
+{% url 'events' as events_url %}
+{% url 'experts' as experts_url %}
+{% url 'audio_visual' as audio_visual_url %}
+{% url 'inbound' as inbound_url %}
+
+
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            <h2 class="soluciones-subpage-subtitle">Soluciones /</h2>
+            <h1 class="soluciones-subpage-title">SOPORTE TÁCTICO</h1>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col s12 m3">
+            <p class="text-blue text-barlow text-right font-150 mt-0 mb-1 text-uppercase">CARACTERÍSTICAS</p>
+            <ul class="tabs soluciones-tabs-ul" style="height:unset">
+                <li class="tab col s12 soluciones-tabs-ul-tabs">
+                    <a class="soluciones-tabs-ul-a" href="#test1">FLEXIBILIDAD + VERSATILIDAD</a>
+                </li>
+                <li class="tab col s12 soluciones-tabs-ul-tabs">
+                    <a class="soluciones-tabs-ul-a" href="#test2">BAJO RIESGO</a>
+                </li>
+                <li class="tab col s12 soluciones-tabs-ul-tabs">
+                    <a class="soluciones-tabs-ul-a" href="#test3">ACCESO ON DEMAND</a>
+                </li>
+                <li class="tab col s12 soluciones-tabs-ul-tabs">
+                    <a class="soluciones-tabs-ul-a" href="#test4">SOPORTE REACTIVO</a>
+                </li>
+                <li class="tab col s12 soluciones-tabs-ul-tabs">
+                    <a class="soluciones-tabs-ul-a" href="#test5">EXPERIENCIA TÁCTICA</a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="col s12 m9">
+            <div id="test1" class="col s12">
+                <div class="soluciones-tab-square">
+                    <p>Correcto para ti si:</p>
+                    <ul class="browser-default">
+                        <li>
+                            <span class="font-weight-bold">
+                                Estás buscando experiencia
+                            </span>
+                            en un tema específico para mejorar las métricas de tu campaña o incrementar las ventas de tu
+                            empresa.
+
+                        </li>
+                        <li>
+                            Estás buscando desarrollar un proyecto en un
+                            <span class="font-weight-bold">
+                                corto período de tiempo
+                            </span>
+                        </li>
+                        <li>
+                            <span class="font-weight-bold">
+                                Necesitas potencia
+                            </span>
+                            más que capacidad intelectual y más experiencia más que visión.
+
+                        </li>
+                        <li>
+                            <span class="font-weight-bold">
+                                Tienes una necesidad continua de asistencia
+                            </span>
+                            , pero no siempre es constante y el volumen fluctúa.
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid position-relative pb-5 mb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m4">
+                <h2>Detalles</h2>
+                <p class="text-justify">
+                    Aborda los desafíos a medida que surgen con un enfoque flexible y una amplia gama de habilidades en
+                    diversas disciplinas.
+                </p>
+                <p class="text-justify">
+                    Somos expertos en traducir ideas en resultados y estamos aquí para complementar tus capacidades,
+                    aumentar tu productividad o llenar tus vacíos de experiencia.
+                </p>
+            </div>
+            <div class="col s12 m8 mt-md-5 pt-md-5">
+                <div class="card py-5 px-4">
+                    <h2 class="m-0 font-250">PRINCIPALES TIPOS DE SERVICIOS</h2>
+
+                    <div class="row mt-5">
+
+                        <div class="col s12 m6 p-4">
+                            <a href="{{ inbound_url }}">
+                                <div class="row soluciones-squares">
+                                    <div class="col s4 soluciones-icon">
+                                        <img src="{% static 'images/inbound/test-logo.png' %}" class="responsive-img"/>
+                                    </div>
+                                    <div class="col s8 center">
+                                        <p class="m-0">ALINEACIÓN MARKETING Y VENTAS</p>
+                                        <p class="text-blue-light">Aprende más ></p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col s12 m6 p-4">
+                            <a href="{{ inbound_url }}">
+                                <div class="row soluciones-squares">
+                                    <div class="col s4 soluciones-icon">
+                                        <img src="{% static 'images/inbound/test-logo.png' %}" class="responsive-img"/>
+                                    </div>
+                                    <div class="col s8 center">
+                                        <p class="m-0">BUSINESS INTELIGENCE</p>
+                                        <p class="text-blue-light">Aprende más ></p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="row mt-2">
+
+                        <div class="col s12 m6 p-4">
+                            <a href="{{ inbound_url }}">
+                                <div class="row soluciones-squares">
+                                    <div class="col s4 soluciones-icon">
+                                        <img src="{% static 'images/inbound/test-logo.png' %}" class="responsive-img"/>
+                                    </div>
+                                    <div class="col s8 center">
+                                        <p class="m-0">SOPORTE WEB</p>
+                                        <p class="text-blue-light">Aprende más ></p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col s12 m6 p-4">
+                            <a href="{{ inbound_url }}">
+                                <div class="row soluciones-squares">
+                                    <div class="col s4 soluciones-icon">
+                                        <img src="{% static 'images/inbound/test-logo.png' %}" class="responsive-img"/>
+                                    </div>
+                                    <div class="col s8 center">
+                                        <p class="m-0">INTEGRACIÓN CRM</p>
+                                        <p class="text-blue-light">Aprende más ></p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="row mt-2">
+
+                        <div class="col s12 m6 p-4">
+                            <a href="{{ inbound_url }}">
+                                <div class="row soluciones-squares">
+                                    <div class="col s4 soluciones-icon">
+                                        <img src="{% static 'images/inbound/test-logo.png' %}" class="responsive-img"/>
+                                    </div>
+                                    <div class="col s8 center">
+                                        <p class="m-0">CREACION DE CONTENIDO</p>
+                                        <p class="text-blue-light">Aprende más ></p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col s12 m6 p-4">
+                            <a href="{{ inbound_url }}">
+                                <div class="row soluciones-squares">
+                                    <div class="col s4 soluciones-icon">
+                                        <img src="{% static 'images/inbound/test-logo.png' %}" class="responsive-img"/>
+                                    </div>
+                                    <div class="col s8 center">
+                                        <p class="m-0">EVALUACIÓN DE VENTAS DIGITALES</p>
+                                        <p class="text-blue-light">Aprende más ></p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <img src="{% static 'images/bg-blue-left-3.png' %}" alt="" class="soluciones-bg-blue-left">
+    <img src="{% static 'images/bg-splash-lines-2.png' %}" alt="" class="soluciones-splash-lines-1">
+
+</div>
+
+<div class="row bg-light-grey">
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <h2 class="text-center">Nuestro Blog</h2>
+                <p class="gold-hr-center"></p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://materializecss.com/images/sample-1.jpg">
+                        <a class="btn-floating halfway-fab waves-effect waves-light bg-gold"><i
+                                class="material-icons">add</i></a>
+                    </div>
+                    <div class="card-content text-center">
+                        <p class="home-blog-title">COMO APARECER EN GOOGLE PARA AUMENTAR TU POSICIONAMIENTO WEB?</p>
+                        <p class="gold-hr-center my-3"></p>
+                        <p class="home-blog-desc">I am a very simple card. I am good at containing small bits of
+                            information. I am
+                            convenient because I require little markup to use effectively.</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://materializecss.com/images/sample-1.jpg">
+                        <a class="btn-floating halfway-fab waves-effect waves-light bg-gold"><i
+                                class="material-icons">add</i></a>
+                    </div>
+                    <div class="card-content text-center">
+                        <p class="home-blog-title">COMO APARECER EN GOOGLE PARA AUMENTAR TU POSICIONAMIENTO WEB?</p>
+                        <p class="gold-hr-center my-3"></p>
+                        <p class="home-blog-desc">I am a very simple card. I am good at containing small bits of
+                            information. I am
+                            convenient because I require little markup to use effectively.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://materializecss.com/images/sample-1.jpg">
+                        <a class="btn-floating halfway-fab waves-effect waves-light bg-gold"><i
+                                class="material-icons">add</i></a>
+                    </div>
+                    <div class="card-content text-center">
+                        <p class="home-blog-title">COMO APARECER EN GOOGLE PARA AUMENTAR TU POSICIONAMIENTO WEB?</p>
+                        <p class="gold-hr-center my-3"></p>
+                        <p class="home-blog-desc">I am a very simple card. I am good at containing small bits of
+                            information. I am
+                            convenient because I require little markup to use effectively.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row my-5">
+            <div class="col s12 m6 offset-m3">
+                <a class="btn btn-gold w-100" href="#">VER MÁS</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid position-relative">
+    <div class="container my-5">
+        <div class="row">
+            <div class="col s6 offset-s3 m4 offset-m4">
+                <img src="{% static 'images/home/home-gold-plane.png' %}" class="responsive-img"/>
+            </div>
+            <div class="col s12">
+                <p class="home-contactanos-title">CONTÁCTANOS</p>
+                <p class="text-center text-uppercase text-barlow font-weight-bold font-150">
+                    Da Click y dejanos tus comentarios</p>
+            </div>
+        </div>
+        <div class="row my-2">
+            <div class="col s12 m6 offset-m3">
+                <a class="btn btn-gold w-100" href="{{ contact_url }}">CONTÁCTANOS</a>
+            </div>
+        </div>
+    </div>
+    <img src="{% static 'images/bg-splash-lines-2.png' %}" class="event-list-splash-lines-2 d-none d-md-block"/>
+    <img src="{% static 'images/bg-splash-lines.png' %}" class="audio-visual-splash-lines-top d-none d-md-block"/>
+
+</div>
+
+
+{% endblock %}
+
+
+{% block js_extra %}
+
+{% endblock %}

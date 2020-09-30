@@ -2254,3 +2254,43 @@
   left: 0;
   z-index: 1030;
 }
+
+.font-070 {
+    font-size:0.7rem!important;
+}
+
+.font-080 {
+    font-size:0.8rem!important;
+}
+
+.font-090 {
+    font-size:0.9rem!important;
+}
+
+.font-150 {
+    font-size:1.5rem!important;
+}
+
+.font-200 {
+    font-size:2rem!important;
+}
+
+.font-250 {
+    font-size:2.5rem!important;
+}
+
+.font-300 {
+    font-size:3rem!important;
+}
+
+.font-350 {
+    font-size:3.5rem!important;
+}
+
+.font-400 {
+    font-size:4rem;
+}
+
+a {
+    color:unset!important;
+}

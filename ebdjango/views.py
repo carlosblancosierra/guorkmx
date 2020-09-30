@@ -144,7 +144,21 @@ def programas_estrategicos_page(request):
     context = {
     }
 
-    return render(request, "programas_estrategicos_page.html", context)
+    return render(request, "soluciones_programas_estrategicos_page.html", context)
+
+
+def soporte_tactico_page(request):
+    context = {
+    }
+
+    return render(request, "soluciones_soporte_tactico_page.html", context)
+
+
+def proyectos_page(request):
+    context = {
+    }
+
+    return render(request, "soluciones_proyectos_page.html", context)
 
 
 def nosotros_page(request):

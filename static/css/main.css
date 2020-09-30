@@ -10,13 +10,13 @@ a {
     color: unset;
 }
 
-ul:not(.browser-default) {
+#blog-post-content ul:not(.browser-default) {
     list-style-type: inherit!important;
     padding-left:2rem!important;
 
 }
 
-ul:not(.browser-default) li{
+#blog-post-content ul:not(.browser-default) li{
     list-style-type: inherit!important;
 }
 :root {

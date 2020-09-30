@@ -8,7 +8,9 @@
 
 {% url 'inbound' as inbound_url %}
 {% url 'contact' as contact_url %}
+{% url 'soporte_tactico' as soporte_tactico_url %}
 {% url 'programas_estrategicos' as programas_estrategicos_url %}
+{% url 'proyectos' as proyectos_url %}
 
 <div class="row">
     <div class="container">
@@ -95,31 +97,37 @@
         </div>
 
         <div class="col s12 m4 mt-5 pt-3">
-            <div class="soluciones-square">
-                <img src="{% static 'images/soluciones/icono-programas-estrategicos.png' %}" alt=""
-                     class="soluciones-square-icon"/>
-                <h3 class="font-150 mt-2">Soporte Táctico</h3>
-                <p class="text-justify">
-                    Un equipo de expertos listo para implementar iniciativas específicas bajo demanda, como marketing +
-                    operaciones de ventas, integraciones de CRM, soporte creativo, desarrollo web, marketing
-                    conversacional y creación de contenido.
-                </p>
-                <p class="font-125 text-blue m-0 text-right">Conoce más</p>
-            </div>
+            <a href="{{ soporte_tactico_url }}">
+                <div class="soluciones-square">
+                    <img src="{% static 'images/soluciones/icono-programas-estrategicos.png' %}" alt=""
+                         class="soluciones-square-icon"/>
+                    <h3 class="font-150 mt-2">Soporte Táctico</h3>
+                    <p class="text-justify">
+                        Un equipo de expertos listo para implementar iniciativas específicas bajo demanda, como
+                        marketing +
+                        operaciones de ventas, integraciones de CRM, soporte creativo, desarrollo web, marketing
+                        conversacional y creación de contenido.
+                    </p>
+                    <p class="font-125 text-blue m-0 text-right">Conoce más</p>
+                </div>
+            </a>
         </div>
 
         <div class="col s12 m4 mt-5 pt-3">
-            <div class="soluciones-square">
-                <img src="{% static 'images/soluciones/icono-programas-estrategicos.png' %}" alt=""
-                     class="soluciones-square-icon"/>
-                <h3 class="font-150 mt-2">Proyectos</h3>
-                <p class="text-justify">
-                    Un entregable de alcance fijo, claramente definido, ya sea una auditoría o análisis de terceros, un
-                    proyecto de video, diseño de sitio web, implementación de chatbot, migración de datos o una
-                    aplicación web / móvil.
-                </p>
-                <p class="font-125 text-blue m-0 text-right">Conoce más</p>
-            </div>
+            <a href="{{ proyectos_url }}">
+                <div class="soluciones-square">
+                    <img src="{% static 'images/soluciones/icono-programas-estrategicos.png' %}" alt=""
+                         class="soluciones-square-icon"/>
+                    <h3 class="font-150 mt-2">Proyectos</h3>
+                    <p class="text-justify">
+                        Un entregable de alcance fijo, claramente definido, ya sea una auditoría o análisis de terceros,
+                        un
+                        proyecto de video, diseño de sitio web, implementación de chatbot, migración de datos o una
+                        aplicación web / móvil.
+                    </p>
+                    <p class="font-125 text-blue m-0 text-right">Conoce más</p>
+                </div>
+            </a>
         </div>
     </div>
 </div>
@@ -133,7 +141,7 @@
                 Hablemos de tus desafíos, objetivos y plazos. Juntos determinaremos los servicios adecuados para tu
                 empresa.
             </p>
-            <p class="text-center"><a class="btn-large btn-blue" href="#">Conoce más</a></p>
+            <p class="text-center"><a class="btn-large btn-blue" href="{{ contact_url }}">Conoce más</a></p>
 
         </div>
     </div>

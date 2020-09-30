@@ -4,7 +4,13 @@
 {% url 'inbound' as inbound_url %}
 {% url 'contact' as contact_url %}
 {% url 'events' as events_url %}
+{% url 'blog:home' as blog_url %}
 
+
+{% url 'soluciones' as soluciones_url %}
+{% url 'soporte_tactico' as soporte_tactico_url %}
+{% url 'programas_estrategicos' as programas_estrategicos_url %}
+{% url 'proyectos' as proyectos_url %}
 
 <nav class="navbar py-3">
     <div class="container">
@@ -14,14 +20,10 @@
             </a>
             <a href="#" data-target="slide-out" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a class="dropdown-trigger" href="#!" data-target="dropdownServicios">Servicios
+                <li><a class="dropdown-trigger" href="#!" data-target="dropdownServicios">Soluciones
                     <i class="material-icons right">arrow_drop_down</i></a></li>
-                <li><a href="badges.html">Nosotros</a></li>
-                <li><a href="collapsible.html">Casos de Éxito</a></li>
-                <li><a href="badges.html">Partnership</a></li>
-                <li><a href="badges.html">Blog</a></li>
-                <li><a href="{{ contact_url }}">Contáctanos</a></li>
-                <li><a href="badges.html" class="btn btn-gold">Cotiza</a></li>
+                <li><a href="{{ blog_url }}">Blog</a></li>
+                <li><a href="{{ contact_url }}">Contacto</a></li>
             </ul>
         </div>
     </div>
@@ -29,10 +31,11 @@
 
 <!-- Dropdown Structure -->
 <ul id="dropdownServicios" class="dropdown-content">
-    <li><a href="{{ inbound_url }}">Inbound</a></li>
-    <li><a href="#!">two</a></li>
+    <li><a href="{{ soporte_tactico_url }}">Soporte Táctico</a></li>
+    <li><a href="{{ programas_estrategicos_url }}">Programas Estratégicos</a></li>
+    <li><a href="{{ proyectos_url }}">Proyectos</a></li>
     <li class="divider"></li>
-    <li><a href="#!">three</a></li>
+    <li><a href="{{ soluciones_url }}">Todos</a></li>
 </ul>
 
 <ul id="slide-out" class="sidenav">

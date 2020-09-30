@@ -14,6 +14,10 @@
 {% url 'audio_visual' as audio_visual_url %}
 {% url 'inbound' as inbound_url %}
 
+{% url 'soporte_tactico' as soporte_tactico_url %}
+{% url 'programas_estrategicos' as programas_estrategicos_url %}
+{% url 'proyectos' as proyectos_url %}
+
 
 <div class="container-fluid">
     <div class="container">
@@ -116,60 +120,30 @@
                     <div class="row mt-5">
 
                         <div class="col s12 m6 p-4">
-                            <a href="{{ inbound_url }}">
+                            <a href="#">
                                 <div class="row soluciones-squares">
                                     <div class="col s4 soluciones-icon">
-                                        <img src="{% static 'images/inbound/test-logo.png' %}" class="responsive-img"/>
+                                        <img src="{% static 'images/soluciones/icons/white/inbound.png' %}"
+                                             class="responsive-img"/>
                                     </div>
                                     <div class="col s8 center">
-                                        <p class="m-0">INBOUND MARKETING</p>
-                                        <p class="text-blue-light">Aprende más ></p>
+                                        <p class="soluciones-servicios-titles">INBOUND MARKETING</p>
+<!--                                        <p class="text-blue-light">Aprende más ></p>-->
                                     </div>
                                 </div>
                             </a>
                         </div>
 
                         <div class="col s12 m6 p-4">
-                            <a href="{{ inbound_url }}">
+                            <a href="#">
                                 <div class="row soluciones-squares">
                                     <div class="col s4 soluciones-icon">
-                                        <img src="{% static 'images/inbound/test-logo.png' %}" class="responsive-img"/>
+                                        <img src="{% static 'images/soluciones/icons/white/marketing.png' %}"
+                                             class="responsive-img"/>
                                     </div>
                                     <div class="col s8 center">
-                                        <p class="m-0">Marketing Conversacional</p>
-                                        <p class="text-blue-light">Aprende más ></p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-
-                    <div class="row mt-2">
-
-                        <div class="col s12 m6 p-4">
-                            <a href="{{ inbound_url }}">
-                                <div class="row soluciones-squares">
-                                    <div class="col s4 soluciones-icon">
-                                        <img src="{% static 'images/inbound/test-logo.png' %}" class="responsive-img"/>
-                                    </div>
-                                    <div class="col s8 center">
-                                        <p class="m-0">Prospección Digital</p>
-                                        <p class="text-blue-light">Aprende más ></p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col s12 m6 p-4">
-                            <a href="{{ inbound_url }}">
-                                <div class="row soluciones-squares">
-                                    <div class="col s4 soluciones-icon">
-                                        <img src="{% static 'images/inbound/test-logo.png' %}" class="responsive-img"/>
-                                    </div>
-                                    <div class="col s8 center">
-                                        <p class="m-0">Lead Management</p>
-                                        <p class="text-blue-light">Aprende más ></p>
+                                        <p class="soluciones-servicios-titles">MARKETING CONVERSACIONAL</p>
+<!--                                        <p class="text-blue-light">Aprende más ></p>-->
                                     </div>
                                 </div>
                             </a>
@@ -180,28 +154,64 @@
                     <div class="row mt-2">
 
                         <div class="col s12 m6 p-4">
-                            <a href="{{ inbound_url }}">
+                            <a href="#">
                                 <div class="row soluciones-squares">
                                     <div class="col s4 soluciones-icon">
-                                        <img src="{% static 'images/inbound/test-logo.png' %}" class="responsive-img"/>
+                                        <img src="{% static 'images/soluciones/icons/white/prospeccion.png' %}"
+                                             class="responsive-img"/>
                                     </div>
                                     <div class="col s8 center">
-                                        <p class="m-0">Customer Success</p>
-                                        <p class="text-blue-light">Aprende más ></p>
+                                        <p class="soluciones-servicios-titles">PROSPECCIÓN DIGITAL</p>
+<!--                                        <p class="text-blue-light">Aprende más ></p>-->
                                     </div>
                                 </div>
                             </a>
                         </div>
 
                         <div class="col s12 m6 p-4">
-                            <a href="{{ inbound_url }}">
+                            <a href="#">
                                 <div class="row soluciones-squares">
                                     <div class="col s4 soluciones-icon">
-                                        <img src="{% static 'images/inbound/test-logo.png' %}" class="responsive-img"/>
+                                        <img src="{% static 'images/soluciones/icons/white/leads.png' %}"
+                                             class="responsive-img"/>
                                     </div>
                                     <div class="col s8 center">
-                                        <p class="m-0">Campañas SEM</p>
-                                        <p class="text-blue-light">Aprende más ></p>
+                                        <p class="soluciones-servicios-titles">LEAD MANAGEMENT</p>
+<!--                                        <p class="text-blue-light">Aprende más ></p>-->
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="row mt-2">
+
+                        <div class="col s12 m6 p-4">
+                            <a href="#">
+                                <div class="row soluciones-squares">
+                                    <div class="col s4 soluciones-icon">
+                                        <img src="{% static 'images/soluciones/icons/white/customer.png' %}"
+                                             class="responsive-img"/>
+                                    </div>
+                                    <div class="col s8 center">
+                                        <p class="soluciones-servicios-titles">CUSTOMER SUCCESS</p>
+<!--                                        <p class="text-blue-light">Aprende más ></p>-->
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col s12 m6 p-4">
+                            <a href="#">
+                                <div class="row soluciones-squares">
+                                    <div class="col s4 soluciones-icon">
+                                        <img src="{% static 'images/soluciones/icons/white/sem.png' %}"
+                                             class="responsive-img"/>
+                                    </div>
+                                    <div class="col s8 center">
+                                        <p class="soluciones-servicios-titles">CAMPAÑAS SEM</p>
+<!--                                        <p class="text-blue-light">Aprende más ></p>-->
                                     </div>
                                 </div>
                             </a>
@@ -218,6 +228,36 @@
     <img src="{% static 'images/bg-blue-left-3.png' %}" alt="" class="soluciones-bg-blue-left">
     <img src="{% static 'images/bg-splash-lines-2.png' %}" alt="" class="soluciones-splash-lines-1">
 
+</div>
+
+<div class="row bg-gold-gradient text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m6">
+                <p class="font-200 font-barlow text-white text-uppercase mt-5">
+                    ¿Programas Estratégios suenan como algo para ti?
+                </p>
+                <p>Inicia la conversación</p>
+                <p><a href="{{ contact_url }}" class="btn btn-blue font-150">
+                    Agenda una CITA
+                </a></p>
+            </div>
+            <div class="col s12 m6">
+                <p class="font-150 font-barlow">
+                    ¿¿Buscas algo más flexible? Revisa esto
+                </p>
+                <p><a href=" {{ soporte_tactico_url }}" class="btn btn-outline-gold">
+                    Soporte Táctico
+                </a></p>
+                <p class="font-150 font-barlow">
+                    ¿Quieres una relación más centrada en entregables?
+                </p>
+                <p><a href="{{ proyectos_url }}" class="btn btn-outline-gold">
+                    Proyectos
+                </a></p>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="row bg-light-grey">

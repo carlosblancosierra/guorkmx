@@ -14,6 +14,10 @@
 {% url 'audio_visual' as audio_visual_url %}
 {% url 'inbound' as inbound_url %}
 
+{% url 'soporte_tactico' as soporte_tactico_url %}
+{% url 'programas_estrategicos' as programas_estrategicos_url %}
+{% url 'proyectos' as proyectos_url %}
+
 
 <div class="container-fluid">
     <div class="container">
@@ -26,7 +30,7 @@
     <div class="row">
         <div class="col s12">
             <h2 class="soluciones-subpage-subtitle">Soluciones /</h2>
-            <h1 class="soluciones-subpage-title">SOPORTE TÁCTICO</h1>
+            <h1 class="soluciones-subpage-title">PROYECTOS</h1>
         </div>
     </div>
 
@@ -92,6 +96,8 @@
                     implementación, nuestro equipo puede desbloquear el siguiente nivel de crecimiento a través de la
                     gestión de proyectos centrados en resultados.
                 </p>
+
+
             </div>
             <div class="col s12 m8 mt-md-5 pt-md-5">
                 <div class="card py-5 px-4">
@@ -100,60 +106,30 @@
                     <div class="row mt-5">
 
                         <div class="col s12 m6 p-4">
-                            <a href="{{ inbound_url }}">
+                            <a href="#">
                                 <div class="row soluciones-squares">
                                     <div class="col s4 soluciones-icon">
-                                        <img src="{% static 'images/inbound/test-logo.png' %}" class="responsive-img"/>
+                                        <img src="{% static 'images/soluciones/icons/white/diseno-web.png' %}"
+                                             class="responsive-img"/>
                                     </div>
                                     <div class="col s8 center">
-                                        <p class="m-0">DISEÑO WEB</p>
-                                        <p class="text-blue-light">Aprende más ></p>
+                                        <p class="soluciones-servicios-titles">DISEÑO WEB</p>
+<!--                                        <p class="text-blue-light">Aprende más ></p>-->
                                     </div>
                                 </div>
                             </a>
                         </div>
 
                         <div class="col s12 m6 p-4">
-                            <a href="{{ inbound_url }}">
+                            <a href="#">
                                 <div class="row soluciones-squares">
                                     <div class="col s4 soluciones-icon">
-                                        <img src="{% static 'images/inbound/test-logo.png' %}" class="responsive-img"/>
+                                        <img src="{% static 'images/soluciones/icons/white/animacion.png' %}"
+                                             class="responsive-img"/>
                                     </div>
                                     <div class="col s8 center">
-                                        <p class="m-0">ANIMACIÓN 2D Y 3D</p>
-                                        <p class="text-blue-light">Aprende más ></p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-
-                    <div class="row mt-2">
-
-                        <div class="col s12 m6 p-4">
-                            <a href="{{ inbound_url }}">
-                                <div class="row soluciones-squares">
-                                    <div class="col s4 soluciones-icon">
-                                        <img src="{% static 'images/inbound/test-logo.png' %}" class="responsive-img"/>
-                                    </div>
-                                    <div class="col s8 center">
-                                        <p class="m-0">BRANDING</p>
-                                        <p class="text-blue-light">Aprende más ></p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col s12 m6 p-4">
-                            <a href="{{ inbound_url }}">
-                                <div class="row soluciones-squares">
-                                    <div class="col s4 soluciones-icon">
-                                        <img src="{% static 'images/inbound/test-logo.png' %}" class="responsive-img"/>
-                                    </div>
-                                    <div class="col s8 center">
-                                        <p class="m-0">APLICACIONES MÓVILES</p>
-                                        <p class="text-blue-light">Aprende más ></p>
+                                        <p class="soluciones-servicios-titles">ANIMACIÓN 2D Y 3D</p>
+<!--                                        <p class="text-blue-light">Aprende más ></p>-->
                                     </div>
                                 </div>
                             </a>
@@ -164,28 +140,30 @@
                     <div class="row mt-2">
 
                         <div class="col s12 m6 p-4">
-                            <a href="{{ inbound_url }}">
+                            <a href="#">
                                 <div class="row soluciones-squares">
                                     <div class="col s4 soluciones-icon">
-                                        <img src="{% static 'images/inbound/test-logo.png' %}" class="responsive-img"/>
+                                        <img src="{% static 'images/soluciones/icons/white/branding.png' %}"
+                                             class="responsive-img"/>
                                     </div>
                                     <div class="col s8 center">
-                                        <p class="m-0">DESARROLLO WEB</p>
-                                        <p class="text-blue-light">Aprende más ></p>
+                                        <p class="soluciones-servicios-titles">BRANDING</p>
+<!--                                        <p class="text-blue-light">Aprende más ></p>-->
                                     </div>
                                 </div>
                             </a>
                         </div>
 
                         <div class="col s12 m6 p-4">
-                            <a href="{{ inbound_url }}">
+                            <a href="#">
                                 <div class="row soluciones-squares">
                                     <div class="col s4 soluciones-icon">
-                                        <img src="{% static 'images/inbound/test-logo.png' %}" class="responsive-img"/>
+                                        <img src="{% static 'images/soluciones/icons/white/aplicaciones.png' %}"
+                                             class="responsive-img"/>
                                     </div>
                                     <div class="col s8 center">
-                                        <p class="m-0">CHATBOTS</p>
-                                        <p class="text-blue-light">Aprende más ></p>
+                                        <p class="soluciones-servicios-titles">APLICACIONES MÓVILES</p>
+<!--                                        <p class="text-blue-light">Aprende más ></p>-->
                                     </div>
                                 </div>
                             </a>
@@ -196,28 +174,64 @@
                     <div class="row mt-2">
 
                         <div class="col s12 m6 p-4">
-                            <a href="{{ inbound_url }}">
+                            <a href="#">
                                 <div class="row soluciones-squares">
                                     <div class="col s4 soluciones-icon">
-                                        <img src="{% static 'images/inbound/test-logo.png' %}" class="responsive-img"/>
+                                        <img src="{% static 'images/soluciones/icons/white/desarrollo-web.png' %}"
+                                             class="responsive-img"/>
                                     </div>
                                     <div class="col s8 center">
-                                        <p class="m-0">AUDITORÍAS DIGITALES</p>
-                                        <p class="text-blue-light">Aprende más ></p>
+                                        <p class="soluciones-servicios-titles">DESARROLLO WEB</p>
+<!--                                        <p class="text-blue-light">Aprende más ></p>-->
                                     </div>
                                 </div>
                             </a>
                         </div>
 
                         <div class="col s12 m6 p-4">
-                            <a href="{{ inbound_url }}">
+                            <a href="#">
                                 <div class="row soluciones-squares">
                                     <div class="col s4 soluciones-icon">
-                                        <img src="{% static 'images/inbound/test-logo.png' %}" class="responsive-img"/>
+                                        <img src="{% static 'images/soluciones/icons/white/chatbots.png' %}"
+                                             class="responsive-img"/>
                                     </div>
                                     <div class="col s8 center">
-                                        <p class="m-0">REALIDAD VIRTUAL</p>
-                                        <p class="text-blue-light">Aprende más ></p>
+                                        <p class="soluciones-servicios-titles">CHATBOTS</p>
+<!--                                        <p class="text-blue-light">Aprende más ></p>-->
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="row mt-2">
+
+                        <div class="col s12 m6 p-4">
+                            <a href="#">
+                                <div class="row soluciones-squares">
+                                    <div class="col s4 soluciones-icon">
+                                        <img src="{% static 'images/soluciones/icons/white/auditorias.png' %}"
+                                             class="responsive-img"/>
+                                    </div>
+                                    <div class="col s8 center">
+                                        <p class="soluciones-servicios-titles">AUDITORÍAS DIGITALES</p>
+<!--                                        <p class="text-blue-light">Aprende más ></p>-->
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col s12 m6 p-4">
+                            <a href="#">
+                                <div class="row soluciones-squares">
+                                    <div class="col s4 soluciones-icon">
+                                        <img src="{% static 'images/soluciones/icons/white/aplicaciones.png' %}"
+                                             class="responsive-img"/>
+                                    </div>
+                                    <div class="col s8 center">
+                                        <p class="soluciones-servicios-titles">REALIDAD VIRTUAL</p>
+<!--                                        <p class="text-blue-light">Aprende más ></p>-->
                                     </div>
                                 </div>
                             </a>
@@ -234,6 +248,36 @@
     <img src="{% static 'images/bg-blue-left-3.png' %}" alt="" class="soluciones-bg-blue-left">
     <img src="{% static 'images/bg-splash-lines-2.png' %}" alt="" class="soluciones-splash-lines-1">
 
+</div>
+
+<div class="row bg-gold-gradient text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m6">
+                <p class="font-200 font-barlow text-white text-uppercase mt-5">
+                    ¿Un Proyecto suena bien para ti?
+                </p>
+                <p>Iniciemos conversaciones</p>
+                <p><a href="{{ contact_url }}" class="btn btn-blue font-150">
+                    Agenda una Asesoría
+                </a></p>
+            </div>
+            <div class="col s12 m6">
+                <p class="font-150 font-barlow">
+                    ¿Buscas algo más flexible? Revisa esto
+                </p>
+                <p><a href="{{ soporte_tactico_url }}" class="btn btn-outline-gold">
+                    Soporte Táctico
+                </a></p>
+                <p class="font-150 font-barlow">
+                    ¿Buscas hacer una inversión continua para el crecimiento de tu empresa?
+                </p>
+                <p><a href=" {{ programas_estrategicos_url }}" class="btn btn-outline-gold">
+                    Programas Estratégicos
+                </a></p>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="row bg-light-grey">

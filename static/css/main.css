@@ -1175,3 +1175,8 @@ a:hover .home-service-consult-col {
 .recursos-owl-carousels .owl-dots {
     display: none;
 }
+
+.soluciones-servicios-titles {
+    min-height:4.5rem;
+    margin-top:1.5rem;
+}

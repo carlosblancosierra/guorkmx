@@ -66,15 +66,19 @@ $(document).ready(function() {
         loop: true,
         margin: 10,
         nav: true,
+        autoplay:true,
+        autoplayTimeout:2000,
+        autoplaySpeed:4000,
+        slideTransition: 'linear',
         responsive: {
             0: {
-                items: 1
+                items: 1,
             },
             600: {
-                items: 3
+                items: 3,
             },
             1000: {
-                items: 5
+                items: 5,
             }
         }
     });
@@ -82,6 +86,10 @@ $(document).ready(function() {
     $("#owl-carousel-casos-exito").owlCarousel({
         loop: true,
         nav: true,
+        autoplay:true,
+        autoplayTimeout:5000,
+        autoplaySpeed:2000,
+        autoplayHoverPause:true,
         responsive: {
             0: {
                 items: 1
@@ -104,9 +112,9 @@ $(document).ready(function() {
         margin: 0,
         nav: false,
         autoplay:true,
-        autoplayTimeout:3000,
+        autoplayTimeout:0,
         autoplayHoverPause:false,
-        autoplaySpeed:3000,
+        autoplaySpeed:1000,
         fluidSpeed:true,
         slideTransition: 'linear',
 

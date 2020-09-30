@@ -9,6 +9,24 @@
 {% url 'inbound' as inbound_url %}
 {% url 'contact' as contact_url %}
 
+{% url 'contact' as contact_url %}
+{% url 'audit_lp' as audit_lp_url %}
+
+
+{% url 'events' as events_url %}
+{% url 'experts' as experts_url %}
+{% url 'audio_visual' as audio_visual_url %}
+{% url 'soluciones' as soluciones_url %}
+
+{% url 'programas_estrategicos' as prog_estrategicos_url %}
+{% url 'soporte_tactico' as soporte_tactico_url %}
+{% url 'proyectos' as proyectos_url %}
+
+{% url 'recursos' as recursos_url %}
+{% url 'nosotros' as nosotros_url %}
+{% url 'blog' as blog_url %}
+{% url 'inbound' as inbound_url %}
+
 <div class="row">
     <div class="container">
         <div class="row">
@@ -20,8 +38,8 @@
                     Soluciones digitales integrales y consultoría para los mayores desafíos comerciales
                 </p>
                 <p class="text-right">
-                    <a class="btn btn-outline-gold" href="#">CONOCE MÁS</a>
-                    <a class="btn btn-outline-gold" href="#">HABLEMOS</a>
+                    <a class="btn btn-outline-gold" href="{{ soluciones_url }}">CONOCE MÁS</a>
+                    <a class="btn btn-outline-gold" href="{{ contact_url }}">HABLEMOS</a>
                 </p>
             </div>
         </div>
@@ -176,27 +194,28 @@
             <div class="owl-carousel" id="owl-carousel-casos-exito">
                 <div class="row">
                     <div class="col s12 m6 text-center">
-                        <img src="{% static 'images/home/logo-empresa-test.png' %}"
-                             class="responsive-img w-50"/>
+                        <img src="{% static 'images/home/exito/ludi.jpg' %}"
+                             class="responsive-img w-50 mx-auto"/>
                     </div>
                     <div class="col s12 m6 text-center text-md-left">
-                        <p class="">“Trabajar con Güork ha sido productivo, divertido, efectivo y eficiente. Me ha
+                        <p class="mt-md-5">
+                            “Trabajar con Güork ha sido productivo, divertido, efectivo y eficiente. Me ha
                             impresionado mucho su capacidad para comprender nuestros productos y mercado a través de su
                             proceso de descubrimiento y luego traducir su descubrimiento en entregas
                             significativas.”</p>
                         <p class="font-150 my-2">- Ludi</p>
 
-                        <a href="badges.html" class="btn btn-gold">VER VIDEO</a>
+<!--                        <a href="badges.html" class="btn btn-gold">VER VIDEO</a>-->
                     </div>
 
                 </div>
                 <div class="row">
                     <div class="col s12 m6 text-center">
-                        <img src="{% static 'images/home/logo-empresa-test.png' %}"
-                             class="responsive-img w-50"/>
+                        <img src="{% static 'images/home/exito/gnp.jpg' %}"
+                             class="responsive-img w-50 mx-auto"/>
                     </div>
                     <div class="col s12 m6 text-center text-md-left">
-                        <p class="">
+                        <p class="mt-md-5">
                             “Trabajamos con Güork para actualizar nuestras páginas de productos antes de lanzar nuestra
                             tienda en línea y, sinceramente, fueron el proveedor más fácil con el que hemos trabajado.
                             Escucharon lo que queríamos y generaron hermosas propuestas en una semana. Son profesionales
@@ -204,36 +223,36 @@
                         </p>
                         <p class="font-150 my-2">- GNP</p>
 
-                        <a href="badges.html" class="btn btn-gold">VER VIDEO</a>
+<!--                        <a href="badges.html" class="btn btn-gold">VER VIDEO</a>-->
                     </div>
 
                 </div>
 
                 <div class="row">
                     <div class="col s12 m6 text-center">
-                        <img src="{% static 'images/home/logo-empresa-test.png' %}"
-                             class="responsive-img w-50"/>
+                        <img src="{% static 'images/home/exito/aeromar.jpg' %}"
+                             class="responsive-img w-50 mx-auto"/>
                     </div>
                     <div class="col s12 m6 text-center text-md-left">
-                        <p class="">
+                        <p class="mt-md-5">
                             “Güork Marketing Agency hizo un trabajo excepcional ayudándonos con un cambio radical en la
                             imagen de nuestra marca. No podríamos estar más felices. Crearon una mejor experiencia
                             general para el usuario, optimizaron el sitio para SEO y lo hicieron visualmente atractivo.”
                         </p>
                         <p class="font-150 my-2">- Aeromar</p>
 
-                        <a href="badges.html" class="btn btn-gold">VER VIDEO</a>
+<!--                        <a href="badges.html" class="btn btn-gold">VER VIDEO</a>-->
                     </div>
 
                 </div>
 
                 <div class="row">
                     <div class="col s12 m6 text-center">
-                        <img src="{% static 'images/home/logo-empresa-test.png' %}"
-                             class="responsive-img w-50"/>
+                        <img src="{% static 'images/home/exito/lapi.jpg' %}"
+                             class="responsive-img w-50 mx-auto"/>
                     </div>
                     <div class="col s12 m6 text-center text-md-left">
-                        <p class="">
+                        <p class="mt-md-5">
                             “Mi equipo y yo comenzamos a trabajar con Güork hace poco menos de un año cuando lanzamos
                             nuestra nueva marca. Han sido fundamentales para su éxito, especialmente con tantos
                             recursos. Nuestro ejecutivo de proyecto es el MEJOR se aseguró en todo momento de que
@@ -241,7 +260,7 @@
                         </p>
                         <p class="font-150 my-2">- Lapi</p>
 
-                        <a href="badges.html" class="btn btn-gold">VER VIDEO</a>
+<!--                        <a href="badges.html" class="btn btn-gold">VER VIDEO</a>-->
                     </div>
 
                 </div>
@@ -278,23 +297,17 @@
 
             <!-- Set up your HTML -->
             <div class="owl-carousel" id="owl-carousel-partnertship">
-                <img src="{% static 'images/logo.png' %}" class=""/>
+                <img src="{% static '/images/home/partners/clientify.jpg' %}" class=""/>
 
-                <img src="{% static 'images/logo.png' %}" class=""/>
+                <img src="{% static '/images/home/partners/digital-marketer.jpg' %}" class=""/>
 
-                <img src="{% static 'images/logo.png' %}" class=""/>
+                <img src="{% static '/images/home/partners/google.jpg' %}" class=""/>
 
-                <img src="{% static 'images/logo.png' %}" class=""/>
+                <img src="{% static '/images/home/partners/hubspot.jpg' %}" class=""/>
 
-                <img src="{% static 'images/logo.png' %}" class=""/>
+                <img src="{% static '/images/home/partners/instapage.jpg' %}" class=""/>
 
-                <img src="{% static 'images/logo.png' %}" class=""/>
-
-                <img src="{% static 'images/logo.png' %}" class=""/>
-
-                <img src="{% static 'images/logo.png' %}" class=""/>
-
-                <img src="{% static 'images/logo.png' %}" class=""/>
+                <img src="{% static '/images/home/partners/wistia.jpg' %}" class=""/>
 
             </div>
 

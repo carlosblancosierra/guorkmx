@@ -29,6 +29,8 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     'guork-env.trawp8wvmc.us-east-1.elasticbeanstalk.com',
     'guork.mx',
+    'www2.guork.mx',
+    'www.guork.mx',
     'guork.herokuapp.com'
 ]
 

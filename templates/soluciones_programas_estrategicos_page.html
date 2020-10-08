@@ -19,15 +19,7 @@
 {% url 'proyectos' as proyectos_url %}
 {% url 'blog:home' as blog_url %}
 
-
-<div class="container-fluid">
-    <div class="container">
-        <div class="row">
-        </div>
-    </div>
-</div>
-
-<div class="container">
+<div class="container mt-5 mt-md-1">
     <div class="row">
         <div class="col s12">
             <h2 class="soluciones-subpage-subtitle">Soluciones /</h2>
@@ -35,233 +27,203 @@
         </div>
     </div>
 
-    <div class="row mt-3">
-        <div class="col s12 m3">
-            <p class="text-blue text-barlow text-right font-150 mt-0 mb-1 text-uppercase">CARACTERÍSTICAS</p>
-            <ul class="tabs soluciones-tabs-ul" style="height:unset">
-                <li class="tab col s12 soluciones-tabs-ul-tabs">
-                    <a class="soluciones-tabs-ul-a" href="#test1">ENFOCADA EN EL CRECIMIENTO</a>
-                </li>
-                <li class="tab col s12 soluciones-tabs-ul-tabs">
-                    <a class="soluciones-tabs-ul-a" href="#test2">RESPONSABLES DE KPI’S</a>
-                </li>
-                <li class="tab col s12 soluciones-tabs-ul-tabs">
-                    <a class="soluciones-tabs-ul-a" href="#test3">SOCIOS DE NEGOCIO</a>
-                </li>
-                <li class="tab col s12 soluciones-tabs-ul-tabs">
-                    <a class="soluciones-tabs-ul-a" href="#test4">MENTALIDAD PROACTIVA</a>
-                </li>
-                <li class="tab col s12 soluciones-tabs-ul-tabs">
-                    <a class="soluciones-tabs-ul-a" href="#test5">ALINEACIÓN DE ESFUERZOS</a>
-                </li>
-
-            </ul>
+    <div class="row mt-5">
+        <div class="col s12 m4">
+            <p class="text-blue text-barlow text-right font-200 mt-0 mb-1 text-uppercase font-weight-bold">
+                CARACTERÍSTICAS
+            </p>
+            <p class="soluciones-tabs-ul-a mt-3">ENFOCADA EN EL CRECIMIENTO</p>
+            <p class="soluciones-tabs-ul-a">RESPONSABLES DE KPI’S</p>
+            <p class="soluciones-tabs-ul-a">SOCIOS DE NEGOCIO</p>
+            <p class="soluciones-tabs-ul-a">MENTALIDAD PROACTIVA</p>
+            <p class="soluciones-tabs-ul-a">ALINEACIÓN DE ESFUERZOS</p>
         </div>
-        <div class="col s12 m9">
-            <div id="test1" class="col s12">
-                <div class="soluciones-tab-square">
-                    <p>Correcto para ti si:</p>
-                    <ul class="browser-default">
-                        <li>
+
+        <div class="col s12 m8">
+            <div class="soluciones-tab-square">
+                <p>Correcto para ti si:</p>
+                <ul class="browser-default">
+                    <li>
                             <span class="font-weight-bold">
                                 Buscas un equipo para profundizar, comprender tu negocio y tu panorama,
                                 y ​​concentrarte de manera proactiva en las vías de crecimiento.
                             </span>
-                        </li>
-                        <li>
+                    </li>
+                    <li>
                             <span class="font-weight-bold">
                                 Tienes metas y un presupuesto
                             </span>
-                            , y quiere que un equipo diseñe y ejecute un plan que logre objetivos de alto nivel.
+                        , y quiere que un equipo diseñe y ejecute un plan que logre objetivos de alto nivel.
 
-                        </li>
-                        <li>
+                    </li>
+                    <li>
                             <span class="font-weight-bold">
                                 Quieres un equipo para diseñar e implementar tecnología escalable</span>
-                            que respalde el crecimiento de tu negocio.
+                        que respalde el crecimiento de tu negocio.
 
-                        </li>
-                        <li>
+                    </li>
+                    <li>
                             <span class="font-weight-bold">
                                 Quieres un equipo que sea responsable</span>
-                            de las iniciativas estratégicas así como su respectiva ejecución.
+                        de las iniciativas estratégicas así como su respectiva ejecución.
 
-                        </li>
+                    </li>
 
-                    </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col s12 m7">
+            <h2>Detalles</h2>
+            <p class="soluciones-detalles-desc">
+                Quieres más clientes o clientes potenciales mejor calificados. Deseas respaldar tus esfuerzos de
+                ventas y cerrar más acuerdos.
+            </p>
+            <p class="soluciones-detalles-desc">
+                Deseas aumentar la retención de clientes y el valor de vida de cada
+                uno de ellos, mientras convierte a tus clientes satisfechos en promotores de la marca.
+            </p>
+            <p class="soluciones-detalles-desc">
+                Quizás solo
+                quieras hacer lo que sea que impulse el crecimiento de tu negocio. Independientemente de los
+                desafíos a los que te enfrentes, estamos listos para ayudar.
+            </p>
+            <h2>Principales tipos de servicios</h2>
+
+            <div class="row mt-5">
+                <div class="col s12 m4">
+                    <div class="row">
+                        <div class="col s4 p-md-0 mt-3 mt-md-0">
+                            <img src="{% static 'images/soluciones/icons/blue/inbound.png' %}"
+                                 class="responsive-img"/>
+                        </div>
+                        <div class="col s8">
+                            <p class="soluciones-servicios-title">INBOUND MARKETING</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 m4">
+                    <div class="row">
+                        <div class="col s4 p-md-0 mt-3 mt-md-0">
+                            <img src="{% static 'images/soluciones/icons/blue/marketing.png' %}"
+                                 class="responsive-img"/>
+                        </div>
+                        <div class="col s8">
+                            <p class="soluciones-servicios-title">MARKETING CONVERSACIONAL</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 m4">
+                    <div class="row">
+                        <div class="col s4 p-md-0 mt-3 mt-md-0">
+                            <img src="{% static 'images/soluciones/icons/blue/prospeccion.png' %}"
+                                 class="responsive-img"/>
+                        </div>
+                        <div class="col s8">
+                            <p class="soluciones-servicios-title">PROSPECCIÓN DIGITAL</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-md-5">
+                <div class="col s12 m4">
+                    <div class="row">
+                        <div class="col s4 p-md-0 mt-3 mt-md-0">
+                            <img src="{% static 'images/soluciones/icons/blue/leads.png' %}"
+                                 class="responsive-img"/>
+                        </div>
+                        <div class="col s8">
+                            <p class="soluciones-servicios-title">LEAD MANAGEMENT</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 m4">
+                    <div class="row">
+                        <div class="col s4 p-md-0 mt-3 mt-md-0">
+                            <img src="{% static 'images/soluciones/icons/blue/customer.png' %}"
+                                 class="responsive-img"/>
+                        </div>
+                        <div class="col s8">
+                            <p class="soluciones-servicios-title">CUSTOMER SUCCESS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 m4">
+                    <div class="row">
+                        <div class="col s4 p-md-0 mt-3 mt-md-0">
+                            <img src="{% static 'images/soluciones/icons/blue/sem.png' %}"
+                                 class="responsive-img"/>
+                        </div>
+                        <div class="col s8">
+                            <p class="soluciones-servicios-title">CAMPAÑAS SEM</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="container-fluid position-relative pb-5 mb-5">
-    <div class="container">
-        <div class="row">
-            <div class="col s12 m4">
-                <h2>Detalles</h2>
-                <p class="text-justify">
-                    Quieres más clientes o clientes potenciales mejor calificados. Deseas respaldar tus esfuerzos de
-                    ventas y cerrar más acuerdos.
-                </p>
-                <p class="text-justify">
-                    Deseas aumentar la retención de clientes y el valor de vida de cada
-                    uno de ellos, mientras convierte a tus clientes satisfechos en promotores de la marca.
-                </p>
-                <p class="text-justify">
-                    Quizás solo
-                    quieras hacer lo que sea que impulse el crecimiento de tu negocio. Independientemente de los
-                    desafíos a los que te enfrentes, estamos listos para ayudar.
-                </p>
-            </div>
-            <div class="col s12 m8 mt-md-5 pt-md-5">
-                <div class="card py-5 px-4">
-                    <h2 class="m-0 font-250">PRINCIPALES TIPOS DE SERVICIOS</h2>
-
-                    <div class="row mt-5">
-
-                        <div class="col s12 m6 p-4">
-                            <a href="#">
-                                <div class="row soluciones-squares">
-                                    <div class="col s4 soluciones-icon">
-                                        <img src="{% static 'images/soluciones/icons/white/inbound.png' %}"
-                                             class="responsive-img"/>
-                                    </div>
-                                    <div class="col s8 center">
-                                        <p class="soluciones-servicios-titles">INBOUND MARKETING</p>
-                                        <!--                                        <p class="text-blue-light">Aprende más ></p>-->
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col s12 m6 p-4">
-                            <a href="#">
-                                <div class="row soluciones-squares">
-                                    <div class="col s4 soluciones-icon">
-                                        <img src="{% static 'images/soluciones/icons/white/marketing.png' %}"
-                                             class="responsive-img"/>
-                                    </div>
-                                    <div class="col s8 center">
-                                        <p class="soluciones-servicios-titles">MARKETING CONVERSACIONAL</p>
-                                        <!--                                        <p class="text-blue-light">Aprende más ></p>-->
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-
-                    <div class="row mt-2">
-
-                        <div class="col s12 m6 p-4">
-                            <a href="#">
-                                <div class="row soluciones-squares">
-                                    <div class="col s4 soluciones-icon">
-                                        <img src="{% static 'images/soluciones/icons/white/prospeccion.png' %}"
-                                             class="responsive-img"/>
-                                    </div>
-                                    <div class="col s8 center">
-                                        <p class="soluciones-servicios-titles">PROSPECCIÓN DIGITAL</p>
-                                        <!--                                        <p class="text-blue-light">Aprende más ></p>-->
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col s12 m6 p-4">
-                            <a href="#">
-                                <div class="row soluciones-squares">
-                                    <div class="col s4 soluciones-icon">
-                                        <img src="{% static 'images/soluciones/icons/white/leads.png' %}"
-                                             class="responsive-img"/>
-                                    </div>
-                                    <div class="col s8 center">
-                                        <p class="soluciones-servicios-titles">LEAD MANAGEMENT</p>
-                                        <!--                                        <p class="text-blue-light">Aprende más ></p>-->
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-
-                    <div class="row mt-2">
-
-                        <div class="col s12 m6 p-4">
-                            <a href="#">
-                                <div class="row soluciones-squares">
-                                    <div class="col s4 soluciones-icon">
-                                        <img src="{% static 'images/soluciones/icons/white/customer.png' %}"
-                                             class="responsive-img"/>
-                                    </div>
-                                    <div class="col s8 center">
-                                        <p class="soluciones-servicios-titles">CUSTOMER SUCCESS</p>
-                                        <!--                                        <p class="text-blue-light">Aprende más ></p>-->
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col s12 m6 p-4">
-                            <a href="#">
-                                <div class="row soluciones-squares">
-                                    <div class="col s4 soluciones-icon">
-                                        <img src="{% static 'images/soluciones/icons/white/sem.png' %}"
-                                             class="responsive-img"/>
-                                    </div>
-                                    <div class="col s8 center">
-                                        <p class="soluciones-servicios-titles">CAMPAÑAS SEM</p>
-                                        <!--                                        <p class="text-blue-light">Aprende más ></p>-->
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
+<div class="container pt-5">
+    <div class="row">
+        <div class="col s12 m4 mt-5 pt-3">
+            <a href="{{ contact_url }}">
+                <div class="otras-soluciones-square">
+                    <img src="{% static 'images/soluciones/icono-programas-estrategicos.png' %}" alt=""
+                         class="soluciones-square-icon"/>
+                    <h3 class="font-150 mt-2">¿Programas Estratégios suenan como algo para ti?</h3>
+                    <p class="font-150 font-barlow">
+                        Inicia la conversación
+                    </p>
+                    <p><a href="{{ contact_url }}" class="btn btn-blue font-150">
+                        Agenda una CITA
+                    </a></p>
                 </div>
-
-            </div>
+            </a>
         </div>
 
-    </div>
+        <div class="col s12 m4 mt-5 pt-3">
+            <a href="{{ soporte_tactico_url }}">
+                <div class="otras-soluciones-square">
+                    <img src="{% static 'images/soluciones/icono-programas-estrategicos.png' %}" alt=""
+                         class="soluciones-square-icon"/>
+                    <p class="font-150 font-barlow">
+                        ¿Buscas algo más flexible? Revisa esto?
+                    </p>
+                    <p><a href=" {{ soporte_tactico_url }}" class="btn btn-outline-gold font-150">
+                        Soporte Táctico
+                    </a></p>
+                </div>
+            </a>
+        </div>
 
-    <img src="{% static 'images/bg-blue-left-3.png' %}" alt="" class="soluciones-bg-blue-left">
-    <img src="{% static 'images/bg-splash-lines-2.png' %}" alt="" class="soluciones-splash-lines-1">
-
-</div>
-
-<div class="row bg-gold-gradient text-center">
-    <div class="container">
-        <div class="row">
-            <div class="col s12 m6">
-                <p class="font-200 font-barlow text-white text-uppercase mt-5">
-                    ¿Programas Estratégios suenan como algo para ti?
-                </p>
-                <p>Inicia la conversación</p>
-                <p><a href="{{ contact_url }}" class="btn btn-blue font-150">
-                    Agenda una CITA
-                </a></p>
-            </div>
-            <div class="col s12 m6">
-                <p class="font-150 font-barlow">
-                    ¿¿Buscas algo más flexible? Revisa esto
-                </p>
-                <p><a href=" {{ soporte_tactico_url }}" class="btn btn-outline-gold">
-                    Soporte Táctico
-                </a></p>
-                <p class="font-150 font-barlow">
-                    ¿Quieres una relación más centrada en entregables?
-                </p>
-                <p><a href="{{ proyectos_url }}" class="btn btn-outline-gold">
-                    Proyectos
-                </a></p>
-            </div>
+        <div class="col s12 m4 mt-5 pt-3">
+            <a href="{{ proyectos_url }}">
+                <div class="otras-soluciones-square">
+                    <img src="{% static 'images/soluciones/icono-programas-estrategicos.png' %}" alt=""
+                         class="soluciones-square-icon"/>
+                    <p class="font-150 font-barlow">
+                        ¿Quieres una relación más centrada en entregables?
+                    </p>
+                    <p><a href="{{ proyectos_url }}" class="btn btn-outline-gold font-150">
+                        Proyectos
+                    </a></p>
+                </div>
+            </a>
         </div>
     </div>
 </div>
 
-<div class="row bg-light-grey">
+<div class="row bg-light-grey mt-5">
     <div class="container">
         <div class="row">
             <div class="col s12">

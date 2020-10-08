@@ -19,13 +19,6 @@
 {% url 'proyectos' as proyectos_url %}
 {% url 'blog:home' as blog_url %}
 
-<div class="container-fluid">
-    <div class="container">
-        <div class="row">
-        </div>
-    </div>
-</div>
-
 <div class="container">
     <div class="row">
         <div class="col s12">
@@ -33,233 +26,205 @@
             <h1 class="soluciones-subpage-title">SOPORTE TÁCTICO</h1>
         </div>
     </div>
+    <div class="row mt-5">
+        <div class="col s12 m4">
+            <p class="text-blue text-barlow text-right font-200 mt-0 mb-1 text-uppercase font-weight-bold">
+                CARACTERÍSTICAS
+            </p>
+            <p class="soluciones-tabs-ul-a mt-3">FLEXIBILIDAD + VERSATILIDAD</p>
+            <p class="soluciones-tabs-ul-a">BAJO RIESGO</p>
+            <p class="soluciones-tabs-ul-a">ACCESO ON DEMAND</p>
+            <p class="soluciones-tabs-ul-a">SOPORTE REACTIVO</p>
+            <p class="soluciones-tabs-ul-a">EXPERIENCIA TÁCTICA</p>
 
-    <div class="row mt-3">
-        <div class="col s12 m3">
-            <p class="text-blue text-barlow text-right font-150 mt-0 mb-1 text-uppercase">CARACTERÍSTICAS</p>
-            <ul class="tabs soluciones-tabs-ul" style="height:unset">
-                <li class="tab col s12 soluciones-tabs-ul-tabs">
-                    <a class="soluciones-tabs-ul-a" href="#test1">FLEXIBILIDAD + VERSATILIDAD</a>
-                </li>
-                <li class="tab col s12 soluciones-tabs-ul-tabs">
-                    <a class="soluciones-tabs-ul-a" href="#test2">BAJO RIESGO</a>
-                </li>
-                <li class="tab col s12 soluciones-tabs-ul-tabs">
-                    <a class="soluciones-tabs-ul-a" href="#test3">ACCESO ON DEMAND</a>
-                </li>
-                <li class="tab col s12 soluciones-tabs-ul-tabs">
-                    <a class="soluciones-tabs-ul-a" href="#test4">SOPORTE REACTIVO</a>
-                </li>
-                <li class="tab col s12 soluciones-tabs-ul-tabs">
-                    <a class="soluciones-tabs-ul-a" href="#test5">EXPERIENCIA TÁCTICA</a>
-                </li>
-
-            </ul>
         </div>
-        <div class="col s12 m9">
-            <div id="test1" class="col s12">
-                <div class="soluciones-tab-square">
-                    <p>Correcto para ti si:</p>
-                    <ul class="browser-default">
-                        <li>
+
+        <div class="col s12 m8">
+            <div class="soluciones-tab-square">
+                <p>Correcto para ti si:</p>
+                <ul class="browser-default">
+                    <li>
                             <span class="font-weight-bold">
                                 Estás buscando experiencia
                             </span>
-                            en un tema específico para mejorar las métricas de tu campaña o incrementar las ventas de tu
-                            empresa.
+                        en un tema específico para mejorar las métricas de tu campaña o incrementar las ventas de tu
+                        empresa.
 
-                        </li>
-                        <li>
-                            Estás buscando desarrollar un proyecto en un
-                            <span class="font-weight-bold">
+                    </li>
+                    <li>
+                        Estás buscando desarrollar un proyecto en un
+                        <span class="font-weight-bold">
                                 corto período de tiempo
                             </span>
-                        </li>
-                        <li>
+                    </li>
+                    <li>
                             <span class="font-weight-bold">
                                 Necesitas potencia
                             </span>
-                            más que capacidad intelectual y más experiencia más que visión.
+                        más que capacidad intelectual y más experiencia más que visión.
 
-                        </li>
-                        <li>
+                    </li>
+                    <li>
                             <span class="font-weight-bold">
                                 Tienes una necesidad continua de asistencia
                             </span>
-                            , pero no siempre es constante y el volumen fluctúa.
-                        </li>
+                        , pero no siempre es constante y el volumen fluctúa.
+                    </li>
 
-                    </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col s12 m7">
+            <h2>Detalles</h2>
+            <p class="soluciones-detalles-desc">
+                Aborda los desafíos a medida que surgen con un enfoque flexible y una amplia gama de habilidades en
+                diversas disciplinas.
+            </p>
+            <p class="soluciones-detalles-desc">
+                Somos expertos en traducir ideas en resultados y estamos aquí para complementar tus capacidades,
+                aumentar tu productividad o llenar tus vacíos de experiencia.
+            </p>
+
+            <div class="row mt-5">
+                <div class="col s12 m4">
+                    <div class="row">
+                        <div class="col s4 p-md-0 mt-3 mt-md-0">
+                            <img src="{% static 'images/soluciones/icons/blue/marketing-ventas.png' %}"
+                                 class="responsive-img"/>
+                        </div>
+                        <div class="col s8">
+                            <p class="soluciones-servicios-title">ALINEACIÓN MARKETING Y VENTAS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 m4">
+                    <div class="row">
+                        <div class="col s4 p-md-0 mt-3 mt-md-0">
+                            <img src="{% static 'images/soluciones/icons/blue/bi.png' %}"
+                                 class="responsive-img"/>
+                        </div>
+                        <div class="col s8">
+                            <p class="soluciones-servicios-title">BUSINESS INTELLIGENCE
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 m4">
+                    <div class="row">
+                        <div class="col s4 p-md-0 mt-3 mt-md-0">
+                            <img src="{% static 'images/soluciones/icons/blue/soporte-web.png' %}"
+                                 class="responsive-img"/>
+                        </div>
+                        <div class="col s8">
+                            <p class="soluciones-servicios-title">SOPORTE WEB</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-md-5">
+                <div class="col s12 m4">
+                    <div class="row">
+                        <div class="col s4 p-md-0 mt-3 mt-md-0">
+                            <img src="{% static 'images/soluciones/icons/blue/crm.png' %}"
+                                 class="responsive-img"/>
+                        </div>
+                        <div class="col s8">
+                            <p class="soluciones-servicios-title">INTEGRACIÓN CRM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 m4">
+                    <div class="row">
+                        <div class="col s4 p-md-0 mt-3 mt-md-0">
+                            <img src="{% static 'images/soluciones/icons/blue/contenido.png' %}"
+                                 class="responsive-img"/>
+                        </div>
+                        <div class="col s8">
+                            <p class="soluciones-servicios-title">CREACIÓN DE CONTENIDO</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 m4">
+                    <div class="row">
+                        <div class="col s4 p-md-0 mt-3 mt-md-0">
+                            <img src="{% static 'images/soluciones/icons/blue/ventas.png' %}"
+                                 class="responsive-img"/>
+                        </div>
+                        <div class="col s8">
+                            <p class="soluciones-servicios-title">EVALUACIÓN DE VENTAS DIGITALES</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="container-fluid position-relative pb-5 mb-5">
-    <div class="container">
-        <div class="row">
-            <div class="col s12 m4">
-                <h2>Detalles</h2>
-                <p class="text-justify">
-                    Aborda los desafíos a medida que surgen con un enfoque flexible y una amplia gama de habilidades en
-                    diversas disciplinas.
-                </p>
-                <p class="text-justify">
-                    Somos expertos en traducir ideas en resultados y estamos aquí para complementar tus capacidades,
-                    aumentar tu productividad o llenar tus vacíos de experiencia.
-                </p>
-            </div>
-            <div class="col s12 m8 mt-md-5 pt-md-5">
-                <div class="card py-5 px-4">
-                    <h2 class="m-0 font-250">PRINCIPALES TIPOS DE SERVICIOS</h2>
-
-                    <div class="row mt-5">
-
-                        <div class="col s12 m6 p-4">
-                            <a href="#">
-                                <div class="row soluciones-squares">
-                                    <div class="col s4 soluciones-icon">
-                                        <img src="{% static 'images/soluciones/icons/white/marketing-ventas.png' %}"
-                                             class="responsive-img"/>
-                                    </div>
-                                    <div class="col s8 center">
-                                        <p class="soluciones-servicios-titles">ALINEACIÓN MARKETING Y VENTAS</p>
-                                        <!--                                        <p class="text-blue-light">Aprende más ></p>-->
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col s12 m6 p-4">
-                            <a href="#">
-                                <div class="row soluciones-squares">
-                                    <div class="col s4 soluciones-icon">
-                                        <img src="{% static 'images/soluciones/icons/white/bi.png' %}"
-                                             class="responsive-img"/>
-                                    </div>
-                                    <div class="col s8 center">
-                                        <p class="soluciones-servicios-titles">BUSINESS INTELLIGENCE</p>
-                                        <!--                                        <p class="text-blue-light">Aprende más ></p>-->
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-
-                    <div class="row mt-2">
-
-                        <div class="col s12 m6 p-4">
-                            <a href="#">
-                                <div class="row soluciones-squares">
-                                    <div class="col s4 soluciones-icon">
-                                        <img src="{% static 'images/soluciones/icons/white/soporte-web.png' %}"
-                                             class="responsive-img"/>
-                                    </div>
-                                    <div class="col s8 center">
-                                        <p class="soluciones-servicios-titles">SOPORTE WEB</p>
-                                        <!--                                        <p class="text-blue-light">Aprende más ></p>-->
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col s12 m6 p-4">
-                            <a href="#">
-                                <div class="row soluciones-squares">
-                                    <div class="col s4 soluciones-icon">
-                                        <img src="{% static 'images/soluciones/icons/white/crm.png' %}"
-                                             class="responsive-img"/>
-                                    </div>
-                                    <div class="col s8 center">
-                                        <p class="soluciones-servicios-titles">INTEGRACIÓN CRM</p>
-                                        <!--                                        <p class="text-blue-light">Aprende más ></p>-->
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-
-                    <div class="row mt-2">
-
-                        <div class="col s12 m6 p-4">
-                            <a href="#">
-                                <div class="row soluciones-squares">
-                                    <div class="col s4 soluciones-icon">
-                                        <img src="{% static 'images/soluciones/icons/white/contenido.png' %}"
-                                             class="responsive-img"/>
-                                    </div>
-                                    <div class="col s8 center">
-                                        <p class="soluciones-servicios-titles">CREACIÓN DE CONTENIDO</p>
-                                        <!--                                        <p class="text-blue-light">Aprende más ></p>-->
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col s12 m6 p-4">
-                            <a href="#">
-                                <div class="row soluciones-squares">
-                                    <div class="col s4 soluciones-icon">
-                                        <img src="{% static 'images/soluciones/icons/white/ventas.png' %}"
-                                             class="responsive-img"/>
-                                    </div>
-                                    <div class="col s8 center">
-                                        <p class="soluciones-servicios-titles">EVALUACIÓN DE VENTAS DIGITALES</p>
-                                        <!--                                        <p class="text-blue-light">Aprende más ></p>-->
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-
+<div class="container pt-5">
+    <div class="row">
+        <div class="col s12 m4 mt-5 pt-3">
+            <a href="{{ contact_url }}">
+                <div class="otras-soluciones-square">
+                    <img src="{% static 'images/soluciones/icono-programas-estrategicos.png' %}" alt=""
+                         class="soluciones-square-icon"/>
+                    <h3 class="font-150 mt-2">
+                        ¿Soporte táctico suena bien para ti?
+                    </h3>
+                    <p class="font-150 font-barlow">
+                        Iniciemos conversaciones
+                    </p>
+                    <p><a href="{{ contact_url }}" class="btn btn-blue font-150">
+                        Agenda una Asesoría
+                    </a></p>
                 </div>
-
-            </div>
+            </a>
         </div>
 
-    </div>
+        <div class="col s12 m4 mt-5 pt-3">
+            <a href="{{ proyectos_url }}">
+                <div class="otras-soluciones-square">
+                    <img src="{% static 'images/soluciones/icono-programas-estrategicos.png' %}" alt=""
+                         class="soluciones-square-icon"/>
+                    <p class="font-150 font-barlow">
+                        ¿Quieres una relación más centrada en entregables?
+                    </p>
+                    <p><a href=" {{ proyectos_url }}" class="btn btn-outline-gold font-150">
+                        Proyectos
+                    </a></p>
+                </div>
+            </a>
+        </div>
 
-    <img src="{% static 'images/bg-blue-left-3.png' %}" alt="" class="soluciones-bg-blue-left">
-    <img src="{% static 'images/bg-splash-lines-2.png' %}" alt="" class="soluciones-splash-lines-1">
-
-</div>
-
-
-<div class="row bg-gold-gradient text-center">
-    <div class="container">
-        <div class="row">
-            <div class="col s12 m6">
-                <p class="font-200 font-barlow text-white text-uppercase mt-5">
-                    ¿Soporte táctico suena bien para ti?
-                </p>
-                <p>Iniciemos conversaciones</p>
-                <p><a href="{{ contact_url }}" class="btn btn-blue font-150">
-                    Agenda una Asesoría
-                </a></p>
-            </div>
-            <div class="col s12 m6">
-                <p class="font-150 font-barlow">
-                    ¿Buscas hacer una inversión continua para el crecimiento de tu empresa?
-                </p>
-                <p><a href=" {{ programas_estrategicos_url }}" class="btn btn-outline-gold">
-                    Programas Estratégicos
-                </a></p>
-                <p class="font-150 font-barlow">
-                    ¿Quieres una relación más centrada en entregables?
-                </p>
-                <p><a href="{{ proyectos_url }}" class="btn btn-outline-gold">
-                    Proyectos
-                </a></p>
-            </div>
+        <div class="col s12 m4 mt-5 pt-3">
+            <a href="{{ programas_estrategicos_url }}">
+                <div class="otras-soluciones-square">
+                    <img src="{% static 'images/soluciones/icono-programas-estrategicos.png' %}" alt=""
+                         class="soluciones-square-icon"/>
+                    <p class="font-150 font-barlow">
+                        ¿Buscas hacer una inversión continua para el crecimiento de tu empresa?
+                    </p>
+                    <p><a href="{{ programas_estrategicos_url }}" class="btn btn-outline-gold font-150">
+                        Programas Estratégicos
+                    </a></p>
+                </div>
+            </a>
         </div>
     </div>
 </div>
 
-<div class="row bg-light-grey">
+
+<div class="row bg-light-grey mt-5">
     <div class="container">
         <div class="row">
             <div class="col s12">
@@ -305,7 +270,6 @@
         </div>
     </div>
 </div>
-
 
 
 <div class="container-fluid position-relative">

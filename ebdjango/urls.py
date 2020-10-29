@@ -56,6 +56,8 @@ urlpatterns = [
     path('cuenta/', include('accounts.urls')),
     path('cuenta/', include('accounts.passwords.urls')),
 
+    path('aviso-de-privacidad', views.aviso_de_privacidad_page, name='aviso_de_privacidad'),
+
     # third party
     path('ckeditor/', include('ckeditor_uploader.urls')),
 ]

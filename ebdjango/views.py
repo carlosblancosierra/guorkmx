@@ -188,3 +188,10 @@ def recursos_page(request):
     }
 
     return render(request, "recursos_page.html", context)
+
+
+def aviso_de_privacidad_page(request):
+    context = {
+    }
+
+    return render(request, "aviso_de_privacidad_page.html", context)

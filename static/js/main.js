@@ -65,7 +65,7 @@ $(document).ready(function() {
     $("#owl-carousel-partnertship").owlCarousel({
         loop: true,
         margin: 10,
-        nav: true,
+        nav: false,
         autoplay:true,
         autoplayTimeout:2000,
         autoplaySpeed:4000,

@@ -16,13 +16,13 @@
     <div class="container">
         <div class="nav-wrapper black-text">
             <a href="{{ home_url }}" class="brand-logo">
-                <img src="{% static 'images/logo.png' %}" class="responsive-img" width="100px">
+                <img src="{% static 'images/logo.png' %}" class="responsive-img" width="130px">
             </a>
             <a href="#" data-target="slide-out" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <!--                <li><a class="dropdown-trigger" href="#!" data-target="dropdownServicios">Soluciones-->
-                <!--                    <i class="material-icons right">arrow_drop_down</i></a></li>-->
-                <li><a href="{{ soluciones_url }}">Soluciones</a></li>
+                <li><a class="dropdown-trigger" href="#!" data-target="dropdownServicios">Soluciones
+                    <i class="material-icons right">arrow_drop_down</i></a></li>
+                <!--                <li><a href="{{ soluciones_url }}">Soluciones</a></li>-->
                 <li><a href="{{ blog_url }}">Blog</a></li>
                 <li><a href="{{ contact_url }}">Contacto</a></li>
                 <li><a href="https://wa.me/5215531880495">55 3188 0495</a></li>
@@ -33,6 +33,7 @@
 
 <!-- Dropdown Structure -->
 <ul id="dropdownServicios" class="dropdown-content">
+
     <li><a href="{{ soporte_tactico_url }}">Soporte Táctico</a></li>
     <li><a href="{{ programas_estrategicos_url }}">Programas Estratégicos</a></li>
     <li><a href="{{ proyectos_url }}">Proyectos</a></li>
@@ -41,21 +42,16 @@
 </ul>
 
 <ul id="slide-out" class="sidenav">
-    <li>
-        <div class="user-view">
-            <div class="background">
-                <img src="">
-            </div>
-            <a href="#user"><img class="circle" src=""></a>
-            <a href="#name"><span class="white-text name">John Doe</span></a>
-            <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
-        </div>
-    </li>
-    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-    <li><a href="#!">Second Link</a></li>
-    <li>
-        <div class="divider"></div>
-    </li>
-    <li><a class="subheader">Subheader</a></li>
-    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+    <p class="mx-5">
+        <img src="{% static 'images/logo.png' %}" class="responsive-img">
+    </p>
+
+    <li><a href="{{ soluciones_url }}" class="font-200">Soluciones</a></li>
+    <li><a href="{{ blog_url }}" class="font-200">Blog</a></li>
+    <li><a href="{{ contact_url }}" class="font-200">Contacto</a></li>
+    <li><a href="https://wa.me/5215531880495" class="font-200">55 3188 0495</a></li>
+    <!--    <li>-->
+    <!--        <div class="divider"></div>-->
+    <!--    </li>-->
+
 </ul>

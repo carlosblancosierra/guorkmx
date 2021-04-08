@@ -127,7 +127,7 @@ p {
 /*Fonts*/
 
 * {
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
 }
 
 h1,
@@ -143,7 +143,7 @@ h3 {
 
 .text-fira,
 .font-fira {
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
 }
 
 .font-070 {

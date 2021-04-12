@@ -11,7 +11,7 @@ a {
 }
 
 p {
-    font-size:1.2rem;
+    font-size:1.5rem;
 }
 
 @media only screen and (min-width: 993px) {
@@ -94,7 +94,7 @@ p {
         position: absolute;
         top: 0;
         left: 0;
-        width: 55%;
+        width: 50%;
         z-index: -5;
     }
     .blue-right-bg-img {
@@ -528,6 +528,15 @@ a:hover .home-service-consult-col {
     top: -10%;
 }
 
+.home-nosotros-faces {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    left: 0%;
+    z-index: -10;
+    top: -10%;
+}
+
 .home-blog-title {
     font-family: 'Barlow Condensed', sans-serif;
 }
@@ -548,8 +557,8 @@ a:hover .home-service-consult-col {
 .home-contactanos-title {
     text-align: center;
     color: #F1F2F3;
-    font-size: 11rem;
-    line-height: 11rem;
+    font-size: 18rem;
+    line-height: 15rem;
     font-family: 'Barlow Condensed', sans-serif;
     margin-top: 0;
     margin-bottom: 0;
@@ -618,7 +627,7 @@ a:hover .home-service-consult-col {
     }
     .cotiza-banner-container {
         z-index: -3;
-        margin-top: 5rem;
+        margin-top: 7rem;
     }
 }
 

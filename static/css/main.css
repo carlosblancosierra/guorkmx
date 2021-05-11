@@ -962,12 +962,6 @@ a:hover .home-service-consult-col {
 }
 
 .soluciones-square {
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cea568+0,ddbe8a+100 */
-    background: #cea568; /* Old browsers */
-    background: -moz-linear-gradient(top,  #cea568 0%, #ddbe8a 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  #cea568 0%,#ddbe8a 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  #cea568 0%,#ddbe8a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cea568', endColorstr='#ddbe8a',GradientType=0 ); /* IE6-9 */
     padding-left:1rem;
     padding-right:1.5rem;
     padding-bottom:0.5rem;

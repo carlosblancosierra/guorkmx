@@ -7,6 +7,459 @@
 {% block content %}
 
 <div class="container">
+    <div class="row">
+        <div class="col s12">
+        </div>
+
+        <div class="col s12">
+            <table>
+                <thead>
+                <tr>
+                    <th>Factores de Éxito SEO</th>
+                    <th class="text-center">Score</th>
+                    <th class="text-center">Recomendaciones</th>
+                    <th class="text-center">Recursos</th>
+
+                </tr>
+                </thead>
+            </table>
+            <table class="mt-3">
+                <tbody>
+
+                <tr>
+                    <th colspan="4">Estrategia & Habilidades</th>
+                </tr>
+
+                <!-- 0 -->
+                <tr>
+                    <td>
+                        Compromiso de Dirección
+                    </td>
+                    <td class="text-center">
+                        {{ seo_list.0 }}
+                    </td>
+                    <td class="text-center">
+                        Obtén el compromiso de dirección y utiliza nuestra cartera para armar un business case y crear
+                        una hoja de ruta
+                    </td>
+                    <td class="text-center">
+                        <a href="#">Ruta Crítica</a>
+                    </td>
+                </tr>
+
+                <!-- 1 -->
+                <tr>
+                    <td>
+                        Estrategia SEO
+                    </td>
+                    <td class="text-center">
+                        {{ seo_list.1 }}
+                    </td>
+                    <td class="text-center">
+                        Documente tu estrategia de SEO utilizando nuestra plantilla
+                    </td>
+                    <td class="text-center">
+                        <a href="#">Business Strategy Plan</a>
+                    </td>
+                </tr>
+
+                <!-- 2 -->
+                <tr>
+                    <td>
+                        Recursos Humanos y Financieros
+                    </td>
+                    <td class="text-center">
+                        {{ seo_list.2 }}
+                    </td>
+                    <td class="text-center">
+                        Obten la aprobación de dirección para los recursos necesarios para completar con éxito esta
+                        iniciativa.
+                    </td>
+                    <td class="text-center">
+                    </td>
+                </tr>
+
+                <!-- 3 -->
+                <tr>
+                    <td>
+                        Entrenamiento y Habilidades SEO
+                    </td>
+                    <td class="text-center">
+                        {{ seo_list.3 }}
+                    </td>
+                    <td class="text-center">
+                        Obten la aprobación de dirección para los recursos necesarios para completar con éxito esta
+                        iniciativa.
+                    </td>
+                    <td class="text-center">
+                    </td>
+                </tr>
+
+                <!-- 4 -->
+                <tr>
+                    <td>
+                        Esfuerzos Integrados
+                    </td>
+                    <td class="text-center">
+                        {{ seo_list.4 }}
+                    </td>
+                    <td class="text-center">
+                        Identifica el estado actual del proyecto, enumere los requisitos para cerrar el 'gap',utiliza
+                        nuestra herramienta.
+                    </td>
+                    <td class="text-center">
+                        <a href="#">GAP Analysis</a>
+                    </td>
+                </tr>
+
+                <!-- 5 -->
+                <tr>
+                    <td>
+                        Investigación y Mantenimiento SEO
+                    </td>
+                    <td class="text-center">
+                        {{ seo_list.5 }}
+                    </td>
+                    <td class="text-center">
+                    </td>
+                    <td class="text-center">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Promedio de Madurez de Estrategias y Habilidades</td>
+                    <td>{{ seo_ave }}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <th colspan="4">Definición de procesos, Automatización y Sistemas</th>
+                </tr>
+
+                <!-- 0 -->
+                <tr>
+                    <td>
+                        Website Analytics
+                    </td>
+                    <td class="text-center">
+                        {{ sistemas_list.0 }}
+                    </td>
+                    <td class="text-center">
+                        Integra Google Analytics y entrena a el equipo en su correcto uso
+                    </td>
+                    <td class="text-center">
+                        Análiticos Web de Google
+                    </td>
+                </tr>
+
+                <!-- 1 -->
+                <tr>
+                    <td>
+                        Sitemaps & Estructura del Directorio
+                    </td>
+                    <td class="text-center">
+                        {{ sistemas_list.1 }}
+                    </td>
+                    <td class="text-center">
+                        Revisa el mapa de sitio con el desarrollador de tu sitio web y el administrador SEO de tu
+                        empresa
+                    </td>
+                    <td class="text-center">
+                    </td>
+                </tr>
+
+                <!-- 2 -->
+                <tr>
+                    <td>
+                        Tecnología Disponible
+                    </td>
+                    <td class="text-center">
+                        {{ sistemas_list.2 }}
+                    </td>
+                    <td class="text-center">
+                        Consigue el presupuesto, evalua proveedores y utiliza nuestra herramienta para tomar la decisión
+                        correcta.
+                    </td>
+                    <td class="text-center">
+                        Matriz de Evaluación
+                    </td>
+                </tr>
+
+                <!-- 3 -->
+                <tr>
+                    <td>
+                        Optimización de Procesos de Comunicación
+                    </td>
+                    <td class="text-center">
+                        {{ sistemas_list.3 }}
+                    </td>
+                    <td class="text-center">
+                        Define roles y responsabilidades y documenta procesos claramente
+                    </td>
+                    <td class="text-center">
+                    </td>
+                </tr>
+
+                <!-- 4 -->
+                <tr>
+                    <td>
+                        Registro de Servicio y Nivel de Servicio
+                    </td>
+                    <td class="text-center">
+                        {{ sistemas_list.4 }}
+                    </td>
+                    <td class="text-center">
+                        Registra tu dominio por al menos 5 años y discute el nivel de servicio con tu ISP
+                    </td>
+                    <td class="text-center">
+                    </td>
+                </tr>
+
+                <!-- 5 -->
+                <tr>
+                    <td>
+                        Arquitectura de Sitio y Layout
+                    </td>
+                    <td class="text-center">
+                        {{ sistemas_list.5 }}
+                    </td>
+                    <td class="text-center">
+                        Revisa la arquitectura de tu sitio con un buen desarrollador y experto en SEO
+                    </td>
+                    <td class="text-center">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Promedio de definición de Procesos, Automatización y Sistemas</td>
+                    <td>{{ sistemas_ave }}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <th colspan="4">Keyword Management</th>
+                </tr>
+
+                <!-- 0 -->
+                <tr>
+                    <td>
+                        Estrategia de Keywords y Trazabilidad
+                    </td>
+                    <td class="text-center">
+                        {{ keyword_list.0 }}
+                    </td>
+                    <td class="text-center">
+                        Selecciona las palabras clave para rastrear usando herramientas y/o Google Ads
+                    </td>
+                    <td class="text-center">
+                        Análisis de Keywords
+                    </td>
+                </tr>
+
+                <!-- 1 -->
+                <tr>
+                    <td>
+                        Análisis de Keywords & alineación de términos de búsqueda Analysis & Aligned Search Terms
+                    </td>
+                    <td class="text-center">
+                        {{ keyword_list.1 }}
+                    </td>
+                    <td class="text-center">
+                        Selecciona las palabras clave para rastrear usando herramientas y/o Google Ads
+                    </td>
+                    <td class="text-center">
+                        Análisis de Keywords
+                    </td>
+                </tr>
+
+                <!-- 2 -->
+                <tr>
+                    <td>
+                        Evaluación de Palabras Clave
+                    </td>
+                    <td class="text-center">
+                        {{ keyword_list.2 }}
+                    </td>
+                    <td class="text-center">
+                        Crea un calendario de investigación y análisis de keywords
+                    </td>
+                    <td class="text-center">
+                    </td>
+                </tr>
+
+                <!-- 3 -->
+                <tr>
+                    <td>
+                        Objetivos y KPI's
+                    </td>
+                    <td class="text-center">
+                        {{ keyword_list.3 }}
+                    </td>
+                    <td class="text-center">
+                        Establece objetivos y KPI's
+                    </td>
+                    <td class="text-center">
+                        KPI's
+                    </td>
+                </tr>
+
+                <!-- 4 -->
+                <tr>
+                    <td>
+                        Meta Descriptions
+                    </td>
+                    <td class="text-center">
+                        {{ keyword_list.4 }}
+                    </td>
+                    <td class="text-center">
+                        Consigue un buen redactor que redacte metadescripciones SEO-Friendly
+                    </td>
+                    <td class="text-center">
+                    </td>
+                </tr>
+
+                <!-- 5 -->
+                <tr>
+                    <td>
+                        Sitio web con URLs limpias
+                    </td>
+                    <td class="text-center">
+                        {{ keyword_list.5 }}
+                    </td>
+                    <td class="text-center">
+                        Trabaja con tu desarrollador para seleccionar URL's SEO Friendly
+                    </td>
+                    <td class="text-center">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Promedio de Madurez de Keyword Management</td>
+                    <td>{{ keyword_ave }}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <th colspan="4">Informes y Resultados</th>
+                </tr>
+
+                <!-- 0 -->
+                <tr>
+                    <td>
+                        Métricas Básicas & KPIs
+                    </td>
+                    <td class="text-center">
+                        {{ resultados_list.0 }}
+                    </td>
+                    <td class="text-center">
+                        Familiarízate con las métricas básicas de palabras clave y los KPI de SEO
+                    </td>
+                    <td class="text-center">
+                        KPI's
+                    </td>
+                </tr>
+
+                <!-- 1 -->
+                <tr>
+                    <td>
+                        Medición & Reporteo de manera regular
+                    </td>
+                    <td class="text-center">
+                        {{ resultados_list.1 }}
+                    </td>
+                    <td class="text-center">
+                        Crea un calendario de investigación y análisis de keywords
+                    </td>
+                    <td class="text-center">
+                    </td>
+                </tr>
+
+                <!-- 2 -->
+                <tr>
+                    <td>
+                        Proceso de Medición Automatizado
+                    </td>
+                    <td class="text-center">
+                        {{ resultados_list.2 }}
+                    </td>
+                    <td class="text-center">
+                    </td>
+                    <td class="text-center">
+                    </td>
+                </tr>
+
+                <!-- 3 -->
+                <tr>
+                    <td>
+                        Monitoreo Tráfico Pagado vs. Orgánico
+                    </td>
+                    <td class="text-center">
+                        {{ resultados_list.3 }}
+                    </td>
+                    <td class="text-center">
+                        Instala en tu sitio web un programa que te ayude a medir ambos tráficos
+                    </td>
+                    <td class="text-center">
+                    </td>
+                </tr>
+
+                <!-- 4 -->
+                <tr>
+                    <td>
+                        Monitoreo de Esfuerzos SEO de la Competencia
+                    </td>
+                    <td class="text-center">
+                        {{ resultados_list.4 }}
+                    </td>
+                    <td class="text-center">
+                        Monitorea el comportamiento de los sitios web de tus competidores. Te recomendamos utilizar la
+                        herramienta SimilarWeb
+                    </td>
+                    <td class="text-center">
+                    </td>
+                </tr>
+
+                <!-- 5 -->
+                <tr>
+                    <td>
+                        Monitoreo de Keywords y Páginas que generan tráfico
+                    </td>
+                    <td class="text-center">
+                        {{ resultados_list.5 }}
+                    </td>
+                    <td class="text-center">
+                        Crea un archivo con los principales indicadores que debe monitorear tu equipo SEO
+                    </td>
+                    <td class="text-center">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Promedio de Madurez Informe de Resultados</td>
+                    <td>{{ resultados_ave }}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td class="font-weight-bold">Promedio General de Madurez de SEO</td>
+                    <td>{{ audit_ave }}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+<div class="container">
     <div class="row my-5">
         <div class="col s12 text-center">
             <h1>Hi carlos,</h1>
@@ -61,7 +514,6 @@
         </div>
     </div>
 </div>
-{% endblock %}
 
 
 {% block js_extra %}
@@ -147,5 +599,24 @@
         data: radioData,
         options: radioOptions
     });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
 {% endblock %}

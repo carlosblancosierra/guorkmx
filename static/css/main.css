@@ -1302,3 +1302,10 @@ a:hover .home-service-consult-col {
     margin-top:1.5rem;
 }
 
+.recursos-title {
+    min-height:3rem;
+}
+
+.flex-wrap {
+    flex-wrap:wrap!important;
+}

@@ -20,7 +20,7 @@
             </a>
             <a href="#" data-target="slide-out" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a class="dropdown-trigger" href="#!" data-target="dropdownServicios">SOLUCIONES
+                <li><a class="dropdown-trigger-main" href="#!" data-target="dropdownServicios">SOLUCIONES
                     <i class="material-icons right">arrow_drop_down</i></a></li>
                 <!--                <li><a href="{{ soluciones_url }}">Soluciones</a></li>-->
                 <li><a href="{{ blog_url }}">BLOG</a></li>
@@ -33,12 +33,50 @@
 
 <!-- Dropdown Structure -->
 <ul id="dropdownServicios" class="dropdown-content">
+    <div class="row">
+        <div class="col s12">
+            <a href="{{ soluciones_url }}" class="nav-dropdown-title">
+                <p class="text-center font-weight-bold mt-2 mb-4">
+                    SOLUCIONES
+                </p>
+            </a>
+        </div>
+        <div class="col m4">
+            <a href="{{ soporte_tactico_url }}">
+                <img src="{% static 'images/soluciones/icono-programas-estrategicos.png' %}" alt="" class="w-50"/>
+                <p class="m-0">Soporte Táctico</p>
+                <p class="font-110 mt-2">
+                    Un equipo de expertos listo para implementar iniciativas específicas bajo demanda, como
+                    marketing + operaciones de ventas, integraciones de CRM, soporte creativo, desarrollo web, marketing
+                    conversacional y creación de contenido.
 
-    <li><a href="{{ soporte_tactico_url }}">Soporte Táctico</a></li>
-    <li><a href="{{ programas_estrategicos_url }}">Programas Estratégicos</a></li>
-    <li><a href="{{ proyectos_url }}">Proyectos</a></li>
-    <li class="divider"></li>
-    <li><a href="{{ soluciones_url }}">Todos</a></li>
+                </p>
+            </a>
+        </div>
+        <div class="col m4">
+            <a href="{{ programas_estrategicos_url }}">
+                <img src="{% static 'images/soluciones/icono-programas-estrategicos.png' %}" alt="" class="w-50"/>
+                <p class="m-0">Programas Estratégicos</p>
+                <p class="font-110 mt-2">
+                    Un socio totalmente integrado, listo para lanzar y monitorear estrategias creativas, desde
+                    Inbound Marketing hasta Marketing Basado en Cuentas, habilitación de ventas y programas de
+                    atención y servicio post-venta.
+                </p>
+            </a>
+        </div>
+        <div class="col m4">
+            <a href="{{ proyectos_url }}">
+                <img src="{% static 'images/soluciones/icono-programas-estrategicos.png' %}" alt="" class="w-50"/>
+                <p class="m-0">Proyectos</p>
+                <p class="font-110 mt-2">
+                    Un entregable de alcance fijo, claramente definido, ya sea una auditoría o análisis de terceros,
+                    un proyecto de video, diseño de sitio web, implementación de chatbot, migración de datos o una
+                    aplicación web / móvil.
+
+                </p>
+            </a>
+        </div>
+    </div>
 </ul>
 
 <ul id="slide-out" class="sidenav">
@@ -47,6 +85,9 @@
     </p>
 
     <li><a href="{{ soluciones_url }}" class="font-200">Soluciones</a></li>
+    <li><a href="{{ soporte_tactico_url }}" class="font-175 ml-2">Soporte Táctico</a></li>
+    <li><a href="{{ programas_estrategicos_url }}" class="font-175 ml-2">Programas Estratégicos</a></li>
+    <li><a href="{{ proyectos_url }}" class="font-175 ml-2">Proyectos</a></li>
     <li><a href="{{ blog_url }}" class="font-200">Blog</a></li>
     <li><a href="{{ contact_url }}" class="font-200">Contacto</a></li>
     <li><a href="https://wa.me/5215531880495" class="font-200">55 3188 0495</a></li>

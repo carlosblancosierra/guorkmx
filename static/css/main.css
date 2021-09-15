@@ -21,6 +21,12 @@ p {
 }
 }
 
+@media only screen and (min-width: 1920px) {
+.container {
+    max-width: 7obje0%!important;
+    width: 70%!important;
+}
+}
 #blog-post-content ul:not(.browser-default) {
     list-style-type: inherit!important;
     padding-left:2rem!important;
@@ -160,6 +166,17 @@ h3 {
     font-size: 0.9rem!important;
     line-height:1rem!important;
 }
+
+.font-100 {
+    font-size: 1rem!important;
+    line-height:1.1rem!important;
+}
+
+.font-110 {
+    font-size: 1.1rem!important;
+    line-height:1.2rem!important;
+}
+
 
 .font-125 {
     font-size: 1.25rem!important;
@@ -1308,4 +1325,12 @@ a:hover .home-service-consult-col {
 
 .flex-wrap {
     flex-wrap:wrap!important;
+}
+
+#dropdownServicios {
+    max-width:50vw !important;
+    left:40%!important;
+}
+
+.nav-dropdown-title {
 }

@@ -10,7 +10,7 @@
     <!-- css -->
     {% include "base/css.html" %}
 
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js?hl=es" async defer></script>
 
     <link rel="apple-touch-icon" sizes="180x180" href="{% static './img/favicon.png' %}">
     <link rel="icon" type="image/png" sizes="192x192" href="{% static './img/favicon.png' %}">
@@ -26,11 +26,22 @@
 
 {% include 'base/footer.html' %}
 
+
+
 <!-- js -->
 {% include 'base/js.html' %}
 
 {% block js_extra %}
 {% endblock %}
 
+{% if messages %}
+{% for message in messages %}
+{{ message }}
+<script>
+    M.toast({html: '{{ message }}', classes: '{% if message.tags %}{{ message.tags }}{% endif %} rounded'});
+</script>
+{% endfor %}
+
+{% endif %}
 </body>
 </html>

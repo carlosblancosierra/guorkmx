@@ -2,7 +2,9 @@ from django.shortcuts import render, redirect
 import json
 from ebdjango.settings import GOOGLE_RECAPTCHA_PUBLIC_KEY
 from blog.models import BlogPost
+from leads.models import AuditoriaLead
 from .forms import ContactForm
+from ebdjango.decorators import check_recaptcha
 
 
 def home_page(request):
@@ -54,6 +56,7 @@ def audit_landing_page(request):
     return render(request, "audit_landing_page.html", context)
 
 
+@check_recaptcha
 def audit_page(request):
     questions_list = [
         # 11
@@ -168,82 +171,108 @@ def audit_page(request):
     ]
 
     current_page = questions_list[0]
+    questions_titles = ['Estrategia y Habilidades',
+                        'Definición de procesos, Automatización y Sistemas',
+                        'Keyword Management',
+                        'Informes y Resultados'
+                        ]
 
     if request.POST:
-        # json_post = json.dumps(request.POST)
-        print('AUDIT -> post: ', json.dumps(request.POST, indent=4))
+        if request.recaptcha_is_valid:
+            # json_post = json.dumps(request.POST)
+            # print('AUDIT -> post: ', json.dumps(request.POST, indent=4))
 
-        def average(lst):
-            return round(sum(lst) / len(lst), 2)
+            def average(lst):
+                return round(sum(lst) / len(lst), 2)
 
-        seo_list = [
-            int(request.POST['audit_option_1_1']),
-            int(request.POST['audit_option_2_1']),
-            int(request.POST['audit_option_3_1']),
-            int(request.POST['audit_option_4_1']),
-            int(request.POST['audit_option_5_1']),
-            int(request.POST['audit_option_6_1']),
-        ]
-        seo_ave = average(seo_list)
+            seo_list = [
+                int(request.POST['audit_option_1_1']),
+                int(request.POST['audit_option_2_1']),
+                int(request.POST['audit_option_3_1']),
+                int(request.POST['audit_option_4_1']),
+                int(request.POST['audit_option_5_1']),
+                int(request.POST['audit_option_6_1']),
+            ]
+            seo_ave = average(seo_list)
 
-        sistemas_list = [
-            int(request.POST['audit_option_7_1']),
-            int(request.POST['audit_option_8_1']),
-            int(request.POST['audit_option_9_1']),
-            int(request.POST['audit_option_10_1']),
-            int(request.POST['audit_option_11_1']),
-            int(request.POST['audit_option_12_1']),
-        ]
-        sistemas_ave = average(sistemas_list)
+            sistemas_list = [
+                int(request.POST['audit_option_7_1']),
+                int(request.POST['audit_option_8_1']),
+                int(request.POST['audit_option_9_1']),
+                int(request.POST['audit_option_10_1']),
+                int(request.POST['audit_option_11_1']),
+                int(request.POST['audit_option_12_1']),
+            ]
+            sistemas_ave = average(sistemas_list)
 
-        keyword_list = [
-            int(request.POST['audit_option_13_1']),
-            int(request.POST['audit_option_14_1']),
-            int(request.POST['audit_option_15_1']),
-            int(request.POST['audit_option_16_1']),
-            int(request.POST['audit_option_17_1']),
-            int(request.POST['audit_option_18_1']),
-        ]
-        keyword_ave = average(keyword_list)
+            keyword_list = [
+                int(request.POST['audit_option_13_1']),
+                int(request.POST['audit_option_14_1']),
+                int(request.POST['audit_option_15_1']),
+                int(request.POST['audit_option_16_1']),
+                int(request.POST['audit_option_17_1']),
+                int(request.POST['audit_option_18_1']),
+            ]
+            keyword_ave = average(keyword_list)
 
-        print("seo_list", seo_list)
-        print("seo_ave", seo_ave)
+            # print("seo_list", seo_list)
+            # print("seo_ave", seo_ave)
 
-        resultados_list = [
-            int(request.POST['audit_option_19_1']),
-            int(request.POST['audit_option_20_1']),
-            int(request.POST['audit_option_21_1']),
-            int(request.POST['audit_option_22_1']),
-            int(request.POST['audit_option_23_1']),
-            int(request.POST['audit_option_24_1']),
-        ]
-        resultados_ave = average(resultados_list)
+            resultados_list = [
+                int(request.POST['audit_option_19_1']),
+                int(request.POST['audit_option_20_1']),
+                int(request.POST['audit_option_21_1']),
+                int(request.POST['audit_option_22_1']),
+                int(request.POST['audit_option_23_1']),
+                int(request.POST['audit_option_24_1']),
+            ]
+            resultados_ave = average(resultados_list)
 
-        audit_ave = average([seo_ave, sistemas_ave, keyword_ave, resultados_ave])
+            audit_ave = average([seo_ave, sistemas_ave, keyword_ave, resultados_ave])
 
-        result = {
-            "seo_list": seo_list,
-            "seo_ave": seo_ave,
-            "sistemas_list": sistemas_list,
-            "sistemas_ave": sistemas_ave,
-            "keyword_list": keyword_list,
-            "keyword_ave": keyword_ave,
-            "resultados_list": resultados_list,
-            "resultados_ave": resultados_ave,
-            "audit_ave": audit_ave,
-        }
+            result = {
+                "seo_list": seo_list,
+                "seo_ave": seo_ave,
+                "sistemas_list": sistemas_list,
+                "sistemas_ave": sistemas_ave,
+                "keyword_list": keyword_list,
+                "keyword_ave": keyword_ave,
+                "resultados_list": resultados_list,
+                "resultados_ave": resultados_ave,
+                "audit_ave": audit_ave,
+            }
 
-        print('AUDIT -> result dict: ', json.dumps(result, indent=4))
+            # print('AUDIT -> result dict: ', json.dumps(result, indent=4))
 
-        request.session['seo_audit_result'] = result
+            request.session['seo_audit_result'] = result
 
-        return redirect('audit_result')
+            name = request.POST['audit_name']
+            lastname = request.POST['audit_last_name']
+            company = request.POST['audit_company']
+            email = request.POST['audit_email']
+            company_size = request.POST['audit_company_size']
+            role = request.POST['audit_position']
+
+            lead = AuditoriaLead(
+                name=name,
+                lastname=lastname,
+                company=company,
+                email=email,
+                company_size=company_size,
+                role=role,
+                results=result
+            )
+
+            lead.save()
+
+            return redirect('audit_result')
 
     context = {
         'current_page': current_page,
         'range': range(5),
         'questions_list': questions_list,
         'public_key': GOOGLE_RECAPTCHA_PUBLIC_KEY,
+        'questions_titles': questions_titles,
     }
 
     return render(request, "audit_page.html", context)

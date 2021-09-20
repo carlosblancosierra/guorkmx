@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+from django.contrib.messages import constants as messages
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -74,6 +75,8 @@ INSTALLED_APPS = [
     'blog',
     'courses',
     'stripe_checkout',
+    'leads',
+    'leads',
 
 ]
 
@@ -127,7 +130,6 @@ DATABASES = {
 }
 
 import dj_database_url
-
 
 db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
@@ -213,3 +215,9 @@ CSRF_COOKIE_SECURE = False
 SECURE_HSTS_SECONDS = None
 SECURE_HSTS_INCLUDE_SUBDOMAINS = False
 SECURE_FRAME_DENY = False
+
+# MESSAGE BOOTSTRAP
+MESSAGE_TAGS = {
+    messages.ERROR: 'red',
+    messages.SUCCESS: 'green',
+}

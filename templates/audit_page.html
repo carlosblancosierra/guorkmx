@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% load static %}
+{% load ebdjango_extras %}
 
 {% block head_title %}Auditoria de Marketing{% endblock %}
 
@@ -35,6 +36,7 @@
 
 
 
+
 </style>
 
 <div class="container">
@@ -45,19 +47,23 @@
                 <div class="carousel carousel-slider" id="carousel-audit">
 
                     {% for questions in questions_list %}
-                    <div class="carousel-item py-auto white">
+                    <div class="carousel-item white">
                         <p class="text-center">Pregunta {{ forloop.counter }} de 24</p>
-                            <p class="text-center font-weight-bold">
-                                {% if forloop.counter <= 6 %}
-                                {{ questions_titles.0 }}
-                                {% elif forloop.counter <= 12 %}
-                                {{ questions_titles.1 }}
-                                {% elif forloop.counter <= 18 %}
-                                {{ questions_titles.2 }}
-                                {% elif forloop.counter <= 24 %}
-                                {{ questions_titles.3 }}
-                                {% endif %}
-                            </p>
+                        <div class="progress">
+                            <div class="determinate" style="width: {{ forloop.counter|div:24 }}%"></div>
+                        </div>
+
+                        <p class="text-center font-weight-bold">
+                            {% if forloop.counter <= 6 %}
+                            {{ questions_titles.0 }}
+                            {% elif forloop.counter <= 12 %}
+                            {{ questions_titles.1 }}
+                            {% elif forloop.counter <= 18 %}
+                            {{ questions_titles.2 }}
+                            {% elif forloop.counter <= 24 %}
+                            {{ questions_titles.3 }}
+                            {% endif %}
+                        </p>
                         {% for question in questions %}
                         <div class="questions_{{ questions|length }} {% if forloop.last %}last_div{% endif %}">
                             <p class="font-150 text-center">{{ question }}</p>
@@ -222,6 +228,7 @@
             }, 300);
 
     });
+
 
 
 

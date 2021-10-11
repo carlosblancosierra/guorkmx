@@ -2,8 +2,8 @@
 
 {% load static %}
 
-{% block head_title %} {% endblock %}
-
+{% block head_title %} {{ object.seo_title }}{% endblock %}
+{% block meta_description %}{{ object.meta_description }}{% endblock %}
 {% block content %}
 
 <div class="container">

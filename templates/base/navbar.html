@@ -11,6 +11,8 @@
 {% url 'soporte_tactico' as soporte_tactico_url %}
 {% url 'programas_estrategicos' as programas_estrategicos_url %}
 {% url 'proyectos' as proyectos_url %}
+{% url 'audit_pre' as audit_pre_url %}
+{% url 'recursos' as recursos_url %}
 
 <nav class="navbar py-3">
     <div class="container">
@@ -20,12 +22,17 @@
             </a>
             <a href="#" data-target="slide-out" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a class="dropdown-trigger-main" href="#!" data-target="dropdownEmpecemos">
+                    EMPECEMOS <i class="material-icons right">arrow_drop_down</i>
+                </a>
+                </li>
                 <li><a class="dropdown-trigger-main" href="#!" data-target="dropdownServicios">SOLUCIONES
                     <i class="material-icons right">arrow_drop_down</i></a></li>
-                <!--                <li><a href="{{ soluciones_url }}">Soluciones</a></li>-->
+                <li><a href="{{ recursos_url }}">RECURSOS</a></li>
+                <li><a href="https://tienda.guork.mx/">PRODUCTOS</a></li>
+                <li><a href="{{ blog_url }}">CASOS DE ÉXITO</a></li>
                 <li><a href="{{ blog_url }}">BLOG</a></li>
                 <li><a href="{{ contact_url }}">CONTACTO</a></li>
-                <li><a href="https://wa.me/5215572179301">55 7217 9301</a></li>
             </ul>
         </div>
     </div>
@@ -43,7 +50,7 @@
         </div>
         <div class="col m4">
             <a href="{{ soporte_tactico_url }}">
-                <img src="{% static 'images/soluciones/icono-programas-estrategicos.png' %}" alt="" class="w-50"/>
+                <img src="{% static 'images/soluciones/icono-apoyo-tactico.png' %}" alt="" class="w-50"/>
                 <p class="m-0">Soporte Táctico</p>
                 <p class="font-110 mt-2">
                     Un equipo de expertos listo para implementar iniciativas específicas bajo demanda, como
@@ -66,7 +73,7 @@
         </div>
         <div class="col m4">
             <a href="{{ proyectos_url }}">
-                <img src="{% static 'images/soluciones/icono-programas-estrategicos.png' %}" alt="" class="w-50"/>
+                <img src="{% static 'images/soluciones/icono-projectos.png' %}" alt="" class="w-50"/>
                 <p class="m-0">Proyectos</p>
                 <p class="font-110 mt-2">
                     Un entregable de alcance fijo, claramente definido, ya sea una auditoría o análisis de terceros,
@@ -77,6 +84,14 @@
             </a>
         </div>
     </div>
+</ul>
+
+<ul id="dropdownEmpecemos" class="dropdown-content">
+    <li><a href="#!">GUÍA MARKETING DIGITAL</a></li>
+    <li><a href="{{ audit_pre_url }}">AUDITORÍA DIGITA</a></li>
+    <li><a href="https://landing.guork.mx/objetivos-guork ">CALCULADOR DE OBJETIVOS</a></li>
+    <li><a href="https://landing.guork.mx/embudo-copy-39873">BENCHMARK</a></li>
+
 </ul>
 
 <ul id="slide-out" class="sidenav">

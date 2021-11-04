@@ -6,12 +6,12 @@
 {% block meta_description %}{{ object.meta_description }}{% endblock %}
 
 {% block meta_facebook %}
-<meta property="og:url"          content="{{ object.get_absolute_url }}" />
+<meta property="og:url"          content="{{ request.get_host }}{{ object.get_absolute_url }}" />
 <meta property="og:type"         content="article" />
 <meta property="og:title"        content="{{ object.seo_title }}" />
 <meta property="og:description"  content="{{ object.meta_description }}" />
-<meta property="og:image"        content="{{ object.image.url }}" />
-{% block endblock %}
+<meta property="og:image"        content="{{ request.get_host }}{{ object.image.url }}" />
+{% endblock %}
 
 {% block content %}
 

@@ -13,6 +13,8 @@
 {% url 'proyectos' as proyectos_url %}
 {% url 'audit_pre' as audit_pre_url %}
 {% url 'recursos' as recursos_url %}
+{% url 'guia_marketing_digital' as guia_marketing_digital_url %}
+
 
 <nav class="navbar py-3">
     <div class="container">
@@ -29,8 +31,8 @@
                 <li><a class="dropdown-trigger-main" href="#!" data-target="dropdownServicios">SOLUCIONES
                     <i class="material-icons right">arrow_drop_down</i></a></li>
                 <li><a href="{{ recursos_url }}">RECURSOS</a></li>
-                <li><a href="https://tienda.guork.mx/">PRODUCTOS</a></li>
-                <li><a href="{{ blog_url }}">CASOS DE ÉXITO</a></li>
+                <!--                <li><a href="https://tienda.guork.mx/" target="_blank">PRODUCTOS</a></li>-->
+                <!--                <li><a href="#">CASOS DE ÉXITO</a></li>-->
                 <li><a href="{{ blog_url }}">BLOG</a></li>
                 <li><a href="{{ contact_url }}">CONTACTO</a></li>
             </ul>
@@ -87,10 +89,10 @@
 </ul>
 
 <ul id="dropdownEmpecemos" class="dropdown-content">
-    <li><a href="#!">GUÍA MARKETING DIGITAL</a></li>
-    <li><a href="{{ audit_pre_url }}">AUDITORÍA DIGITA</a></li>
-    <li><a href="https://landing.guork.mx/objetivos-guork ">CALCULADOR DE OBJETIVOS</a></li>
-    <li><a href="https://landing.guork.mx/embudo-copy-39873">BENCHMARK</a></li>
+    <!--    <li><a href="{{ guia_marketing_digital_url }}">GUÍA MARKETING DIGITAL</a></li>-->
+    <li><a href="{{ audit_pre_url }}">AUDITORÍA DIGITAL</a></li>
+    <li><a href="https://landing.guork.mx/objetivos-guork" target="_blank">CALCULADORA DE OBJETIVOS</a></li>
+    <li><a href="https://landing.guork.mx/embudo-copy-39873" target="_blank">BENCHMARK</a></li>
 
 </ul>
 
@@ -98,11 +100,16 @@
     <p class="mx-5">
         <img src="{% static 'images/logo.png' %}" class="responsive-img">
     </p>
+    <li><a href="#" class="font-200">Empecemos</a></li>
+    <li><a href="{{ audit_pre_url }}" class="font-175 ml-2">Auditoría Digital</a></li>
+    <li><a href="https://landing.guork.mx/objetivos-guork" target="_blank" class="font-175 ml-2">Calculadora de objetivos</a></li>
+    <li><a href="https://landing.guork.mx/embudo-copy-39873" target="_blank" class="font-175 ml-2">Benchmark</a></li>
 
     <li><a href="{{ soluciones_url }}" class="font-200">Soluciones</a></li>
     <li><a href="{{ soporte_tactico_url }}" class="font-175 ml-2">Soporte Táctico</a></li>
     <li><a href="{{ programas_estrategicos_url }}" class="font-175 ml-2">Programas Estratégicos</a></li>
     <li><a href="{{ proyectos_url }}" class="font-175 ml-2">Proyectos</a></li>
+    <li><a href="{{ recursos_url }}" class="font-200">Recursos</a></li>
     <li><a href="{{ blog_url }}" class="font-200">Blog</a></li>
     <li><a href="{{ contact_url }}" class="font-200">Contacto</a></li>
     <li><a href="https://wa.me/5215531880495" class="font-200">55 3188 0495</a></li>

@@ -595,3 +595,10 @@ def aviso_de_privacidad_page(request):
     }
 
     return render(request, "aviso_de_privacidad_page.html", context)
+
+
+def guia_marketing_digital(request):
+    context = {
+    }
+
+    return render(request, "guia_marketing_digital_page.html", context)

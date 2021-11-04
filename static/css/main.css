@@ -627,7 +627,24 @@ a:hover .home-service-consult-col {
     width: 3rem;
 }
 
+#guia-marketing-owl-carousel .owl-prev,
+#guia-marketing-owl-carousel .owl-next {
+    font-size: 5rem !important;
+    color: var(--dark-gold);
+    margin: .5rem;
+    border-radius: 50%;
+    width: 3rem;
+    position: absolute;
+    top: 28%;
+}
 
+#guia-marketing-owl-carousel .owl-prev {
+    left: -10%;
+}
+
+#guia-marketing-owl-carousel .owl-next {
+    right: -10%;
+}
 /*Phones*/
 
 @media (max-width: 425px) {
@@ -1341,4 +1358,14 @@ a:hover .home-service-consult-col {
 
 #carousel-audit {
     height:800px;
+}
+
+#guia-marketing-container p{
+    font-size:1.3rem;
+}
+
+#guia-marketing-content {
+    margin-top:-10%;
+    background:white;
+    z-index:99999;
 }

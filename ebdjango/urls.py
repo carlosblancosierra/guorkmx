@@ -33,6 +33,8 @@ urlpatterns = [
     path('auditoria/', views.audit_page, name='audit'),
     path('auditoria/resultado/', views.audit_result_page, name='audit_result'),
 
+    path('guia_marketing_digital', views.guia_marketing_digital, name='guia_marketing_digital'),
+
     path('eventos', views.events_list_page, name='events'),
     path('reserva_un_experto', views.experts_list_page, name='experts'),
     path('audio_visual', views.audio_visual_page, name='audio_visual'),

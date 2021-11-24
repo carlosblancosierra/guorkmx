@@ -74,6 +74,7 @@ INSTALLED_APPS = [
     'stripe_checkout',
     'leads',
     'recursos',
+    'guia_marketing',
 
 ]
 

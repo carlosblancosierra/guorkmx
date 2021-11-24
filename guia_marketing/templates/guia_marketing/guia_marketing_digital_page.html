@@ -5,6 +5,8 @@
 {% block head_title %} {% endblock %}
 
 {% block content %}
+
+{% url 'guia_marketing_digital_1' as guia_marketing_digital_1_url %}
 <div class="container-fluid">
     <div class="row">
         <div class="col s12 p-0">
@@ -16,13 +18,44 @@
 <div class="container-fluid" id="guia-marketing-container">
     <div class="row">
         <div class="col s12 m3">
-            <ul class="collection font-125">
-                <li class="collection-item text-darkgold">La Guía Definitiva del Marketing Digital</li>
-<!--                <li class="collection-item">Desarrolla tu Estrategia de Marketing Digital</li>-->
-            </ul>
+            <div class="collection font-125 text-grey">
+                <!--                <a href="{{ guia_marketing_digital_1_url }}" class="collection-item text-darkgold">-->
+                <!--                    La Guía Definitiva del Marketing Digital</a>-->
+                <!--                <a href="{{ guia_marketing_digital_1_url }}" class="collection-item">-->
+                <!--                    Desarrolla tu Estrategia de Marketing Digital</a>-->
+                <!--                <a href="{{ guia_marketing_digital_1_url }}" class="collection-item">-->
+                <!--                    Desarrollando una Estrategia de Marketing de Contenido</a>-->
+                <!--                <a href="{{ guia_marketing_digital_1_url }}" class="collection-item">-->
+                <!--                    Elaboración de un Plan de Publicidad Digital</a>-->
+                <!--                <a href="{{ guia_marketing_digital_1_url }}" class="collection-item">-->
+                <!--                    Desarrolla una Estrategia de Redes Sociales</a>-->
+                <!--                <a href="{{ guia_marketing_digital_1_url }}" class="collection-item">-->
+                <!--                    Seguir las mejores prácticas de Marketing por correo electrónico</a>-->
+                <!--                <a href="{{ guia_marketing_digital_1_url }}" class="collection-item">-->
+                <!--                    Diseña tu Estrategia para Motores De Búsqueda</a>-->
+                <!--                <a href="{{ guia_marketing_digital_1_url }}" class="collection-item">-->
+                <!--                    Utiliza los analíticos en tu Marketing Digital</a>-->
+                <!--                <a href="{{ guia_marketing_digital_1_url }}" class="collection-item">-->
+                <!--                    Aprovechar la optimización de la tasa de conversión para impulsar el-->
+                <!--                    crecimiento</a>-->
+                <!--                <a href="{{ guia_marketing_digital_1_url }}" class="collection-item">-->
+                <!--                    ¿Que sigue?</a>-->
+                <a
+                        href="{{ guia_marketing_digital_url }}"
+                        class="collection-item text-gold">
+                    La Guía Definitiva del Marketing Digital
+                </a>
+                {% for capitulo in capitulos %}
+                <a
+                        href="{{ capitulo.get_absolute_url }}"
+                        class="collection-item text-grey">
+                    {{ capitulo.title }}
+                </a>
+                {% endfor %}
+            </div>
 
         </div>
-        <div class="col s12 m6 p-5" id="guia-marketing-content">
+        <div class="col s12 m6 px-5 pt-2 pb-5 guia-marketing-content">
             <h4 class="text-center">GUORK PRESENTA</h4>
             <p class="gold-hr-center"></p>
             <h1 class="text-center">La guía definitiva del Marketing Digital</h1>
@@ -532,7 +565,11 @@
 
                     <p>Aquí está el siguiente paso ...</p>
 
-                    <p>Empieza el Capítulo 1</p>
+                    <p>
+                        <a href="{{ next_url }}" class="btn-large btn-gold">
+                            Empieza el Capítulo
+                        </a>
+                    </p>
 
 
                 </div>

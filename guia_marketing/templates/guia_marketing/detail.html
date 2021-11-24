@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block head_title %} {% endblock %}
+
+{% block content %}
+
+{% url 'guia_marketing_digital' as guia_marketing_digital_url %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col s12 p-0">
+            <img src="{% static 'images/guia-marketing/banner.jpg'%}" width="100%">
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid" id="guia-marketing-container">
+    <div class="row">
+        <div class="col s12 m3">
+            <ul class="collection font-125">
+                <a
+                        href="{{ guia_marketing_digital_url }}"
+                        class="collection-item text-grey">
+                    La Guía Definitiva del Marketing Digital
+                </a>
+                {% for capitulo in capitulos %}
+                <a
+                        href="{{ capitulo.get_absolute_url }}"
+                        class="collection-item
+                        {% if forloop.counter == object.order %}text-gold{% else %}text-grey{% endif %}">
+                    {{ capitulo.title }}
+                </a>
+                {% endfor %}
+            </ul>
+
+        </div>
+        <div class="col s12 m6 px-5 pt-2 pb-5 guia-marketing-content">
+            <p class="font-150 mb-0 text-center">Capitulo</p>
+            <p class="guia-markting-capitulo-numero text-center">{{ object.slug }}</p>
+            <p class="gold-hr-center"></p>
+            <h1>{{ object.title }}</h1>
+            <span id="blog-post-content">{{ object.content|safe }}</span>
+
+            {% if next_url %}
+            <p>
+                <a href="{{ next_url }}" class="btn-large btn-gold">
+                    Próximo capítulo
+                </a>
+            </p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            <div class="row">
+                <div class="col s12 m10 offset-m1">
+                    {% for capitulo in capitulos %}
+                    <div
+                            class="div col s12 m4">
+                        <div class="card p-3">
+                            <a href="{{ capitulo.url }}">
+                                <p class="m-0">Capitulo {{ forloop.counter }}</p>
+                                <h2 class="font-150 mt-2">{{ capitulo.title }}</h2>
+                            </a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
+

@@ -7,6 +7,8 @@ from .forms import ContactForm
 from ebdjango.decorators import check_recaptcha
 from django.urls import reverse
 
+from guia_marketing.models import Capitulo
+
 
 def home_page(request):
     blog_posts = BlogPost.objects.all()
@@ -401,6 +403,7 @@ def nosotros_page(request):
 
     return render(request, "nosotros_page.html", context)
 
+
 def aviso_de_privacidad_page(request):
     context = {
     }
@@ -450,93 +453,3 @@ capitulos = [
         'url': '/guia_marketing_digital/9'
     },
 ]
-
-
-def guia_marketing_digital(request):
-    context = {
-        'capitulos': capitulos,
-        'counter': 1,
-    }
-
-    return render(request, "guia_marketing_digital_page.html", context)
-
-
-def guia_marketing_digital_1(request):
-    context = {
-        'capitulos': capitulos,
-        'counter': 2,
-    }
-
-    return render(request, "guia_marketing_digital_page_1.html", context)
-
-
-def guia_marketing_digital_2(request):
-    context = {
-        'capitulos': capitulos,
-        'counter': 3,
-    }
-
-    return render(request, "guia_marketing_digital_page_2.html", context)
-
-
-def guia_marketing_digital_3(request):
-    context = {
-        'capitulos': capitulos,
-        'counter': 4,
-    }
-
-    return render(request, "guia_marketing_digital_page_3.html", context)
-
-
-def guia_marketing_digital_4(request):
-    context = {
-        'capitulos': capitulos,
-        'counter': 5,
-    }
-
-    return render(request, "guia_marketing_digital_page_4.html", context)
-
-
-def guia_marketing_digital_5(request):
-    context = {
-        'capitulos': capitulos,
-        'counter': 6,
-    }
-
-    return render(request, "guia_marketing_digital_page_5.html", context)
-
-
-def guia_marketing_digital_6(request):
-    context = {
-        'capitulos': capitulos,
-        'counter': 7,
-    }
-
-    return render(request, "guia_marketing_digital_page_6.html", context)
-
-
-def guia_marketing_digital_7(request):
-    context = {
-        'capitulos': capitulos,
-        'counter': 8,
-    }
-
-    return render(request, "guia_marketing_digital_page_7.html", context)
-
-
-def guia_marketing_digital_8(request):
-    context = {
-        'capitulos': capitulos,
-        'counter': 9,
-    }
-
-    return render(request, "guia_marketing_digital_page_8.html", context)
-
-
-def guia_marketing_digital_9(request):
-    context = {
-        'capitulos': capitulos,
-        'counter': 10,
-    }
-
-    return render(request, "guia_marketing_digital_page_9.html", context)

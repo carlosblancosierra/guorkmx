@@ -317,7 +317,7 @@ h3 {
 }
 
 .text-grey {
-    color:#444444;
+    color:#444444 !important;
 }
 
 /*BUTTONS*/
@@ -1364,8 +1364,18 @@ a:hover .home-service-consult-col {
     font-size:1.3rem;
 }
 
-#guia-marketing-content {
+.guia-marketing-content {
     margin-top:-10%;
     background:white;
     z-index:99999;
+}
+
+.guia-marketing-content li{
+    font-size:1.3rem;
+}
+
+.guia-markting-capitulo-numero {
+    font-size:6rem!important;
+    line-height:6rem!important;
+    margin:0;
 }

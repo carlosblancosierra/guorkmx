@@ -73,6 +73,7 @@ INSTALLED_APPS = [
     'courses',
     'stripe_checkout',
     'leads',
+    'recursos',
 
 ]
 

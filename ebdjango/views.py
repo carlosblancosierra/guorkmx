@@ -5,6 +5,7 @@ from blog.models import BlogPost
 from leads.models import AuditoriaLead
 from .forms import ContactForm
 from ebdjango.decorators import check_recaptcha
+from django.urls import reverse
 
 
 def home_page(request):
@@ -400,196 +401,6 @@ def nosotros_page(request):
 
     return render(request, "nosotros_page.html", context)
 
-
-def recursos_page(request):
-    data = [
-        {
-            "title": "Email Marketing",
-            "id": "emailmarketing",
-            "resources": [
-                {
-                    "title": "Guía Email Marketing",
-                    "desc": "Con este recurso puedes comenzar fácilmente a crear estrategias de email marketing enfocadas "
-                            "en la venta.",
-                    "url": "#",
-                },
-                {
-                    "title": "Creación de Campañas de Emailing",
-                    "desc": "Asegúrate de que tus campañas de emailing se envíen, reciban clics, proporcionen valor y "
-                            "vendan.",
-                    "url": "#",
-                },
-
-            ]
-        },
-        {
-            "title": "Publicidad Pagada",
-            "id": "PublicidadPagada",
-            "resources": [
-                {
-                    "title": "Retargeting",
-                    "desc": "Una vez que desarrolles campañas de retargeting basadas en el comportamiento anterior de "
-                            "los usuarios, generar mayores ingresos será muy sencillo.",
-                    "url": "#",
-                },
-                {
-                    "title": "Estrategias de Facebook Ads",
-                    "desc": "Como marketero, debes pensar en Facebook de manera diferente. Los consumidores no están en "
-                            "Facebook para ver anuncios y es importante recordar que sigue siendo una plataforma social.",
-                    "url": "#",
-                },
-
-            ]
-        },
-        {
-            "title": "Marketing de Contenido",
-            "id": "Contenido",
-            "resources": [
-                {
-                    "title": "Estrategias de Marketing de Blogs",
-                    "desc": "El blog debe aportar valor a tus clientes ayudandolos a resolver sus problemas. Hay muchas "
-                            "formas de hacer esto, aquí te ayudaremos a crear una estrategia paso a paso. ",
-                    "url": "#",
-                },
-                {
-                    "title": "Distribución de Contenido",
-                    "desc": "El reto más grande es atraer tráfico a tus contenidos. Para ello, debes distribuirlos a "
-                            "través de los canales adecuados, ya sea de forma orgánica o con publicidad pagada. ",
-                    "url": "#",
-                },
-                {
-                    "title": "Redacción de Contenidos",
-                    "desc": "El objetivo de una buena redacción es generar una cierta expectativa o interés en la "
-                            "audiencia para que puedas vender más. Aquí te decimos cómo.",
-                    "url": "#",
-                },
-                {
-                    "title": "Contenido para el Top of the Funnel",
-                    "desc": "Aprende a captar la atención de nuevos usuarios y comienza a generar más clientes "
-                            "potenciales para tu negocio.",
-                    "url": "#",
-                },
-
-            ]
-        },
-        {
-            "title": "Search Marketing",
-            "id": "Search",
-            "resources": [
-                {
-                    "title": "SEO On-Site",
-                    "desc": "Si cada pieza de contenido que produces está optimizada y es valiosa para tus usuarios, "
-                            "la clasificación en los motores de búsqueda será un problema menor.",
-                    "url": "#",
-                },
-                {
-                    "title": "Auditoría SEO",
-                    "desc": "Nadie quiere informar sobre métricas irrelevantes. Descubre el cómo y el por qué de los "
-                            "informes de SEO.",
-                    "url": "#",
-                },
-                {
-                    "title": "Herramientas de Investigación de Palabras Clave",
-                    "desc": "Aprende a hacer una investigación de palabras clave y crear contenido que sea importante "
-                            "para tus clientes.",
-                    "url": "#",
-                },
-                {
-                    "title": "SEO Backlinks",
-                    "desc": "Con más backlinks, conducirás más y mejor tráfico a tu sitio, ¡lo que significa más dinero!",
-                    "url": "#",
-                },
-
-            ]
-        },
-        {
-            "title": "Copywriting",
-            "id": "Copywriting",
-            "resources": [
-                {
-                    "title": "Persuade a Prospectos",
-                    "desc": "Con las herramientas y estrategias correctas puedes persuadir a los prospectos para que "
-                            "compren más y más rápido. ",
-                    "url": "#",
-                },
-                {
-                    "title": "¿Qué es Copywriting?",
-                    "desc": "Cuando se trata de alcanzar más clientes, no hay nada más importante que el mensaje.",
-                    "url": "#",
-                },
-                {
-                    "title": "Copywriting Efectivo",
-                    "desc": "Una investigación efectiva y el conocimiento de la voz de tu marca te ayudarán a producir "
-                            "un ‘copy’ efectivo",
-                    "url": "#",
-                },
-                {
-                    "title": "Propuesta Única de Venta",
-                    "desc": "Tu propuesta única de venta debe ser sólida y debe ser clara en cualquier ‘copy’ de ventas.",
-                    "url": "#",
-                },
-
-            ]
-        },
-        {
-            "title": "Growth Marketing",
-            "id": "GrowthMarketing",
-            "resources": [
-                {
-                    "title": "Social Listening",
-                    "desc": "Social Listening es la clave del éxito cuando se trata de Redes Sociales. "
-                            "Te explicamos porque",
-                    "url": "#",
-                },
-                {
-                    "title": "Community Management",
-                    "desc": "La función del Community Manager es crear un entorno saludable para que los miembros se "
-                            "conecten e interactúen.",
-                    "url": "#",
-                },
-                {
-                    "title": "Construir una Comunidad Digital",
-                    "desc": "Descubre cómo trabajar en equipo puede llevar tus estrategias de Marketing Digital "
-                            "al siguiente nivel.",
-                    "url": "#",
-                },
-                {
-                    "title": "Qué es un Plan de Ejecución",
-                    "desc": "Haz crecer tu negocio a medida que sigues el paso a paso que te llevarán a ser más "
-                            "productivo.",
-                    "url": "#",
-                },
-
-            ]
-        },
-        {
-            "title": "Optimización de Tasas de Conversión",
-            "id": "tasasconversion",
-            "resources": [
-                {
-                    "title": "Personalización del Website",
-                    "desc": "El objetivo final de la personalización es convertir tu sitio web en tu mejor vendedor.",
-                    "url": "#",
-                },
-                {
-                    "title": "A/B Testing",
-                    "desc": "Descubre por qué los A/B Test son una de las mejores formas de saber qué resuena con tus "
-                            "clientes.",
-                    "url": "#",
-                },
-
-            ]
-        },
-
-    ]
-
-    context = {
-        "data": data
-    }
-
-    return render(request, "recursos_page.html", context)
-
-
 def aviso_de_privacidad_page(request):
     context = {
     }
@@ -597,8 +408,135 @@ def aviso_de_privacidad_page(request):
     return render(request, "aviso_de_privacidad_page.html", context)
 
 
+capitulos = [
+    {
+        'title': 'La Guía Definitiva del Marketing Digital',
+        'url': '/guia_marketing_digital'
+    },
+    {
+        'title': 'Desarrolla tu Estrategia de Marketing Digital',
+        'url': '/guia_marketing_digital/1'
+    },
+    {
+        'title': 'Desarrollando una Estrategia de Marketing de Contenido',
+        'url': '/guia_marketing_digital/2'
+    },
+    {
+        'title': 'Elaboración de un Plan de Publicidad Digital',
+        'url': '/guia_marketing_digital/3'
+    },
+    {
+        'title': 'Desarrolla una Estrategia de Redes Sociales',
+        'url': '/guia_marketing_digital/4'
+    },
+    {
+        'title': 'Seguir las mejores prácticas de Marketing por correo electrónico',
+        'url': '/guia_marketing_digital/5'
+    },
+    {
+        'title': 'Diseña tu Estrategia para Motores De Búsqueda',
+        'url': '/guia_marketing_digital/6'
+    },
+    {
+        'title': 'Utiliza los analíticos en tu Marketing Digital',
+        'url': '/guia_marketing_digital/7'
+    },
+    {
+        'title': 'Aprovechar la optimización de la tasa de conversión para impulsar el crecimiento',
+        'url': '/guia_marketing_digital/8'
+    },
+    {
+        'title': '¿Que sigue?',
+        'url': '/guia_marketing_digital/9'
+    },
+]
+
+
 def guia_marketing_digital(request):
     context = {
+        'capitulos': capitulos,
+        'counter': 1,
     }
 
     return render(request, "guia_marketing_digital_page.html", context)
+
+
+def guia_marketing_digital_1(request):
+    context = {
+        'capitulos': capitulos,
+        'counter': 2,
+    }
+
+    return render(request, "guia_marketing_digital_page_1.html", context)
+
+
+def guia_marketing_digital_2(request):
+    context = {
+        'capitulos': capitulos,
+        'counter': 3,
+    }
+
+    return render(request, "guia_marketing_digital_page_2.html", context)
+
+
+def guia_marketing_digital_3(request):
+    context = {
+        'capitulos': capitulos,
+        'counter': 4,
+    }
+
+    return render(request, "guia_marketing_digital_page_3.html", context)
+
+
+def guia_marketing_digital_4(request):
+    context = {
+        'capitulos': capitulos,
+        'counter': 5,
+    }
+
+    return render(request, "guia_marketing_digital_page_4.html", context)
+
+
+def guia_marketing_digital_5(request):
+    context = {
+        'capitulos': capitulos,
+        'counter': 6,
+    }
+
+    return render(request, "guia_marketing_digital_page_5.html", context)
+
+
+def guia_marketing_digital_6(request):
+    context = {
+        'capitulos': capitulos,
+        'counter': 7,
+    }
+
+    return render(request, "guia_marketing_digital_page_6.html", context)
+
+
+def guia_marketing_digital_7(request):
+    context = {
+        'capitulos': capitulos,
+        'counter': 8,
+    }
+
+    return render(request, "guia_marketing_digital_page_7.html", context)
+
+
+def guia_marketing_digital_8(request):
+    context = {
+        'capitulos': capitulos,
+        'counter': 9,
+    }
+
+    return render(request, "guia_marketing_digital_page_8.html", context)
+
+
+def guia_marketing_digital_9(request):
+    context = {
+        'capitulos': capitulos,
+        'counter': 10,
+    }
+
+    return render(request, "guia_marketing_digital_page_9.html", context)

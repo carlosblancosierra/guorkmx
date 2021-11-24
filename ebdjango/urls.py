@@ -64,7 +64,7 @@ urlpatterns = [
     path('ckeditor/', include('ckeditor_uploader.urls')),
 ]
 
-if settings.DEBUG:
+if settings.STATIC_LOCAL:
     # test mode
     from django.conf.urls.static import static
 

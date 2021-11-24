@@ -5,6 +5,9 @@
 {% block head_title %} {% endblock %}
 
 {% block content %}
+
+{% static "" as baseUrl %}
+
 <div class="container">
     <div class="row center">
         <div class="col s12 m10 offset-m1">
@@ -50,7 +53,7 @@
         <div class="col s12 m6 px-4 py-3">
             <div class="row p-4 card h-100">
                 <div class="col s12 m4">
-                    <img src="{{ resource.image }}" class="responsive-img"/>
+                    <img src="{{ baseUrl }}{{ resource.image }}" class="responsive-img"/>
                 </div>
                 <div class="col s12 m7">
                     <h3 class="m-0 recursos-title">
@@ -76,54 +79,54 @@
 
 {% endblock %}
 
-<!--RECURSOS DE MARKETING-->
-<div class="row">
-    <div class="col s12">
-        <h2 class="center bg-blue text-white py-2">RECURSOS DE EMAIL MARKETING</h2>
-    </div>
-</div>
+<!--&lt;!&ndash;RECURSOS DE MARKETING&ndash;&gt;-->
+<!--<div class="row">-->
+<!--    <div class="col s12">-->
+<!--        <h2 class="center bg-blue text-white py-2">RECURSOS DE EMAIL MARKETING</h2>-->
+<!--    </div>-->
+<!--</div>-->
 
 
-<div class="container">
-    <div class="row mt-5 d-flex">
-        <div class="col s12 m6 card m-3">
-            <div class="row p-4 m-3">
-                <div class="col s12 m4">
-                    <img src="{% static 'images/recursos/icons/Email-Campaign-Creation.png' %}" class="responsive-img"/>
-                </div>
-                <div class="col s12 m7">
-                    <h3 class="m-0 recursos-title">
-                        Guía Email Marketing
-                    </h3>
-                    <p class="recursos-desc">
-                        Con este recurso puedes comenzar fácilmente a crear estrategias de email marketing
-                        enfocadas en la venta.
-                    </p>
-                    <p class="">
-                        <a class="btn btn-blue" href="#">Ver Recurso</a>
-                    </p>
-                </div>
-            </div>
-        </div>
+<!--<div class="container">-->
+<!--    <div class="row mt-5 d-flex">-->
+<!--        <div class="col s12 m6 card m-3">-->
+<!--            <div class="row p-4 m-3">-->
+<!--                <div class="col s12 m4">-->
+<!--                    <img src="{% static 'images/recursos/icons/Email-Campaign-Creation.png' %}" class="responsive-img"/>-->
+<!--                </div>-->
+<!--                <div class="col s12 m7">-->
+<!--                    <h3 class="m-0 recursos-title">-->
+<!--                        Guía Email Marketing-->
+<!--                    </h3>-->
+<!--                    <p class="recursos-desc">-->
+<!--                        Con este recurso puedes comenzar fácilmente a crear estrategias de email marketing-->
+<!--                        enfocadas en la venta.-->
+<!--                    </p>-->
+<!--                    <p class="">-->
+<!--                        <a class="btn btn-blue" href="#">Ver Recurso</a>-->
+<!--                    </p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
 
-        <div class="col s12 m6 card m-3">
-            <div class="row p-4 m-3">
-                <div class="col s12 m4">
-                    <img src="{% static 'images/recursos/placeholder.png' %}" class="responsive-img"/>
-                </div>
-                <div class="col s12 m7">
-                    <h3 class="m-0 recursos-title">
-                        Creación de Campañas de Emailing
-                    </h3>
-                    <p>
-                        Asegúrate de que tus campañas de emailing se envíen, reciban clics, proporcionen valor y
-                        vendan.
-                    </p>
-                    <p class="">
-                        <a class="btn btn-blue" href="#">Ver Recurso</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<!--        <div class="col s12 m6 card m-3">-->
+<!--            <div class="row p-4 m-3">-->
+<!--                <div class="col s12 m4">-->
+<!--                    <img src="{% static 'images/recursos/placeholder.png' %}" class="responsive-img"/>-->
+<!--                </div>-->
+<!--                <div class="col s12 m7">-->
+<!--                    <h3 class="m-0 recursos-title">-->
+<!--                        Creación de Campañas de Emailing-->
+<!--                    </h3>-->
+<!--                    <p>-->
+<!--                        Asegúrate de que tus campañas de emailing se envíen, reciban clics, proporcionen valor y-->
+<!--                        vendan.-->
+<!--                    </p>-->
+<!--                    <p class="">-->
+<!--                        <a class="btn btn-blue" href="#">Ver Recurso</a>-->
+<!--                    </p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->

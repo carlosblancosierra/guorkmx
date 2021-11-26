@@ -40,9 +40,9 @@ urlpatterns = [
     path('audio_visual', views.audio_visual_page, name='audio_visual'),
 
     path('soluciones', views.soluciones_page, name='soluciones'),
-    path('soluciones/programas_estrategicos', views.programas_estrategicos_page, name='programas_estrategicos'),
-    path('soluciones/soporte_tactico', views.soporte_tactico_page, name='soporte_tactico'),
-    path('soluciones/proyectos', views.proyectos_page, name='proyectos'),
+    path('soluciones/agencia', views.programas_estrategicos_page, name='programas_estrategicos'),
+    path('soluciones/consultoria', views.soporte_tactico_page, name='soporte_tactico'),
+    path('soluciones/academia', views.proyectos_page, name='proyectos'),
 
     path('recursos/', include('recursos.urls'), name="recursos"),
 

@@ -77,6 +77,9 @@ p {
     cursor: pointer;
 }
 
+.lh-0 {
+    line-height:0;
+}
 
 /*Phones*/
 
@@ -265,6 +268,10 @@ h3 {
 
 .bg-dark-grey {
     background-color: #262626 !important;
+}
+
+.bg-grey-444 {
+    background-color: #444 !important;
 }
 
 .bg-gold {
@@ -1004,6 +1011,7 @@ a:hover .home-service-consult-col {
     padding-right:1.5rem;
     padding-bottom:0.5rem;
     font-size: 0.8rem;
+    color:white;
 }
 
 .soluciones-square-icon {

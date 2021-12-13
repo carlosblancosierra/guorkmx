@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <title>{% block head_title %} {% endblock %}</title>
-    <title>{% block meta_description %} {% endblock %}</title>
+    <meta name="description" content="{% block meta_description %} {% endblock %}"/>
+    <meta name="keywords" content="{% block keywords %} {% endblock %}"/>
     {% block meta_facebook %} {% endblock %}
 
     <!-- css -->
@@ -29,7 +30,6 @@
 {% include 'base/footer.html' %}
 
 
-
 <!-- js -->
 {% include 'base/js.html' %}
 
@@ -41,6 +41,7 @@
 {{ message }}
 <script>
     M.toast({html: '{{ message }}', classes: '{% if message.tags %}{{ message.tags }}{% endif %} rounded'});
+
 </script>
 {% endfor %}
 

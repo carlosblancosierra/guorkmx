@@ -116,6 +116,7 @@ class BlogPost(models.Model):
                                  options={'quality': 90})
 
     meta_description = models.CharField(max_length=120, blank=True)
+    keywords = models.CharField(max_length=120, null=True, blank=True)
     seo_title = models.CharField(max_length=100, blank=True)
     draft = models.BooleanField(default=False)
     publish = models.DateField(auto_now=False, auto_now_add=False)
@@ -137,6 +138,9 @@ class BlogPost(models.Model):
 
     def get_edit_url(self):
         return f"{self.get_absolute_url()}/edit"
+
+    def get_admin_url(self):
+        return f"/admin/blog/blogpost/{self.id}/change/"
 
     def get_delete_url(self):
         return f"{self.get_absolute_url()}/delete"

@@ -104,3 +104,30 @@ def blog_post_delete_view(request, slug):
     }
 
     return render(request, template_name, context)
+
+
+def seo_view(request):
+    queryset = BlogPost.objects.active()
+
+    paginator = Paginator(queryset, 100)
+
+    page_request_var = "pagina"
+    page = request.GET.get(page_request_var)
+
+    try:
+        queryset = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        queryset = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        queryset = paginator.page(paginator.num_pages)
+
+    template_name = 'blog/seo.html'
+    context = {
+        "object_list": queryset,
+        "page_request_var": page_request_var,
+
+    }
+
+    return render(request, template_name, context)

@@ -4,6 +4,8 @@
 
 {% block head_title %} {{ object.seo_title }}{% endblock %}
 {% block meta_description %}{{ object.meta_description }}{% endblock %}
+{% block keywords %}{{ object.keywords }}{% endblock %}
+
 
 {% block meta_facebook %}
 <meta property="og:url"          content="{{ request.get_host }}{{ object.get_absolute_url }}" />

@@ -10,8 +10,9 @@
 {% url 'contact' as contact_url %}
 
 {% url 'events' as events_url %}
-{% url 'experts' as experts_url %}
-{% url 'audio_visual' as audio_visual_url %}
+{% url 'speakers' as speakers_url %}
+{% url 'podcast' as podcast_url %}
+
 
 
 <div class="container-fluid">
@@ -30,10 +31,10 @@
                 <p><a class="link-black-gold text-gold" href="{{ events_url }}">Eventos</a></p>
             </div>
             <div class="col s12 m2 text-center">
-                <p><a class="link-black-gold" href="{{ experts_url }}">Reserva un Expero</a></p>
+                <p><a class="link-black-gold" href="{{ speakers_url }}">Speakers</a></p>
             </div>
-            <div class="col s12 m2 text-center">
-                <p><a class="link-black-gold" href="{{ audio_visual_url }}">Audio/Visual</a></p>
+            <div class="col s12 m3 text-center">
+                <p><a class="link-black-gold" href="{{ podcast_url }}">Hablemos de Marketing Podcast</a></p>
             </div>
         </div>
 

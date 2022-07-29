@@ -343,21 +343,21 @@ def events_list_page(request):
     return render(request, "events_list_page.html", context)
 
 
-def experts_list_page(request):
+def speakers_list_page(request):
     expert_list = range(8)
 
     context = {
         'expert_list': expert_list,
     }
 
-    return render(request, "experts_list_page.html", context)
+    return render(request, "speakers_list_page.html", context)
 
 
-def audio_visual_page(request):
+def podcast_page(request):
     context = {
     }
 
-    return render(request, "audio_visual_page.html", context)
+    return render(request, "podcast_page.html", context)
 
 
 def soluciones_page(request):

@@ -36,8 +36,8 @@ urlpatterns = [
     path('guia_marketing_digital/', include('guia_marketing.urls'), name="guia_marketing"),
 
     path('eventos', views.events_list_page, name='events'),
-    path('reserva_un_experto', views.experts_list_page, name='experts'),
-    path('audio_visual', views.audio_visual_page, name='audio_visual'),
+    path('speakers', views.speakers_list_page, name='speakers'),
+    path('marketing-podcast', views.podcast_page, name='podcast'),
 
     path('soluciones', views.soluciones_page, name='soluciones'),
     path('soluciones/agencia', views.programas_estrategicos_page, name='programas_estrategicos'),

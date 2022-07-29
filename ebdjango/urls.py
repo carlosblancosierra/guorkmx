@@ -50,7 +50,7 @@ urlpatterns = [
 
     path('blog/', include('blog.urls')),
     path('workshops/', include('courses.urls')),
-    path('checkout/', include('stripe_checkout.urls')),
+    # path('checkout/', include('stripe_checkout.urls')),
 
     path('login/', login_page, name='login'),
     path('logout/', LogoutView.as_view(), name='logout'),

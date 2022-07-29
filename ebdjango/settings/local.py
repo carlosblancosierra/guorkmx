@@ -66,7 +66,6 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'imagekit',
-    'stripe',
 
     # my apps
     'accounts',

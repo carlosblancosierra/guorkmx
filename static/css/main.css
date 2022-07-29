@@ -664,7 +664,7 @@ a:hover .home-service-consult-col {
     }
     .cotiza-banner-climber {
         position: absolute;
-        max-width: 58% !important;
+        max-width: 40% !important;
         top: -19%;
         right: 0;
         height: auto;
@@ -675,7 +675,7 @@ a:hover .home-service-consult-col {
     }
     .cotiza-banner-container {
         z-index: -3;
-        margin-top: 7rem;
+        margin-top: 15rem;
     }
 }
 
@@ -1390,4 +1390,21 @@ a:hover .home-service-consult-col {
     font-size:6rem!important;
     line-height:6rem!important;
     margin:0;
+}
+
+.home-marketing-plan {
+    position: absolute;
+    width: 50%;
+    left: 21%;
+    top: -61%;
+}
+
+@media (min-width: 768px) {
+    .home-marketing-plan {
+        position: absolute;
+        width: 20%;
+        left: 10%;
+        top: -26%;
+    }
+
 }

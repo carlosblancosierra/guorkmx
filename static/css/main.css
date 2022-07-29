@@ -602,6 +602,7 @@ a:hover .home-service-consult-col {
     top: -33%;
     right: 0;
     height: auto;
+    z-index:1;
 }
 
 #owl-carousel-partnertship .owl-nav {
@@ -663,18 +664,21 @@ a:hover .home-service-consult-col {
         left: 23%;
     }
     .cotiza-banner-climber {
+        /*
         position: absolute;
-        max-width: 40% !important;
+        max-width: 10% !important;
         top: -19%;
         right: 0;
         height: auto;
-        z-index: -1
+        z-index: 5
+        */
+        display:none
+
     }
     .cotiza-banner-row {
-        z-index: -2
+        z-index: 10
     }
     .cotiza-banner-container {
-        z-index: -3;
         margin-top: 15rem;
     }
 }
@@ -1396,7 +1400,7 @@ a:hover .home-service-consult-col {
     position: absolute;
     width: 50%;
     left: 21%;
-    top: -61%;
+    top: -70%;
 }
 
 @media (min-width: 768px) {
@@ -1406,5 +1410,4 @@ a:hover .home-service-consult-col {
         left: 10%;
         top: -26%;
     }
-
 }

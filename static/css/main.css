@@ -1015,7 +1015,8 @@ a:hover .home-service-consult-col {
     padding-right:1.5rem;
     padding-bottom:0.5rem;
     font-size: 0.8rem;
-    color:white;
+    background:white;
+    border: solid 6px var(--blue);
 }
 
 .soluciones-square-icon {

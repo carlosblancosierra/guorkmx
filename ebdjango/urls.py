@@ -37,7 +37,7 @@ urlpatterns = [
 
     path('eventos', views.events_list_page, name='events'),
     path('speakers', views.speakers_list_page, name='speakers'),
-    path('marketing-podcast', views.podcast_page, name='podcast'),
+    path('hablemos-de-marketing', views.podcast_page, name='podcast'),
 
     path('soluciones', views.soluciones_page, name='soluciones'),
     path('soluciones/agencia', views.programas_estrategicos_page, name='programas_estrategicos'),

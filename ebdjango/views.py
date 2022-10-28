@@ -302,25 +302,25 @@ def audit_result_page(request):
               'Email Marketing', 'Marketing Strategy', 'Data & Analytics', 'Conversion Optmization'
               ]
 
-    importance_values = [8.5, 8, 7.5, 7.17, 7, 6, 4.67, 3]
-    confidence_values = [3, 4, 3, 4, 3, 6, 7, 3]
-    marketing_score = 40
-    total_values = [marketing_score, 100 - marketing_score]
+    # importance_values = [8.5, 8, 7.5, 7.17, 7, 6, 4.67, 3]
+    # confidence_values = [3, 4, 3, 4, 3, 6, 7, 3]
+    # marketing_score = 40
+    # total_values = [marketing_score, 100 - marketing_score]
 
-    table_data = []
-    for i in range(len(labels)):
-        data_point = [labels[i], importance_values[i], confidence_values[i]]
-        table_data.append(data_point)
+    # table_data = []
+    # for i in range(len(labels)):
+    #     data_point = [labels[i], importance_values[i], confidence_values[i]]
+    #     table_data.append(data_point)
 
-    print('AUDIT RESULT table_data', table_data)
+    # print('AUDIT RESULT table_data', table_data)
 
     context = {
-        'marketing_score': marketing_score,
+        # 'marketing_score': marketing_score,
         'labels': labels,
-        'importance_values': importance_values,
-        'confidence_values': confidence_values,
-        'total_values': total_values,
-        'table_data': table_data,
+        # 'importance_values': importance_values,
+        # 'confidence_values': confidence_values,
+        # 'total_values': total_values,
+        # 'table_data': table_data,
         'seo_audit_result': seo_audit_result,
         'seo_list': seo_list,
         'seo_ave': seo_ave,

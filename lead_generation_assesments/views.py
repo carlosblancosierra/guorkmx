@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from leads.models import LeadManagementReadinessLead
 import json
 
 # Create your views here.
@@ -480,51 +481,60 @@ RESULT_DATA = [
     }
 ]
 
-QUESTIONS_AREAS = {
-    '1': {
+QUESTIONS_AREAS = [
+    {
         'title': 'Estrategia, Procesos y Habilidades',
-        'questions': [1, 5],
+        'questions': [1, 6],
+        'ponderacion': '20'
     },
-    '2': {
+    {
         'title': 'Marketing Automation y Lead Management',
-        'questions': [6, 11],
+        'questions': [6, 12],
+        'ponderacion': '15'
     },
-    '3': {
+    {
         'title': 'Gestión de Base de Datos',
-        'questions': [12, 17],
+        'questions': [12, 18],
+        'ponderacion': '5'
     },
-    '4': {
-        'title': 'Gestión de Base de Datos',
-        'questions': [18, 23],
+    {
+        'title': 'Website, Blog & Comunidad',
+        'questions': [18, 24],
+        'ponderacion': '0'
     },
-    '5': {
-        'title': 'Gestión de Base de Datos',
-        'questions': [24, 29],
+    {
+        'title': 'Conversión & Landing Pages',
+        'questions': [24, 30],
+        'ponderacion': '10'
     },
-    '6': {
-        'title': 'Gestión de Base de Datos',
-        'questions': [30, 35],
+    {
+        'title': 'Analíticos, SEO & SEM',
+        'questions': [30, 36],
+        'ponderacion': '10'
     },
-    '7': {
-        'title': 'Gestión de Base de Datos',
-        'questions': [36, 39],
+    {
+        'title': 'Alianzas y Canales',
+        'questions': [36, 40],
+        'ponderacion': '20'
     },
-    '8': {
-        'title': 'Gestión de Base de Datos',
-        'questions': [40, 44],
+    {
+        'title': 'Integración de Sistemas',
+        'questions': [40, 45],
+        'ponderacion': '10'
     },
-    '9': {
-        'title': 'Gestión de Base de Datos',
-        'questions': [45, 49],
+    {
+        'title': 'Métricas y Reporteo',
+        'questions': [45, 50],
+        'ponderacion': '10'
     },
-}
+]
 
 
 def landing_page(request):
     context = {
     }
 
-    return render(request, "audit_pre_page.html", context)
+    return render(request, "landing_page.html", context)
 
 
 # @check_recaptcha
@@ -538,6 +548,27 @@ def assesment_page(request):
                 answers.append(int(request.POST['lead_assesment_q{}'.format(i + 1)]))
 
             request.session['lead_generation_answers'] = answers
+
+            name = request.POST['audit_name']
+            lastname = request.POST['audit_last_name']
+            company = request.POST['audit_company']
+            email = request.POST['audit_email']
+            company_size = request.POST['audit_company_size']
+            role = request.POST['audit_position']
+            phone = request.POST['audit_phone']
+
+            lead = LeadManagementReadinessLead(
+                name=name,
+                lastname=lastname,
+                company=company,
+                email=email,
+                company_size=company_size,
+                role=role,
+                phone=phone,
+                answers=answers
+            )
+
+            lead.save()
 
             return redirect('lead_generation_assesments:results')
 
@@ -555,6 +586,27 @@ def results_page(request):
     answers = request.session.get('lead_generation_answers', None)
     table_data = []
 
+    averages = []
+
+    for area in QUESTIONS_AREAS:
+        # print("area: ", area)
+        start = area['questions'][0] - 1
+        end = area['questions'][1] - 1
+        area_answers = answers[start:end]
+        # print("area_answers: ", area_answers)
+        average = sum(area_answers) / len(area_answers)
+        averages.append({**area, **{
+            'average': float("{:.2f}".format(average))
+        }})
+
+    total = 0
+    for obj in averages:
+        subtotal = obj['average'] * int(obj['ponderacion']) / 100
+        # print('subtotal: ', subtotal)
+        total += subtotal
+
+    total = float("{:.2f}".format(total))
+
     for i in range(len(RESULT_DATA)):
         answer = {'answer': answers[i]}
         data = {**RESULT_DATA[i], **answer}
@@ -566,7 +618,10 @@ def results_page(request):
         'answers': answers,
         'RESULT_DATA': RESULT_DATA,
         'table_data': table_data,
-        'QUESTIONS_TITLES':QUESTIONS_TITLES
+        'QUESTIONS_TITLES': QUESTIONS_TITLES,
+        'averages': averages,
+        'json_averages': json.dumps(averages),
+        'total': total,
     }
 
     return render(request, "lead_generation_assesments/results_page.html", context)

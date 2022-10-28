@@ -57,6 +57,7 @@ urlpatterns = [
     path('register/', register_page_local, name='register'),
     path('cuenta/', include('accounts.urls')),
     path('cuenta/', include('accounts.passwords.urls')),
+    path('lead_generation_assesment/', include('lead_generation_assesments.urls')),
 
     path('aviso-de-privacidad', views.aviso_de_privacidad_page, name='aviso_de_privacidad'),
 

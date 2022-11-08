@@ -518,64 +518,22 @@
 
         </div>
     </div>
+    
+    <div class="row">
+        <div class="col s12">
+            <p class="center">
+                <a href="https://api.whatsapp.com/send?phone=5215619558425&text=Hola%2C%20realic%C3%A9%20el%20diagn%C3%B3stico%20de%20SEO%20y%20quiero%20contactar%20a%20un%20especialista"
+                    class="btn font-200 btn-gold py-2"
+                   target="_blank"
+                >
+                    Contacta a uno de nuestros especialistas
+                </a>
+            </p>
+        </div>
+    </div>
 </div>
 {% endblock %}
 
-<div class="container">
-    <div class="row my-5">
-        <div class="col s12 text-center">
-            <h1>Hi carlos,</h1>
-            <p class="font-150">Looks like we can help jump-start your marketing skills.</p>
-        </div>
-        <div class="col s12 m6">
-            <canvas id="pie_chart"></canvas>
-        </div>
-        <div class="col s12 m6">
-            <h3>Your Overall Score</h3>
-            <p class="audit-score">{{ marketing_score }}%</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col s12">
-            <canvas id="radio_chart"></canvas>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col s12">
-            <h2 class="text-center">Recommendation:</h2>
-            <p class="text-center font-150">Based on your breakdown we'd recommend the following trainings:</p>
-        </div>
-
-        <div class="col s12">
-            <table>
-                <thead>
-                <tr>
-                    <th>Marketing Discipline</th>
-                    <th class="text-center">Confidence</th>
-                    <th class="text-center">Importance</th>
-                </tr>
-                </thead>
-
-                <tbody>
-                {% for data_point in table_data %}
-                <tr>
-                    <td>{{ data_point.0 }}</td>
-                    <td class="text-center">{{ data_point.1 }}</td>
-                    <td class="text-center">{{ data_point.2 }}</td>
-                </tr>
-                {% endfor %}
-
-                <tr>
-                    <td class="font-200">Average Score:</td>
-                    <td class="font-200 text-center" colspan="2">{{ marketing_score }}%</td>
-                </tr>
-
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
 
 
 {% block js_extra %}

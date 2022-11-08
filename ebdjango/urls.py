@@ -29,9 +29,9 @@ urlpatterns = [
     path('nosotros', views.nosotros_page, name='nosotros'),
 
     path('auditoria_landing/', views.audit_landing_page, name='audit_lp'),
-    path('auditoria_pre/', views.audit_pre_page, name='audit_pre'),
-    path('auditoria/', views.audit_page, name='audit'),
-    path('auditoria/resultado/', views.audit_result_page, name='audit_result'),
+    path('diagnostico_seo/', views.audit_pre_page, name='audit_pre'),
+    path('diagnostico_seo/preguntas', views.audit_page, name='audit'),
+    path('diagnostico_seo/resultado/', views.audit_result_page, name='audit_result'),
 
     path('guia_marketing_digital/', include('guia_marketing.urls'), name="guia_marketing"),
 

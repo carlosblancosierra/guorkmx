@@ -185,7 +185,38 @@ STATICFILES_DIRS = [
 MEDIA_ROOT = os.path.join(LOCAL_STATIC_CDN_PATH, 'media')
 MEDIA_URL = '/media/'  # django-storages
 
-from ebdjango.aws.conf import *
+#new AWS S3 CONFIG
+
+AWS_ACCESS_KEY_ID = "AKIAIWMAKUKZAEUHDANQ"
+
+AWS_SECRET_ACCESS_KEY = "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"
+
+AWS_STORAGE_BUCKET_NAME = 'guork-static'
+
+AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+AWS_DEFAULT_ACL = 'public-read'
+
+AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
+
+AWS_LOCATION = 'static'
+
+AWS_QUERYSTRING_AUTH = False
+
+AWS_HEADERS = {'Access-Control-Allow-Origin': '*'}
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
+
+STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
+
+EMAIL_STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}'
+
+MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media/'
+
+AWS_S3_REGION_NAME = 'us-east-1'
+
 
 # CKEDITOR
 CKEDITOR_UPLOAD_PATH = "ckuploads/"

@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block head_title %} Lead Generation Maturity Assesment {% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col s12 p-0">
+        <img src="{% static 'images/audit/banner-auditoria.jpg' %}" class="responsive-img" alt="Auditoría Digital"/>
+    </div>
+</div>
+<div class="container">
+
+    <div class="row">
+        <div class="col s12 m10 offset-m1">
+            <h2 class="">
+                Cómo aprovechar al máximo esta auditoría >>>
+            </h2>
+        </div>
+        <div class="col s12 m6 offset-m1 pr-md-5">
+
+            <div class="row mt-5">
+                <div class="col s2">
+                    <img src="{% static 'images/audit/1.png' %}" class="responsive-img"/>
+                </div>
+                <div class="col s10">
+                    <p class="font-175 mt-0">Utiliza esta herramienta de evaluación que te ayudará a medir la madurez en
+                        los esfuerzos de SEO
+                        de tu empresa a través de 4 factores clave.</p>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col s2">
+                    <img src="{% static 'images/audit/2.png' %}" class="responsive-img"/>
+                </div>
+                <div class="col s10">
+                    <p class="font-175 mt-0 pt-3">
+                        Clasifica a tu empresa en una escala del 1 al 5 según el cumplimiento de cada práctica. Utiliza
+                        de referencia la escala.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col s2">
+                    <img src="{% static 'images/audit/3.png' %}" class="responsive-img"/>
+                </div>
+                <div class="col s10">
+                    <p class="font-175 mt-0 pt-3">
+                        Consulta al final el "Índice de madurez" para identificar tu estado actual
+                        objetivo en cada categoría.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col s2">
+                    <img src="{% static 'images/audit/4.png' %}" class="responsive-img"/>
+                </div>
+                <div class="col s10">
+                    <p class="font-175 mt-0 pt-3">
+                        Consulta al final los "Resultados y recomendaciones" para obtener consejos prácticos sobre cómo
+                        mejorar
+                        el SEO de tu marca.
+                    </p>
+                </div>
+            </div>
+            <p class="">
+                <a class="btn font-200 btn-gold w-100 py-2" href="{% url 'audit' %}">EMPIEZA AHORA</a>
+            </p>
+        </div>
+        <div class="col s12 m4 pr-md-5">
+            <img src="{% static 'images/audit/cohete.jpg' %}" class="responsive-img mt-3" alt="Auditoría Digital"/>
+        </div>
+    </div>
+</div>
+{% endblock %}

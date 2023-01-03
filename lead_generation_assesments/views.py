@@ -565,7 +565,7 @@ def assesment_page(request):
                 company_size=company_size,
                 role=role,
                 phone=phone,
-                answers=answers
+                results=answers
             )
 
             lead.save()

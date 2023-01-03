@@ -72,9 +72,10 @@ INSTALLED_APPS = [
     'billing',
     'blog',
     'courses',
-    'stripe_checkout',
+    # 'stripe_checkout',
     'leads',
     'lead_generation_assesments',
+    'social_media_assesments',
     'recursos',
     'guia_marketing',
 

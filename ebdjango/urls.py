@@ -58,6 +58,8 @@ urlpatterns = [
     path('cuenta/', include('accounts.urls')),
     path('cuenta/', include('accounts.passwords.urls')),
     path('lead_generation_assesment/', include('lead_generation_assesments.urls')),
+    path('social_media_assesments/', include('social_media_assesments.urls')),
+
 
     path('aviso-de-privacidad', views.aviso_de_privacidad_page, name='aviso_de_privacidad'),
 

@@ -1,0 +1,159 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block head_title %} Lead Management Readiness {% endblock %}
+
+{% block content %}
+
+{% load custom_tags %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"
+        integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<div class="container">
+  <div class="row">
+    <div class="col s12">
+      <h1>Social Media</h1>
+    </div>
+    <div class="col s12 m6">
+      <h2>
+        Matriz de Madurez
+      </h2>
+      <table>
+        <thead>
+        <tr>
+          <th>Críterios de Evaluación de Social Media</th>
+          <th class="">Score</th>
+          <th class="">Ponderación</th>
+        </tr>
+        </thead>
+        {% for obj in averages %}
+        <tr>
+          <td>{{ obj.title }}</td>
+          <td>{{ obj.average }}</td>
+          <td>{{ obj.ponderacion }}%</td>
+        </tr>
+        {% endfor %}
+        <tr>
+          <td>TOTAL</td>
+          <td>{{ total }}</td>
+          <td>100%</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="col s12 m5 offset-m1">
+      <canvas id="myChart" width="100%" height="100%"></canvas>
+
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col s12">
+      <h2>
+        Resultados y Recomendaciones
+      </h2>
+    </div>
+
+    <div class="col s12">
+      <table>
+        <thead>
+        <tr>
+<!--          <th>#</th>-->
+          <th>Factores de Éxito Social Media</th>
+          <th class="">Score</th>
+          <th class="">Recomendaciones</th>
+          <th class="">Recurso</th>
+
+        </tr>
+        </thead>
+
+        {% for obj in table_data %}
+
+
+        {% if forloop.counter == 1 or forloop.counter == 6 or forloop.counter == 12 or forloop.counter == 18 or forloop.counter == 23 or forloop.counter == 29 or forloop.counter == 35 or forloop.counter == 39 %}
+        <tr>
+          <th>{{ obj.area }}</th>
+        </tr>
+
+        {% endif %}
+
+        <tr>
+<!--          <td>{{ forloop.counter }}</td>-->
+          <td>{{ obj|dict_key:'title' }}</td>
+          <td>{{ obj|dict_key:'answer' }}</td>
+          <td>{{ obj|dict_key:'recommendation' }}</td>
+          <td>{{ obj|dict_key:'resource' }}</td>
+        </tr>
+
+        {% endfor %}
+
+      </table>
+
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+
+{% block js_extra %}
+
+<script>
+
+var ctx = document.getElementById('myChart');
+const results = {{ json_averages| safe }};
+
+const labels = results.map(e => e.title)
+const data_points = results.map(e => e.average)
+
+const data = {
+  labels: labels,
+  datasets: [{
+    label: 'Matriz de Madurez',
+    data: data_points,
+    fill: true,
+    backgroundColor: 'rgba(212, 189, 139, 0.5)',
+    borderColor: 'rgb(177, 143, 80)',
+    pointBackgroundColor: 'rgb(177, 143, 80)',
+    pointBorderColor: 'rgb(212, 189, 139)',
+    pointHoverBackgroundColor: '#fff',
+    pointHoverBorderColor: 'rgb(177, 143, 80)',
+  }]
+};
+
+const config = {
+  type: 'radar',
+  data: data,
+  options: {
+plugins:{
+         legend:{
+            display:false
+         }
+      },
+  scale: {
+      max: 5,
+      min: 0,
+    ticks: {
+        beginAtZero: true,
+        stepSize: 1
+    }
+    },
+    elements: {
+      line: {
+        borderWidth: 3
+      }
+    },
+  },
+};
+
+var myChart = new Chart(ctx, config);
+
+
+
+
+</script>
+{% endblock %}
